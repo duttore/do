@@ -86,13 +86,12 @@ export default function Home() {
       <section id="contatti" className="py-16">
   <div className="container mx-auto text-center">
     <h2 className="text-3xl font-bold mb-10 text-[#2c3e50]">Contattami</h2>
-    <p className="text-lg text-gray-600">Per richiedere informazioni o prenotare un appuntamento, puoi contattarmi per telefono.</p>
+    <p className="text-lg text-gray-600">Per richiedere informazioni o prenotare un appuntamento, puoi contattami &apos;telefono.</p>
     <div className="text-lg font-bold mt-6">
       <p>Telefono: +39 334 315 6903</p>
     </div>
   </div>
 </section>
-
 
       {/* Footer */}
       <footer className="bg-[#2c3e50] py-6">
