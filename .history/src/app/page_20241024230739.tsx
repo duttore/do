@@ -45,33 +45,32 @@ export default function Home() {
         </div>
       </section>
 
-{/* Servizi Section */}
-<section id="servizi" className="py-16">
-    <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-10 text-[#2c3e50]">I miei servizi</h2>
-        <div className="flex justify-between space-x-6">
+      {/* Servizi Section */}
+      <section id="servizi" className="py-16">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-10 text-[#2c3e50]">I miei servizi</h2>
+          <div className="flex justify-between space-x-6">
             <div className="bg-white p-8 shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300">
-                <h3 className="text-xl font-semibold mb-4 text-[#2c3e50]">Riparazioni</h3>
-                <p className="text-gray-500">
-                    Riparazioni complete per ogni tipo di macchina da cucire, meccanica o elettronica.
-                </p>
+              <h3 className="text-xl font-semibold mb-4 text-[#2c3e50]">Riparazioni</h3>
+              <p className="text-gray-500">
+                Riparazioni complete per ogni tipo di macchina da cucire, meccanica o elettronica.
+              </p>
             </div>
             <div className="bg-white p-8 shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300">
-                <h3 className="text-xl font-semibold mb-4 text-[#2c3e50]">Manutenzione</h3>
-                <p className="text-gray-500">
-                    Controllo e manutenzione preventiva per mantenere la macchina in condizioni ottimali.
-                </p>
+              <h3 className="text-xl font-semibold mb-4 text-[#2c3e50]">Manutenzione</h3>
+              <p className="text-gray-500">
+                Controllo e manutenzione preventiva per mantenere la macchina in condizioni ottimali.
+              </p>
             </div>
             <div className="bg-white p-8 shadow-lg rounded-lg text-center transform hover:-translate-y-2 transition duration-300">
-                <h3 className="text-xl font-semibold mb-4 text-[#2c3e50]">Consulenza</h3>
-                <p className="text-gray-500">
-                    Consulenza personalizzata per l&apos;acquisto di nuove macchine da cucire e accessori.
-                </p>
+              <h3 className="text-xl font-semibold mb-4 text-[#2c3e50]">Consulenza</h3>
+              <p className="text-gray-500">
+                Consulenza personalizzata per l'acquisto di nuove macchine da cucire e accessori.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
-
+      </section>
 
       {/* Chi Sono Section */}
       <section id="chi-sono" className="py-16 bg-gray-100">
