@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGear, faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
