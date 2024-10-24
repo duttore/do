@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faWrench, faCogs, faCommentDots, faPhone, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import Image from 'next/image';
+import { NextSeo } from 'next-seo';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'; // Import WhatsApp icon
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +15,27 @@ export default function Home() {
 
   return (
     <div className="font-sans bg-[#f8f9fa] text-[#343a40]">
+      <NextSeo
+        title="Assistenza Macchine da Cucire"
+        description="Offriamo assistenza professionale per macchine da cucire, riparazioni e manutenzione."
+        canonical="https://yourwebsite.com/"
+        openGraph={{
+          url: 'https://yourwebsite.com/',
+          title: 'Assistenza Macchine da Cucire',
+          description: 'Offriamo assistenza professionale per macchine da cucire, riparazioni e manutenzione.',
+          images: [
+            {
+              url: 'https://yourwebsite.com/og-image.jpg',
+              width: 800,
+              height: 600,
+              alt: 'Immagine di esempio',
+              type: 'image/jpeg',
+            },
+          ],
+          site_name: 'Stefano Ricci',
+        }}
+      />
+
       {/* Header */}
       <header className="bg-[#5465ff] py-4 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
@@ -56,14 +79,6 @@ export default function Home() {
           </div>
         )}
       </header>
-
-      {/* WhatsApp Contact Section */}
-      <section className="py-4 bg-[#f8f9fa] text-center">
-        <p className="text-lg font-bold">
-          <FontAwesomeIcon icon={faPhone} className="text-green-500 mr-2" />
-          Contattami su WhatsApp: <span className="text-[#343a40]">+39 334 315 6903</span>
-        </p>
-      </section>
 
       {/* Hero Section */}
       <section className="hero relative py-32 text-center text-white bg-[#5465ff]">
@@ -129,8 +144,9 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-10 text-[#343a40]">Contattami</h2>
           <p className="text-lg text-gray-600">Per richiedere informazioni o prenotare un appuntamento, puoi contattarmi anche su WhatsApp.</p>
-          <div className="text-lg font-bold mt-6">
-            <p><FontAwesomeIcon icon={faPhone} className="mr-2" />Telefono: <span className="text-[#5465ff]">+39 334 315 6903</span></p>
+          <div className="flex justify-center items-center text-lg font-bold mt-6">
+            <FontAwesomeIcon icon={faWhatsapp} className="text-green-500 text-3xl mr-2" />
+            <span>Telefono: <span className="text-[#5465ff]">+39 334 315 6903</span></span>
           </div>
         </div>
       </section>

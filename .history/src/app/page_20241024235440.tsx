@@ -57,14 +57,6 @@ export default function Home() {
         )}
       </header>
 
-      {/* WhatsApp Contact Section */}
-      <section className="py-4 bg-[#f8f9fa] text-center">
-        <p className="text-lg font-bold">
-          <FontAwesomeIcon icon={faPhone} className="text-green-500 mr-2" />
-          Contattami su WhatsApp: <span className="text-[#343a40]">+39 334 315 6903</span>
-        </p>
-      </section>
-
       {/* Hero Section */}
       <section className="hero relative py-32 text-center text-white bg-[#5465ff]">
         <Image 
@@ -128,9 +120,9 @@ export default function Home() {
       <section id="contatti" className="py-16">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-10 text-[#343a40]">Contattami</h2>
-          <p className="text-lg text-gray-600">Per richiedere informazioni o prenotare un appuntamento, puoi contattarmi anche su WhatsApp.</p>
+          <p className="text-lg text-gray-600">Per richiedere informazioni o prenotare un appuntamento, puoi contattarmi per telefono.</p>
           <div className="text-lg font-bold mt-6">
-            <p><FontAwesomeIcon icon={faPhone} className="mr-2" />Telefono: <span className="text-[#5465ff]">+39 334 315 6903</span></p>
+            <p><FontAwesomeIcon icon={faPhone} className="mr-2" />Telefono: +39 334 315 6903</p>
           </div>
         </div>
       </section>

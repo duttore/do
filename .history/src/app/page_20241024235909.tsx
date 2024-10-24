@@ -1,8 +1,9 @@
 "use client"; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faWrench, faCogs, faCommentDots, faPhone, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 import Image from 'next/image';
+import { NextSeo } from 'next-seo';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +14,11 @@ export default function Home() {
 
   return (
     <div className="font-sans bg-[#f8f9fa] text-[#343a40]">
+      <NextSeo
+        title="Home | Stefano Ricci"
+        description="Assistenza professionale per macchine da cucire."
+      />
+      
       {/* Header */}
       <header className="bg-[#5465ff] py-4 shadow-lg">
         <div className="container mx-auto flex justify-between items-center">
@@ -20,49 +26,29 @@ export default function Home() {
             <a href="#">Stefano Ricci</a>
           </div>
           <nav className="hidden md:flex space-x-6 text-white text-lg">
-            <a href="#servizi" className="flex items-center hover:text-[#ffbe0b] transition duration-300">
-              <FontAwesomeIcon icon={faWrench} className="mr-1" />
-              Servizi
-            </a>
-            <a href="#chi-sono" className="flex items-center hover:text-[#ffbe0b] transition duration-300">
-              <FontAwesomeIcon icon={faInfoCircle} className="mr-1" />
-              Chi Sono
-            </a>
-            <a href="#contatti" className="flex items-center hover:text-[#ffbe0b] transition duration-300">
-              <FontAwesomeIcon icon={faPhone} className="mr-1" />
-              Contatti
-            </a>
+            <a href="#servizi" className="hover:text-[#ffbe0b] transition duration-300">Servizi</a>
+            <a href="#chi-sono" className="hover:text-[#ffbe0b] transition duration-300">Chi Sono</a>
+            <a href="#contatti" className="hover:text-[#ffbe0b] transition duration-300">Contatti</a>
           </nav>
-          {/* Hamburger Icon for Mobile */}
           <div className="md:hidden text-white text-2xl cursor-pointer" onClick={toggleMenu}>
             <FontAwesomeIcon icon={faBars} />
           </div>
         </div>
-        {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden bg-[#5465ff] text-white text-lg py-4">
-            <a href="#servizi" className="flex items-center block py-2 px-4 hover:bg-[#788bff]">
-              <FontAwesomeIcon icon={faWrench} className="mr-1" />
-              Servizi
-            </a>
-            <a href="#chi-sono" className="flex items-center block py-2 px-4 hover:bg-[#788bff]">
-              <FontAwesomeIcon icon={faInfoCircle} className="mr-1" />
-              Chi Sono
-            </a>
-            <a href="#contatti" className="flex items-center block py-2 px-4 hover:bg-[#788bff]">
-              <FontAwesomeIcon icon={faPhone} className="mr-1" />
-              Contatti
-            </a>
+            <a href="#servizi" className="block py-2 px-4 hover:bg-[#788bff]">Servizi</a>
+            <a href="#chi-sono" className="block py-2 px-4 hover:bg-[#788bff]">Chi Sono</a>
+            <a href="#contatti" className="block py-2 px-4 hover:bg-[#788bff]">Contatti</a>
           </div>
         )}
       </header>
 
       {/* WhatsApp Contact Section */}
       <section className="py-4 bg-[#f8f9fa] text-center">
-        <p className="text-lg font-bold">
-          <FontAwesomeIcon icon={faPhone} className="text-green-500 mr-2" />
+        <FontAwesomeIcon icon={faWhatsapp} className="text-green-500 text-3xl" />
+        <div className="text-lg font-bold mt-2">
           Contattami su WhatsApp: <span className="text-[#343a40]">+39 334 315 6903</span>
-        </p>
+        </div>
       </section>
 
       {/* Hero Section */}
@@ -90,15 +76,14 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-10 text-[#343a40]">I miei servizi</h2>
           <div className="flex justify-between space-x-6">
-            {[
-              { name: 'Riparazioni', icon: faWrench, description: 'Riparazioni complete per ogni tipo di macchina da cucire, meccanica o elettronica.' },
-              { name: 'Manutenzione', icon: faCogs, description: 'Controllo e manutenzione preventiva per mantenere la macchina in condizioni ottimali.' },
-              { name: 'Consulenza', icon: faCommentDots, description: 'Consulenza personalizzata per l\'acquisto di nuove macchine da cucire e accessori.' }
-            ].map((service, index) => (
+            {['Riparazioni', 'Manutenzione', 'Consulenza'].map((service, index) => (
               <div key={index} className="bg-white p-8 shadow-lg rounded-lg text-center transform hover:scale-105 transition duration-300">
-                <FontAwesomeIcon icon={service.icon} className="text-[#5465ff] text-4xl mb-4" />
-                <h3 className="text-xl font-semibold mb-4 text-[#343a40]">{service.name}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <h3 className="text-xl font-semibold mb-4 text-[#343a40]">{service}</h3>
+                <p className="text-gray-600">
+                  {service === 'Riparazioni' && 'Riparazioni complete per ogni tipo di macchina da cucire, meccanica o elettronica.'}
+                  {service === 'Manutenzione' && 'Controllo e manutenzione preventiva per mantenere la macchina in condizioni ottimali.'}
+                  {service === 'Consulenza' && 'Consulenza personalizzata per l\'acquisto di nuove macchine da cucire e accessori.'}
+                </p>
               </div>
             ))}
           </div>
@@ -128,9 +113,10 @@ export default function Home() {
       <section id="contatti" className="py-16">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-10 text-[#343a40]">Contattami</h2>
-          <p className="text-lg text-gray-600">Per richiedere informazioni o prenotare un appuntamento, puoi contattarmi anche su WhatsApp.</p>
+          <p className="text-lg text-gray-600">Per richiedere informazioni o prenotare un appuntamento, puoi contattarmi per telefono.</p>
           <div className="text-lg font-bold mt-6">
-            <p><FontAwesomeIcon icon={faPhone} className="mr-2" />Telefono: <span className="text-[#5465ff]">+39 334 315 6903</span></p>
+            <FontAwesomeIcon icon={faWhatsapp} className="text-green-500 mr-2" />
+            <span>Telefono: <span className="text-[#343a40]">+39 334 315 6903</span></span>
           </div>
         </div>
       </section>

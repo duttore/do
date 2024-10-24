@@ -13,16 +13,9 @@ const nextConfig = {
   swcMinify: true,
 
   // Configure external image domains
-
   images: {
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'milanimacchinepercucire.com',
-          pathname: '/**',
-        },
-      ],
-    },
+    domains: ['milanimacchinepercucire.com'], // Add your image domains here
+  },
 
   // Environment variable validation if needed
   env: {

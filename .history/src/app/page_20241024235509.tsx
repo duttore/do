@@ -57,14 +57,6 @@ export default function Home() {
         )}
       </header>
 
-      {/* WhatsApp Contact Section */}
-      <section className="py-4 bg-[#f8f9fa] text-center">
-        <p className="text-lg font-bold">
-          <FontAwesomeIcon icon={faPhone} className="text-green-500 mr-2" />
-          Contattami su WhatsApp: <span className="text-[#343a40]">+39 334 315 6903</span>
-        </p>
-      </section>
-
       {/* Hero Section */}
       <section className="hero relative py-32 text-center text-white bg-[#5465ff]">
         <Image 
