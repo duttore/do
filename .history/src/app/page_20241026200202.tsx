@@ -60,8 +60,7 @@ const MediaCarousel = () => {
   };
 
   const togglePlay = () => {
-    const currentItem = mediaItems[currentIndex];
-    if (currentItem && currentItem.type === 'video' && videoRef.current) {
+    if (mediaItems[currentIndex].type === 'video' && videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
       } else {
@@ -116,7 +115,7 @@ const MediaCarousel = () => {
           <FontAwesomeIcon icon={faChevronRight} className="h-6 w-6" />
         </button>
 
-        {mediaItems[currentIndex]?.type === 'video' && (
+        {mediaItems[currentIndex].type === 'video' && (
           <button
             onClick={togglePlay}
             className="absolute bottom-4 right-4 bg-black/30 hover:bg-black/40 backdrop-blur-md p-2 rounded-full text-white transition-all"
