@@ -1,5 +1,5 @@
 "use client";
-import { NextSeo } from 'next-seo';
+/*import { NextSeo } from 'next-seo';*/
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faWrench, faCogs, faCommentDots, faPhone, faInfoCircle, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
