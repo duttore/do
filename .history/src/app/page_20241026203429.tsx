@@ -41,6 +41,7 @@ const mediaItems = [
     thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png'
   }
 ];
+
 const MediaCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
@@ -58,20 +59,18 @@ const MediaCarousel = () => {
     setCurrentIndex(index);
   };
 
-  const togglePlay = async () => {
+  const togglePlay = () => {
     const currentItem = mediaItems[currentIndex];
     if (currentItem && currentItem.type === 'video' && videoRef.current) {
       try {
         if (isPlaying) {
-          await videoRef.current.pause();
+          videoRef.current.pause();
         } else {
-          await videoRef.current.play();
+          videoRef.current.play();
         }
         setIsPlaying(!isPlaying);
       } catch (error) {
         console.error('Error handling video playback:', error);
-        // Revert the playing state if there was an error
-        setIsPlaying(currentState => currentState);
       }
     }
   };
@@ -132,7 +131,7 @@ const MediaCarousel = () => {
 
         {currentItem?.type === 'video' && (
           <button
-            onClick={() => void togglePlay()}
+            onClick={togglePlay}
             className="absolute bottom-4 right-4 bg-black/30 hover:bg-black/40 backdrop-blur-md p-2 rounded-full text-white transition-all"
           >
             <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} className="h-6 w-6" />
