@@ -13,20 +13,17 @@ export default function Home() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Ensure window is available before accessing it
-      const handleScroll = () => {
-        setScrolled(window.scrollY > 50);
-      };
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const fadeInUp = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
+    transition: { duration: 0.6 }
   };
 
   return (
@@ -166,7 +163,137 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
-        {/* ... Other sections remain the same */}
+
+        {/* Services Section */}
+        <section id="servizi" className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              {...fadeInUp}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">I nostri servizi</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Offriamo soluzioni complete per la manutenzione e riparazione della tua macchina da cucire
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: faWrench,
+                  title: 'Riparazioni',
+                  description: 'Riparazioni complete per ogni tipo di macchina da cucire, meccanica o elettronica.'
+                },
+                {
+                  icon: faCogs,
+                  title: 'Manutenzione',
+                  description: 'Controllo e manutenzione preventiva per mantenere la macchina in condizioni ottimali.'
+                },
+                {
+                  icon: faCommentDots,
+                  title: 'Consulenza',
+                  description: 'Consulenza personalizzata per l\'acquisto di nuove macchine da cucire e accessori.'
+                }
+              ].map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <FontAwesomeIcon icon={service.icon} className="text-blue-600 text-2xl" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">{service.title}</h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-20 bg-gray-900 text-white">
+          <div className="container mx-auto px-4">
+            <motion.div
+              {...fadeInUp}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Cosa dicono i nostri clienti</h2>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  text: "Servizio eccellente e riparazione veloce. La mia macchina da cucire funziona come nuova!",
+                  name: "Maria Rossi"
+                },
+                {
+                  text: "Personale qualificato e molto disponibile. Consiglio vivamente!",
+                  name: "Luca Bianchi"
+                },
+                {
+                  text: "Ottimo servizio di consulenza per l'acquisto della mia nuova macchina da cucire.",
+                  name: "Federica Verdi"
+                }
+              ].map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-800 p-6 rounded-lg"
+                >
+                  <p className="mb-4 text-gray-300">{testimonial.text}</p>
+                  <p className="font-semibold">- {testimonial.name}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contatti" className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              {...fadeInUp}
+              className="text-center max-w-2xl mx-auto"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Contattami</h2>
+              <p className="text-gray-600 mb-8">
+                Per richiedere informazioni o prenotare un appuntamento, puoi contattarmi anche su WhatsApp.
+              </p>
+              <div className="space-y-4">
+                <a
+                  href="tel:+393343156903"
+                  className="flex items-center justify-center space-x-2 text-xl"
+                >
+                  <FontAwesomeIcon icon={faPhone} className="text-blue-600" />
+                  <span>+39 334 315 6903</span>
+                </a>
+                <a
+                  href="https://wa.me/393343156903"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors duration-300"
+                >
+                  <FontAwesomeIcon icon={faWhatsapp} />
+                  <span>Contattami su WhatsApp</span>
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-900 text-white py-8">
+          <div className="container mx-auto px-4 text-center">
+            <p>&copy; {new Date().getFullYear()} Stefano Ricci - Tutti i diritti riservati</p>
+          </div>
+        </footer>
       </div>
     </>
   );
