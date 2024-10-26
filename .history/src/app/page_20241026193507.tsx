@@ -71,7 +71,7 @@ const MediaCarousel = () => {
   };
 
   return (
-    <div className="relative bg-black/5 backdrop-blur-sm rounded-2xl p-4 my-16 px-8 lg:px-32">
+    <div className="relative bg-black/5 backdrop-blur-sm rounded-2xl p-4 my-16">
       <div className="relative aspect-video rounded-xl overflow-hidden mb-8">
         <AnimatePresence mode="wait">
           {mediaItems[currentIndex].type === 'image' ? (
@@ -167,7 +167,7 @@ export default function Home() {
 
   return (
     <div className="font-sans bg-gradient-to-b from-gray-50 to-gray-100 text-gray-900">
-      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-lg' : 'bg-transparent'}`}>
+      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-gray-800/60'}`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <motion.div 
@@ -234,6 +234,15 @@ export default function Home() {
         </div>
       </header>
 
+      <a
+        href="https://wa.me/393343156903"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300"
+      >
+        <FontAwesomeIcon icon={faWhatsapp} className="text-2xl" />
+      </a>
+
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <Image
@@ -258,24 +267,13 @@ export default function Home() {
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
               Riparazioni rapide ed efficienti per garantire il massimo delle prestazioni della tua macchina da cucire.
             </p>
-            <div className="flex justify-center gap-4">
-              <a
-                href="#servizi"
-                className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"
-              >
-                <span>Scopri i servizi</span>
-                <FontAwesomeIcon icon={faArrowRight} />
-              </a>
-              <a
-                href="https://wa.me/393343156903"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-green-500 text-white px-8 py-4 rounded-full hover:bg-green-600 transition-colors duration-300 shadow-lg"
-              >
-                <FontAwesomeIcon icon={faWhatsapp} />
-                <span>Contattami</span>
-              </a>
-            </div>
+            <a
+              href="#servizi"
+              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors duration-300 shadow-lg"
+            >
+              <span>Scopri i servizi</span>
+              <FontAwesomeIcon icon={faArrowRight} />
+            </a>
           </motion.div>
         </div>
       </section>

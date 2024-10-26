@@ -167,7 +167,7 @@ export default function Home() {
 
   return (
     <div className="font-sans bg-gradient-to-b from-gray-50 to-gray-100 text-gray-900">
-      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-lg' : 'bg-transparent'}`}>
+      <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
         <div className="container mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
             <motion.div 
