@@ -21,11 +21,6 @@ const nextConfig = {
           hostname: 'milanimacchinepercucire.com',
           pathname: '/**',
         },
-        {
-          protocol: 'https',
-          hostname: 'cdn.discordapp.com',
-          pathname: '/**',
-        },
       ],
     },
 

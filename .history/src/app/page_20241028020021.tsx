@@ -1,43 +1,50 @@
 "use client";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faWrench, faCogs, faCommentDots, faPhone, faInfoCircle, faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faWrench, faCogs, faCommentDots, faPhone, faInfoCircle, faArrowRight, faPlay, faPause, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Sample media items for the carousel
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 }
+};
+
 const mediaItems = [
   {
     type: 'image',
     url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
+    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png'
   },
   {
     type: 'image',
     url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812925894656/Screenshot_2024-03-03_001724.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812925894656/Screenshot_2024-03-03_001724.png',
+    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812925894656/Screenshot_2024-03-03_001724.png'
   },
   {
     type: 'video',
     url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299766082802028584/C0C0C0.mp4',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
+    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png'
   },
   {
     type: 'image',
     url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
+    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png'
   },
   {
     type: 'video',
     url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299766082802028584/C0C0C0.mp4',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-  },
+    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png'
+  }
 ];
 
 const MediaCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   const handleNext = () => {
@@ -50,6 +57,25 @@ const MediaCarousel = () => {
 
   const handleThumbnailClick = (index: number) => {
     setCurrentIndex(index);
+  };
+
+  const togglePlay = async () => {
+    const currentItem = mediaItems[currentIndex];
+    if (currentItem?.type === 'video' && videoRef.current) {
+      try {
+        if (isPlaying) {
+          videoRef.current.pause();
+        } else {
+          await videoRef.current.play();
+        }
+        setIsPlaying(!isPlaying);
+      } catch (error) {
+        console.error('Error playing video:', error);
+        if (!isPlaying) {
+          setIsPlaying(false);
+        }
+      }
+    }
   };
 
   const currentItem = mediaItems[currentIndex];
@@ -105,34 +131,51 @@ const MediaCarousel = () => {
         >
           <FontAwesomeIcon icon={faChevronRight} className="h-6 w-6" />
         </button>
+
+        {currentItem?.type === 'video' && (
+          <button
+            onClick={() => void togglePlay()}
+            className="absolute bottom-4 right-4 bg-black/30 hover:bg-black/40 backdrop-blur-md p-2 rounded-full text-white transition-all"
+          >
+            <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} className="h-6 w-6" />
+          </button>
+        )}
       </div>
 
-      <div className="mt-2 sm:mt-4 flex gap-2 overflow-x-auto pb-2 snap-x justify-center">
+      <div className="mt-2 sm:mt-4 flex gap-2 overflow-x-auto pb-2 snap-x">
         {mediaItems.map((item, index) => (
           <button
             key={index}
             onClick={() => handleThumbnailClick(index)}
-            className={`relative flex-shrink-0 rounded-lg overflow-hidden snap-center ${
+            className={`relative flex-shrink-0 ${
               currentIndex === index ? 'ring-2 ring-blue-500' : ''
             }`}
             style={{
-              width: 'clamp(50px, 10vw, 100px)',
-              height: 'clamp(50px, 10vw, 100px)',
+              width: '60px',
+              height: '60px',
+              borderRadius: '8px',
+              overflow: 'hidden',
             }}
           >
             <Image
               src={item.thumbnail}
               alt={`Thumbnail ${index + 1}`}
+              width={60}
+              height={60}
               className="object-cover w-full h-full"
-              width={100}
-              height={100}
             />
+            {item.type === 'video' && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                <FontAwesomeIcon icon={faPlay} className="h-4 w-4 text-white" />
+              </div>
+            )}
           </button>
         ))}
       </div>
     </div>
   );
 };
+
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -147,12 +190,6 @@ export default function Home() {
       return () => window.removeEventListener('scroll', handleScroll);
     }
   }, []);
-
-  const menuItems = [
-    { href: '#servizi', icon: faWrench, text: 'Servizi' },
-    { href: '#chi-sono', icon: faInfoCircle, text: 'Chi Sono' },
-    { href: '#contatti', icon: faPhone, text: 'Contatti' },
-  ];
 
   return (
     <div className="font-sans bg-gradient-to-b from-gray-50 to-gray-100 text-gray-900">
@@ -170,7 +207,11 @@ export default function Home() {
             </motion.div>
 
             <nav className="hidden md:flex space-x-8">
-              {menuItems.map((item, index) => (
+              {[
+                { href: '#servizi', icon: faWrench, text: 'Servizi' },
+                { href: '#chi-sono', icon: faInfoCircle, text: 'Chi Sono' },
+                { href: '#contatti', icon: faPhone, text: 'Contatti' }
+              ].map((item, index) => (
                 <motion.a
                   key={index}
                   href={item.href}
@@ -185,45 +226,40 @@ export default function Home() {
               ))}
             </nav>
 
-            <button
+            <button 
               onClick={() => setMenuOpen(!menuOpen)}
               className={`md:hidden p-2 rounded-lg ${scrolled ? 'text-gray-900' : 'text-white'}`}
             >
-              <FontAwesomeIcon icon={menuOpen ? faTimes : faBars} className="text-xl" />
+              <FontAwesomeIcon icon={faBars} className="text-xl" />
             </button>
           </div>
+
+          {menuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg rounded-b-lg"
+            >
+              {[
+                { href: '#servizi', icon: faWrench, text: 'Servizi' },
+                { href: '#chi-sono', icon: faInfoCircle, text: 'Chi Sono' },
+                { href: '#contatti', icon: faPhone, text: 'Contatti' }
+              ].map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center space-x-2 px-6 py-4 hover:bg-gray-50 text-gray-900"
+                >
+                  <FontAwesomeIcon icon={item.icon} />
+                  <span>{item.text}</span>
+                </a>
+              ))}
+            </motion.div>
+          )}
         </div>
       </header>
 
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center z-50"
-          >
-            <ul className="space-y-8">
-              {menuItems.map((item, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-3xl text-white hover:text-blue-400 transition-colors duration-300"
-                >
-                  <a href={item.href} onClick={() => setMenuOpen(false)} className="flex items-center space-x-4">
-                    <FontAwesomeIcon icon={item.icon} />
-                    <span>{item.text}</span>
-                  </a>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <Image
@@ -270,10 +306,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
       <section id="servizi" className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div {...{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.5 }, viewport: { once: true }}} className="text-center mb-16">
+          <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">I nostri servizi</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Offriamo soluzioni complete per la manutenzione e riparazione della tua macchina da cucire
@@ -307,10 +342,9 @@ export default function Home() {
 
       <MediaCarousel />
 
-      {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
-          <motion.div {...{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.5 }, viewport: { once: true }}} className="text-center mb-16">
+          <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Cosa dicono i nostri clienti</h2>
           </motion.div>
 
@@ -336,10 +370,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contatti" className="py-20">
         <div className="container mx-auto px-4">
-          <motion.div {...{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.5 }, viewport: { once: true }}} className="text-center max-w-2xl mx-auto">
+          <motion.div {...fadeInUp} className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Contattami</h2>
             <p className="text-gray-600 mb-8">
               Per richiedere informazioni o prenotare un appuntamento, puoi contattarmi anche su WhatsApp.
@@ -366,7 +399,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; {new Date().getFullYear()} Stefano Ricci - Tutti i diritti riservati</p>

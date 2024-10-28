@@ -1,39 +1,15 @@
 "use client";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faWrench, faCogs, faCommentDots, faPhone, faInfoCircle, faArrowRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faWrench, faCogs, faCommentDots, faPhone, faInfoCircle, faArrowRight, faPlay, faPause, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Sample media items for the carousel
+// Media items for the carousel
 const mediaItems = [
-  {
-    type: 'image',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-  },
-  {
-    type: 'image',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812925894656/Screenshot_2024-03-03_001724.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812925894656/Screenshot_2024-03-03_001724.png',
-  },
-  {
-    type: 'video',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299766082802028584/C0C0C0.mp4',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-  },
-  {
-    type: 'image',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-  },
-  {
-    type: 'video',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299766082802028584/C0C0C0.mp4',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-  },
+  // List of media items goes here as provided previously
 ];
 
 const MediaCarousel = () => {
@@ -223,7 +199,6 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <Image
@@ -270,7 +245,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
       <section id="servizi" className="py-20">
         <div className="container mx-auto px-4">
           <motion.div {...{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.5 }, viewport: { once: true }}} className="text-center mb-16">
@@ -307,7 +281,6 @@ export default function Home() {
 
       <MediaCarousel />
 
-      {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div {...{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.5 }, viewport: { once: true }}} className="text-center mb-16">
@@ -336,7 +309,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contatti" className="py-20">
         <div className="container mx-auto px-4">
           <motion.div {...{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.5 }, viewport: { once: true }}} className="text-center max-w-2xl mx-auto">
@@ -366,7 +338,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; {new Date().getFullYear()} Stefano Ricci - Tutti i diritti riservati</p>
