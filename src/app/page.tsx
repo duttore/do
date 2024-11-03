@@ -11,18 +11,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 const mediaItems = [
   {
     type: 'image',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
+    url: 'https://www.dottorcucito.it/wp-content/uploads/2019/10/riparazione-macchine-per-cucire-1-1200x800.jpg',
+    thumbnail: 'https://www.dottorcucito.it/wp-content/uploads/2019/10/riparazione-macchine-per-cucire-1-1200x800.jpg',
   },
   {
     type: 'image',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812925894656/Screenshot_2024-03-03_001724.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812925894656/Screenshot_2024-03-03_001724.png',
+    url: 'https://www.macchinecucire.com/wp-content/uploads/2022/05/macchine-da-cucire-singer-gli-7-modelli-piu-creativi-980x619.jpg',
+    thumbnail: 'https://www.macchinecucire.com/wp-content/uploads/2022/05/macchine-da-cucire-singer-gli-7-modelli-piu-creativi-980x619.jpg',
   },
   {
     type: 'video',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299766082802028584/C0C0C0.mp4',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
+    url: 'https://www.mondocucito.it/wp-content/uploads/2022/04/Montanari-cucito-106-2-1-640x480.jpg.webp',
+    thumbnail: 'https://www.mondocucito.it/wp-content/uploads/2022/04/Montanari-cucito-106-2-1-640x480.jpg.webp',
   },
   {
     type: 'image',
@@ -227,7 +227,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <Image
-            src="https://milanimacchinepercucire.com/wp-content/uploads/2024/02/milani_shop_desio-1024x575.webp"
+            src="https://www.milanimacchinepercucire.com/wp-content/uploads/2024/02/milani_shop_desio-1024x575.webp"
             alt="Negozio Macchine da Cucire"
             layout="fill"
             objectFit="cover"
