@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.milanimacchinepercucire.com',
+        hostname: 'https://i.ibb.co',
         pathname: '/**',
       },
       {
