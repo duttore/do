@@ -11,28 +11,28 @@ import { motion, AnimatePresence } from 'framer-motion';
 const mediaItems = [
   {
     type: 'image',
-    url: 'https://www.dottorcucito.it/wp-content/uploads/2019/10/riparazione-macchine-per-cucire-1-1200x800.jpg',
-    thumbnail: 'https://www.dottorcucito.it/wp-content/uploads/2019/10/riparazione-macchine-per-cucire-1-1200x800.jpg',
+    url: 'https://i.ibb.co/g4hyGh9/Whats-App-Image-2024-12-27-at-15-33-53-1.jpg',
+    thumbnail: 'https://i.ibb.co/g4hyGh9/Whats-App-Image-2024-12-27-at-15-33-53-1.jpg',
   },
   {
     type: 'image',
-    url: 'https://www.macchinecucire.com/wp-content/uploads/2022/05/macchine-da-cucire-singer-gli-7-modelli-piu-creativi-980x619.jpg',
-    thumbnail: 'https://www.macchinecucire.com/wp-content/uploads/2022/05/macchine-da-cucire-singer-gli-7-modelli-piu-creativi-980x619.jpg',
+    url: 'https://i.ibb.co/8KSSJ1q/Whats-App-Image-2024-12-27-at-15-33-53-2.jpg',
+    thumbnail: 'https://i.ibb.co/8KSSJ1q/Whats-App-Image-2024-12-27-at-15-33-53-2.jpg',
   },
   {
     type: 'video',
-    url: 'https://www.mondocucito.it/wp-content/uploads/2022/04/Montanari-cucito-106-2-1-640x480.jpg.webp',
-    thumbnail: 'https://www.mondocucito.it/wp-content/uploads/2022/04/Montanari-cucito-106-2-1-640x480.jpg.webp',
+    url: 'https://i.ibb.co/b1W9QhW/Whats-App-Image-2024-12-27-at-15-33-53-3.jpg',
+    thumbnail: 'https://i.ibb.co/b1W9QhW/Whats-App-Image-2024-12-27-at-15-33-53-3.jpg',
   },
   {
     type: 'image',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
+    url: 'https://i.ibb.co/ZhjKwZJ/Whats-App-Image-2024-12-27-at-15-33-53-4.jpg',
+    thumbnail: 'https://i.ibb.co/ZhjKwZJ/Whats-App-Image-2024-12-27-at-15-33-53-4.jpg',
   },
   {
     type: 'video',
-    url: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299766082802028584/C0C0C0.mp4',
-    thumbnail: 'https://cdn.discordapp.com/attachments/1297273560158568598/1299764812267651132/Screenshot_2024-08-21_210751.png',
+    url: 'https://i.ibb.co/XtgdB17/Whats-App-Image-2024-12-27-at-15-33-53.jpg',
+    thumbnail: 'https://i.ibb.co/XtgdB17/Whats-App-Image-2024-12-27-at-15-33-53.jpg',
   },
 ];
 
