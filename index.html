@@ -539,26 +539,38 @@
                 });
             });
 
-            let lastScroll = 0;
+            // Variabili per gestire lo scroll dell'header
+            let lastScrollTop = 0;
             const header = document.querySelector('.header');
+            const scrollThreshold = 100; // Soglia di scroll prima che l'header si nasconda
 
-            window.addEventListener('scroll', () => {
-                const currentScroll = window.pageYOffset;
-
-                if (currentScroll <= 0) {
-                    header.classList.remove("scroll-up");
+            // Funzione per gestire la visibilità dell'header
+            function handleHeader() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Mostra sempre l'header all'inizio della pagina
+                if (currentScroll <= scrollThreshold) {
+                    header.classList.remove('hide');
+                    header.classList.add('show');
                     return;
                 }
-
-                if (currentScroll > lastScroll && !header.classList.contains("scroll-down")) {
-                    header.classList.remove("scroll-up");
-                    header.classList.add("scroll-down");
-                } else if (currentScroll < lastScroll && header.classList.contains("scroll-down")) {
-                    header.classList.remove("scroll-down");
-                    header.classList.add("scroll-up");
+                
+                // Nascondi l'header scrollando giù, mostralo scrollando su
+                if (currentScroll > lastScrollTop) {
+                    // Scroll giù
+                    header.classList.remove('show');
+                    header.classList.add('hide');
+                } else {
+                    // Scroll su
+                    header.classList.remove('hide');
+                    header.classList.add('show');
                 }
-                lastScroll = currentScroll;
-            });
+                
+                lastScrollTop = currentScroll;
+            }
+
+            // Aggiungi l'event listener per l'header
+            window.addEventListener('scroll', handleHeader);
         });
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -682,6 +694,51 @@ document.getElementById('imageLightbox').onclick = function(e) {
         document.body.style.overflow = 'auto';
     }
 }
+</script>
+
+<script>
+// Funzione per controllare se un elemento è visibile nel viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    
+    // Trigger quando l'elemento è visibile per almeno il 50%
+    return (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2);
+}
+
+// Funzione per gestire tutte le animazioni
+function handleScrollAnimations() {
+    // Seleziona tutti gli elementi che devono essere animati
+    const animatedElements = document.querySelectorAll(
+        '.fade-in-up, .fade-in-left, .fade-in-right, ' +
+        '.service-card, .issue-card, .pricing-card, .problem-card, ' +
+        '.social-link.facebook, .section-header'
+    );
+    
+    animatedElements.forEach(element => {
+        if (isElementInViewport(element)) {
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Inizializzazione e gestione scroll con throttle per performance
+let isScrolling;
+document.addEventListener('DOMContentLoaded', function() {
+    // Check iniziale
+    handleScrollAnimations();
+    
+    // Gestione scroll ottimizzata
+    window.addEventListener('scroll', function() {
+        // Clear il timeout precedente
+        window.clearTimeout(isScrolling);
+        
+        // Imposta un timeout per controllare quando lo scroll è finito
+        isScrolling = setTimeout(function() {
+            handleScrollAnimations();
+        }, 66); // circa 15fps per performance
+    }, false);
+});
 </script>
 </body>
 </html>
