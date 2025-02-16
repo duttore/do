@@ -1,6 +1,6 @@
 :root {
-      --primary-color: #4a90e2;
-      --secondary-color: #357abd;
+      --primary-color: #1877F2;
+      --secondary-color:  #000957;
       --dark-color: #2c3e50;
       --whatsapp-color: #25D366;
   }
@@ -1527,7 +1527,7 @@ footer {
 }
 
 .faq-section h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
     color: #333;
     font-weight: 600;
