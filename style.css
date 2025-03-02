@@ -248,39 +248,41 @@
   }
 
   .service-card {
-      background: white;
       padding: 2rem;
-      border-radius: 12px;
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid transparent;
+      text-align: center;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
   }
 
-  .service-card::before {
-      display: none;
-  }
-
-  .service-card:hover {
-      transform: translateY(-3px);
-      border-color: var(--primary-color);
-  }
-
-  .service-card .service-icon {
+  .service-card .service-icon i {
+      font-size: 2.5rem;
       color: var(--primary-color);
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .service-card:hover .service-icon {
-      transform: translateY(-3px);
+      transition: all 0.3s ease;
   }
 
   .service-card h3 {
-      position: relative;
-      padding-bottom: 0.5rem;
-      transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 1rem 0;
+      color: var(--dark-color);
+      transition: all 0.3s ease;
   }
 
-  .service-card:hover h3 {
-      color: var(--primary-color);
+  .service-card p {
+      color: var(--dark-color);
+      transition: all 0.3s ease;
+  }
+
+  .service-card:hover {
+      background: var(--primary-color);
+      transform: translateY(-5px);
+  }
+
+  .service-card:hover h3,
+  .service-card:hover p,
+  .service-card:hover .service-icon i {
+      color: white;
   }
 
 
@@ -300,30 +302,18 @@
       background: white;
       padding: 2rem;
       border-radius: 12px;
-      transition: transform 0.3s ease;
-  }
-
-  .pricing-card::before {
-      content: '';
-      position: absolute;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-      transition: top 0.3s ease;
-  }
-
-  .pricing-card:hover {
-      transform: translateY(-5px);
-  }
-
-  .pricing-card:hover::before {
-      top: 0;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
   }
 
   .pricing-card.featured {
       border: 2px solid var(--primary-color);
+  }
+
+  .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   }
 
   .pricing-header {
@@ -1787,776 +1777,239 @@ footer {
 
 /* Effetti per le service cards */
 .service-card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card::before {
-    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .service-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* Effetti per le issue cards */
-.issue-card {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.issue-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 3px;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.issue-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.issue-card:hover::after {
-    width: 100%;
-}
-
-/* Effetti per le pricing cards */
-.pricing-card {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.pricing-card::before {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    transition: top 0.3s ease;
-}
-
-.pricing-card:hover {
-    transform: translateY(-5px);
-}
-
-.pricing-card:hover::before {
-    top: 0;
-}
-
-/* Effetti per le service areas */
-.service-area-item {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.service-area-item:hover {
-    transform: translateY(-3px);
-    color: var(--primary-color);
-}
-
-.service-area-item i {
-    transition: transform 0.3s ease;
-}
-
-.service-area-item:hover i {
-    transform: scale(1.2);
-}
-
-/* Effetti per gli accordion */
-.accordion-header {
-    position: relative;
-    overflow: hidden;
-}
-
-.accordion-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
     background: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-.accordion-header:hover::after {
-    width: 100%;
-}
-
-.accordion-item.active .accordion-header::after {
-    width: 100%;
-}
-
-/* Effetti per i section headers */
-.section-header {
-    position: relative;
-}
-
-.section-header h2 {
-    position: relative;
-    display: inline-block;
-}
-
-.section-header h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-.section-header:hover h2::after {
-    width: 100px;
-}
-
-/* Effetti per il footer */
-.footer-nav a, .footer-social a {
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.footer-nav a::after, .footer-social a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--primary-color);
-    transition: width 0.3s ease;
-}
-
-.footer-nav a:hover::after, .footer-social a:hover::after {
-    width: 100%;
-}
-
-.contact-item {
-    transition: transform 0.3s ease;
-}
-
-.contact-item:hover {
-    transform: translateX(10px);
-}
-
-/* Nuovo effetto per la sezione prezzi */
-.pricing-section .section-header {
-    position: relative;
-}
-
-.pricing-section .section-header::before {
-    content: '€';
-    position: absolute;
-    font-size: 10rem;
-    font-weight: bold;
-    opacity: 0;
-    top: -3rem;
-    right: 5%;
-    color: var(--primary-color);
-    transition: all 0.5s ease;
-}
-
-.pricing-section .section-header::after {
-    content: '€';
-    position: absolute;
-    font-size: 6rem;
-    font-weight: bold;
-    opacity: 0;
-    top: -1rem;
-    right: 12%;
-    color: var(--primary-color);
-    transition: all 0.5s ease;
-    transform: rotate(-15deg);
-}
-
-/* Reset delle pricing cards al design originale */
-.pricing-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.pricing-card:hover {
     transform: translateY(-5px);
-}
-
-/* Fix per l'hover delle città */
-.service-area-item {
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-    overflow: visible;
-}
-
-/* Nuovo effetto per la sezione problemi comuni */
-.common-issues .section-header h2 {
-    position: relative;
-    display: inline-block;
-}
-
-.common-issues .section-header h2::before {
-    content: '!';
-    position: absolute;
-    font-size: 10rem;
-    font-weight: bold;
-    opacity: 0;
-    top: -3rem;
-    left: 5%;
-    color: var(--primary-color);
-    transition: all 0.5s ease;
-}
-
-.common-issues .section-header::after {
-    content: '!!';
-    position: absolute;
-    font-size: 7rem;
-    font-weight: bold;
-    opacity: 0;
-    top: -2rem;
-    left: 15%;
-    color: var(--primary-color);
-    transition: all 0.5s ease;
-}
-
-.common-issues .section-header:hover h2::before {
-    transform: rotate(0deg);
-}
-
-/* Reset e nuovo stile per le issue cards */
-.issue-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    transition: all 0.3s ease;
-}
-
-.issue-card:hover {
-    border-color: var(--primary-color);
-    transform: translateY(-5px);
-}
-
-.issue-card .issue-icon {
-    color: var(--primary-color);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.issue-card:hover .issue-icon {
-    transform: rotate(360deg);
-}
-
-/* Rimuovo le ombre dalle cards */
-.issue-card:hover {
-    box-shadow: none;
-}
-
-/* Aumentare i tempi di transizione */
-.service-card,
-.social-link.facebook,
-.pricing-card,
-.service-area-item,
-.issue-card,
-.gallery-item,
-.accordion-header,
-.section-header h2::after {
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Effetti di scroll */
-.fade-in-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fade-in-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.fade-in-left {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fade-in-left.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.fade-in-right {
-    opacity: 0;
-    transform: translateX(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fade-in-right.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* Stagger effect per le cards */
-.services-grid .service-card,
-.issues-grid .issue-card,
-.pricing-grid .pricing-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.services-grid .service-card.visible,
-.issues-grid .issue-card.visible,
-.pricing-grid .pricing-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Delay per stagger effect */
-.service-card:nth-child(2),
-.issue-card:nth-child(2),
-.pricing-card:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.service-card:nth-child(3),
-.issue-card:nth-child(3) {
-    transition-delay: 0.4s;
-}
-
-/* Nuovo stile per la sezione servizi di riparazione */
-.services-detail .section-header {
-    position: relative;
-}
-
-.services-detail .section-header::before {
-    content: '⚙️';
-    position: absolute;
-    font-size: 8rem;
-    opacity: 0;
-    top: -3rem;
-    right: 5%;
-    transition: all 0.8s ease;
-    transform: rotate(0deg);
-}
-
-/* Nuove animazioni per le service cards */
-.services-grid .service-card {
-    opacity: 0;
-    transform: translateY(20px) scale(0.98);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.services-grid .service-card.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-/* Stagger effect più sottile */
-.services-grid .service-card:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.services-grid .service-card:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.services-grid .service-card:nth-child(3) {
-    transition-delay: 0.3s;
-}
-
-/* Hover effect più sottile per le service cards */
-.service-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid transparent;
-}
-
-.service-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--primary-color);
-}
-
-.service-card .service-icon {
-    color: var(--primary-color);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.service-card:hover .service-icon {
-    transform: translateY(-3px);
-}
-
-/* Animazione più sottile per i titoli delle cards */
-.service-card h3 {
-    position: relative;
-    padding-bottom: 0.5rem;
-    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.service-card:hover h3 {
-    color: var(--primary-color);
-}
-
-/* Stile unificato per tutte le cards */
-.service-card,
-.issue-card,
-.pricing-card,
-.problem-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid transparent;
-}
-
-.service-card:hover,
-.issue-card:hover,
-.pricing-card:hover,
-.problem-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--primary-color);
-}
-
-/* Stile unificato per le icone */
-.service-card .service-icon,
-.issue-card .issue-icon,
-.pricing-card .pricing-header i {
-    color: var(--primary-color);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.service-card:hover .service-icon,
-.issue-card:hover .issue-icon,
-.pricing-card:hover .pricing-header i {
-    transform: translateY(-3px);
-}
-
-/* Stile unificato per i titoli */
-.service-card h3,
-.issue-card h3,
-.pricing-card h3,
-.problem-card h3 {
-    position: relative;
-    padding-bottom: 0.5rem;
-    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-card:hover h3,
-.issue-card:hover h3,
-.pricing-card:hover h3,
-.problem-card:hover h3 {
-    color: var(--primary-color);
+.service-card:hover p,
+.service-card:hover .service-icon i {
+    color: white;
 }
 
-/* Rimuovo tutti gli effetti precedenti */
-.service-card::before,
-.issue-card::before,
-.pricing-card::before,
-.problem-card::before,
-.service-card::after,
-.issue-card::after,
-.pricing-card::after,
-.problem-card::after {
-    display: none;
+/* Brands Slider Styles */
+.brands-section {
+    padding: 4rem 0;
+    overflow: hidden;
+    position: relative;
 }
 
-/* Reset box-shadow */
-.service-card:hover,
-.issue-card:hover,
-.pricing-card:hover,
-.problem-card:hover {
-    box-shadow: none;
+.brands-slider {
+    position: relative;
+    padding: 2rem 0;
+    overflow: hidden;
 }
 
-/* Animazioni automatiche per mobile */
-@media (max-width: 768px) {
-    /* Reset animazioni superflue */
-    .fade-in-up,
-    .fade-in-left,
-    .fade-in-right {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
-
-    .service-card.visible,
-    .issue-card.visible,
-    .pricing-card.visible,
-    .problem-card.visible {
-        animation: none;
-    }
-
-    /* Attivazione automatica bottone Facebook */
-    .social-link.facebook.visible {
-        background: #1877f2;
-        color: white;
-        transform: scale(1.02);
-    }
-
-    .social-link.facebook.visible i,
-    .social-link.facebook.visible span {
-        color: white;
-    }
-
-    .social-link.facebook.visible::before {
-        width: 300px;
-        height: 300px;
-        background: rgba(255,255,255,0.1);
-    }
-
-    /* Attivazione automatica delle barrette */
-    .text-content.visible h2::after,
-    .section-header.visible h2::after {
-        width: 100px;
-    }
-
-    /* Transizioni più lente */
-    .social-link.facebook,
-    .social-link.facebook::before,
-    .social-link.facebook i,
-    .social-link.facebook span,
-    .text-content h2::after,
-    .section-header h2::after {
-        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+.brands-track {
+    display: flex;
+    width: fit-content;
+    animation: slideTrack 30s linear infinite;
+    transition: transform 0.3s ease;
 }
 
-/* Animazioni base per tutti gli elementi */
-.fade-in-up,
-.fade-in-left,
-.fade-in-right {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+.brands-track:hover {
+    animation-play-state: paused;
 }
 
-.fade-in-up.visible,
-.fade-in-left.visible,
-.fade-in-right.visible {
+.brand-card {
+    flex: 0 0 200px;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.brand-logo {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.slider-nav:hover {
+    background: var(--secondary-color);
     opacity: 1;
-    transform: translateY(0);
 }
 
-/* Stili per le cards */
-.service-card,
-.issue-card,
-.pricing-card,
-.problem-card {
+.slider-prev {
+    left: 1rem;
+}
+
+.slider-next {
+    right: 1rem;
+}
+
+@keyframes slideTrack {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Ricambi Preview Section */
+.ricambi-preview-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.ricambi-preview-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.ricambi-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ricambi-text h3 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.ricambi-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.ricambi-features li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.ricambi-features li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.ricambi-features i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.ricambi-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ricambi-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.ricambi-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 5rem 0;
+    background: #f8fafc;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
-}
-
-/* Hover effects per desktop */
-@media (min-width: 769px) {
-    .service-card:hover,
-    .issue-card:hover,
-    .pricing-card:hover,
-    .problem-card:hover {
-        transform: translateY(-3px);
-        border-color: var(--primary-color);
-    }
-}
-
-/* Animazione Facebook button */
-.social-link.facebook {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border: 2px solid #1877f2;
 }
 
-.social-link.facebook::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255,255,255,0.1);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s ease;
+.pricing-card.featured {
+    border: 2px solid var(--primary-color);
 }
 
-/* Desktop hover per Facebook */
-.social-link.facebook:hover {
-    background: #1877f2;
-    color: white;
-    transform: scale(1.02);
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.social-link.facebook:hover::before {
-    width: 300px;
-    height: 300px;
+.pricing-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-/* Mobile scroll animations */
-@media (max-width: 768px) {
-    .social-link.facebook.visible {
-        background: #1877f2;
-        color: white;
-        transform: scale(1.02);
-    }
-
-    .social-link.facebook.visible::before {
-        width: 300px;
-        height: 300px;
-    }
-
-    /* Animazioni per le cards su mobile */
-    .service-card.visible,
-    .issue-card.visible,
-    .pricing-card.visible,
-    .problem-card.visible {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Classe per nascondere l'header quando si scrolla in giù */
-.header.hide {
-    transform: translateY(-100%);
-}
-
-/* Classe per mostrare l'header quando si scrolla in su */
-.header.show {
-    transform: translateY(0);
-}
-
-/* Nuovi elementi decorativi */
-.pricing-section .section-header::before {
-    content: '€';
-    position: absolute;
-    font-size: 10rem;
-    font-weight: bold;
-    opacity: 0;
-    top: -3rem;
-    right: 5%;
+.pricing-header i {
+    font-size: 2rem;
     color: var(--primary-color);
-    transition: all 0.5s ease;
+    margin-bottom: 1rem;
 }
 
-.pricing-section .section-header::after {
-    content: '€';
-    position: absolute;
-    font-size: 6rem;
-    font-weight: bold;
-    opacity: 0;
-    top: -1rem;
-    right: 12%;
+.pricing-features {
+    list-style: none;
+}
+
+.pricing-features li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pricing-features i {
     color: var(--primary-color);
-    transition: all 0.5s ease;
-    transform: rotate(-15deg);
-}
-
-.common-issues .section-header::before {
-    content: '!';
-    position: absolute;
-    font-size: 10rem;
-    font-weight: bold;
-    opacity: 0;
-    top: -3rem;
-    left: 5%;
-    color: var(--primary-color);
-    transition: all 0.5s ease;
-}
-
-.common-issues .section-header::after {
-    content: '!!';
-    position: absolute;
-    font-size: 7rem;
-    font-weight: bold;
-    opacity: 0;
-    top: -2rem;
-    left: 15%;
-    color: var(--primary-color);
-    transition: all 0.5s ease;
-}
-
-/* Animazioni allo scroll */
-.section-header.visible::before {
-    opacity: 0.08;
-}
-
-.section-header.visible::after {
-    opacity: 0.05;
-}
-
-.services-detail .section-header.visible::before {
-    opacity: 0.08;
-    transform: rotate(180deg);
-}
-
-/* Responsive per mobile */
-@media (max-width: 768px) {
-    .pricing-section .section-header::before {
-        font-size: 8rem;
-        top: -2rem;
-        right: 2%;
-    }
-    
-    .pricing-section .section-header::after {
-        font-size: 5rem;
-        top: -1rem;
-        right: 8%;
-    }
-    
-    .common-issues .section-header::before {
-        font-size: 8rem;
-        top: -2rem;
-        left: 2%;
-    }
-    
-    .common-issues .section-header::after {
-        font-size: 6rem;
-        top: -1.5rem;
-        left: 12%;
-    }
-    
-    .services-detail .section-header::before {
-        font-size: 6rem;
-        top: -2rem;
-        right: 2%;
-    }
-
-    /* Animazioni più veloci su mobile */
-    .section-header::before,
-    .section-header::after {
-        transition: all 0.4s ease;
-    }
-}
-
-/* Hover effects solo per desktop */
-@media (min-width: 769px) {
-    .section-header:hover::before,
-    .section-header:hover::after {
-        opacity: 0.12;
-    }
-    
-    .services-detail .section-header:hover::before {
-        transform: rotate(360deg);
-    }
 }
