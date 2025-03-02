@@ -36,6 +36,10 @@
                         <i class="fas fa-phone"></i>
                         <span>Contatti</span>
                     </a>
+                    <a href="ricambi.html" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Ricambi</span>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -208,6 +212,34 @@
       </div>
   </section>
 
+  <section class="ricambi-preview-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Ricambi Originali</h2>
+            <p>Ampia disponibilità di ricambi per tutte le marche di macchine da cucire</p>
+        </div>
+        <div class="ricambi-preview-content">
+            <div class="ricambi-text">
+                <h3>Scopri la Nostra Selezione di Ricambi</h3>
+                <ul class="ricambi-features">
+                    <li><i class="fas fa-check"></i> Aghi professionali per ogni tipo di tessuto</li>
+                    <li><i class="fas fa-check"></i> Bobine e porta-bobine originali</li>
+                    <li><i class="fas fa-check"></i> Pedali e componenti elettronici</li>
+                    <li><i class="fas fa-check"></i> Cinghie e parti meccaniche</li>
+                </ul>
+                <a href="ricambi.html" class="button button-primary">
+                    <span>Esplora i Ricambi</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="ricambi-image">
+                <img src="https://i.ibb.co/g4hyGh9/Whats-App-Image-2024-12-27-at-15-33-53-1.jpg" 
+                     alt="Ricambi macchine da cucire"
+                     onclick="openLightbox(this.src)">
+            </div>
+        </div>
+    </div>
+</section>
 
   <section class="home-service">
       <div class="container">
@@ -586,12 +618,14 @@
 
             mobileMenuBtn.addEventListener('click', function() {
                 navDesktop.classList.toggle('active');
+                this.classList.toggle('active');
             });
 
             document.querySelectorAll('.nav-link').forEach(link => {
                 link.addEventListener('click', () => {
                     if (window.innerWidth <= 768) {
                         navDesktop.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
                     }
                 });
             });
