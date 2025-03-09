@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assistenza professionale per macchine da cucire a Firenze. Riparazioni rapide e di qualità per Singer, Pfaff, Bernina e altre marche. Interventi a domicilio e in laboratorio.">
+    
+    <!-- Meta tag Open Graph per Facebook -->
+    <meta property="og:title" content="Assistenza Macchine da Cucire - Stefano Ricci" />
+    <meta property="og:description" content="Servizio di assistenza specializzata per macchine da cucire a Firenze. Riparazioni rapide e di qualità per tutte le marche." />
+    <meta property="og:image" content="https://live.staticflickr.com/65535/54376268770_dee9028758_h.jpg" />
+    <meta property="og:url" content="https://www.macchinedacucirefirenze.it/assistenza" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Riparazioni Ricci" />
+    
+    <title>Assistenza Macchine da Cucire Firenze - Riparazioni Ricci</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="canonical" href="https://www.macchinedacucirefirenze.it/assistenza">
+    <link rel="preload" href="https://live.staticflickr.com/65535/54376112613_6f54e65a2c_h.jpg" as="image">
+    <link rel="preload" href="https://live.staticflickr.com/65535/54376268775_25c9e100a7_h.jpg" as="image">
+    
+    <!-- Stili per la hero section -->
+    <style>
+        /* Hero Section - Stile completo */
+        .hero-section {
+            position: relative;
+            padding: 8rem 0 4rem;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            color: #fff;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            z-index: -2;
+            transform: scale(1);
+            transition: transform 0.8s ease;
+        }
+
+        .hero-section:hover .hero-background {
+            transform: scale(1.05);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: -1;
+        }
+
+        .hero-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 650px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            color: #ffffff;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            color: #ffffff;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-feature {
+            flex: 0 0 300px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #4361ee;
+            margin-bottom: 1rem;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            background: rgba(67, 97, 238, 0.25);
+            box-shadow: 0 10px 20px rgba(67, 97, 238, 0.2);
+            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+            background: rgba(67, 97, 238, 0.35);
+            color: #4361ee;
+            box-shadow: 0 15px 30px rgba(67, 97, 238, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .hero-divider {
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+            z-index: 1;
+        }
+
+        .hero-divider svg {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Stili per la sezione FAQ */
+        .faq-section {
+            padding: 5rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .faq-item h3 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-size: 1.5rem;
+        }
+        
+        .accordion-item {
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background-color: #fff;
+        }
+        
+        .accordion-header {
+            width: 100%;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .accordion-header h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            color: #333;
+        }
+        
+        .accordion-header i {
+            transition: transform 0.3s ease;
+            color: #4361ee;
+        }
+        
+        .accordion-header.active {
+            background-color: #f5f7ff;
+        }
+        
+        .accordion-header.active i {
+            transform: rotate(180deg);
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.2rem;
+        }
+        
+        .accordion-content p {
+            margin: 0;
+            padding: 0.5rem 0 1.2rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Velocizzazione animazioni */
+        .fade-in-up, .fade-in-left, .fade-in-right, 
+        .service-card, .issue-card, .pricing-card, .problem-card, 
+        .social-link.facebook, .section-header {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-left {
+            transform: translateX(-10px);
+        }
+
+        .fade-in-right {
+            transform: translateX(10px);
+        }
+
+        .fade-in-up.visible, 
+        .fade-in-left.visible, 
+        .fade-in-right.visible, 
+        .service-card.visible, 
+        .issue-card.visible, 
+        .pricing-card.visible, 
+        .problem-card.visible, 
+        .social-link.facebook.visible, 
+        .section-header.visible {
+            opacity: 1;
+            transform: translate(0);
+        }
+
+        @media (max-width: 992px) {
+            .hero-wrapper {
+                flex-direction: column;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 7rem 0 3rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Riparazioni Ricci</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav-desktop">
+                    <div class="nav-group dynamic-links">
+                        <a href="#problematiche" class="nav-link">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Problematiche</span>
+                        </a>
+                        <a href="#servizi-assistenza" class="nav-link">
+                            <i class="fas fa-wrench"></i>
+                            <span>Servizi</span>
+                        </a>
+                        <a href="#contatti" class="nav-link">
+                            <i class="fas fa-phone"></i>
+                            <span>Contatti</span>
+                        </a>
+                    </div>
+                    <div class="nav-separator"></div>
+                    <div class="nav-group fixed-links">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="ricambi.html" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Ricambi</span>
+                        </a>
+                        <a href="assistenza.html" class="nav-link active">
+                            <i class="fas fa-tools"></i>
+                            <span>Assistenza</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="scroll-progress"></div>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-background" style="background-image: url('https://live.staticflickr.com/65535/54376268770_dee9028758_h.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1>Assistenza Macchine da Cucire Firenze</h1>
+                    <p>Offriamo un'assistenza specializzata per macchine da cucire professionali a Firenze di ogni marca e modello, garantendo interventi rapidi e di alta qualità.</p>
+                    <div class="hero-buttons">
+                        <a href="#problematiche" class="button button-primary">
+                            <span>Risolvi il Tuo Problema</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://wa.me/393343156903" target="_blank" rel="noopener noreferrer" class="button button-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+39 334 315 6903</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-feature">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Riparazioni Professionali</h3>
+                        <p>Interventi rapidi e di qualità per risolvere qualsiasi problema con la tua macchina da cucire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 48" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="1" d="M0,0L120,5.3C240,11,480,21,720,26.7C960,32,1200,32,1320,32L1440,32L1440,48L1320,48C1200,48,960,48,720,48C480,48,240,48,120,48L0,48Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="marche-supportate" class="intro-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Assistenza Specializzata per Tutte le Marche</h2>
+                <p>La nostra assistenza copre un'ampia gamma di marche e modelli, dalle più comuni a quelle di alta gamma</p>
+            </div>
+            <div class="content-wrapper">
+                <div class="text-content fade-in-left">
+                    <p>Siamo specializzati nel fornire supporto tecnico per le principali marche di macchine da cucire, garantendo interventi precisi e professionali. La nostra esperienza ci permette di affrontare qualsiasi tipo di problema, dalle semplici manutenzioni alle riparazioni più complesse.</p>
+                    <div class="service-areas">
+                        <div class="service-area-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Singer</span>
+                        </div>
+                        <div class="service-area-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Pfaff</span>
+                        </div>
+                        <div class="service-area-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Bernina</span>
+                        </div>
+                        <div class="service-area-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Brother</span>
+                        </div>
+                        <div class="service-area-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Janome</span>
+                        </div>
+                        <div class="service-area-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Husqvarna</span>
+                        </div>
+                        <div class="service-area-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Necchi</span>
+                        </div>
+                        <div class="service-area-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Juki</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-gallery fade-in-right">
+                    <div class="gallery-item">
+                        <img src="https://live.staticflickr.com/65535/54376078659_d4f87ced73_h.jpg"
+                             alt="Assistenza macchine da cucire"
+                             onclick="openLightbox(this.src)">
+                        <div class="gallery-overlay">
+                            <span>Assistenza Professionale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problematiche" class="common-issues">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Problematiche Risolte</h2>
+                <p>La nostra priorità è garantire che la tua macchina da cucire torni a funzionare come nuova</p>
+            </div>
+            <div class="issues-grid">
+                <div class="issue-card fade-in-left">
+                    <div class="issue-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Ago Rotto o Piegato</h3>
+                    <p>Sostituiamo l'ago con uno nuovo e compatibile, verificando l'allineamento corretto</p>
+                </div>
+                <div class="issue-card fade-in-up">
+                    <div class="issue-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Tensione del Filo</h3>
+                    <p>Regoliamo la macchina per ottenere punti perfetti e bilanciati su ogni tipo di tessuto</p>
+                </div>
+                <div class="issue-card fade-in-up">
+                    <div class="issue-icon">
+                        <i class="fas fa-circle-notch"></i>
+                    </div>
+                    <h3>Bobina Inceppata</h3>
+                    <p>Rimuoviamo eventuali inceppamenti e verifichiamo il corretto funzionamento della bobina</p>
+                </div>
+                <div class="issue-card fade-in-right">
+                    <div class="issue-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3>Rumori Anomali</h3>
+                    <p>Puliamo e lubrifichiamo le parti meccaniche per un funzionamento fluido e silenzioso</p>
+                </div>
+                <div class="issue-card fade-in-left">
+                    <div class="issue-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Problemi Elettrici</h3>
+                    <p>Riparazione di componenti elettrici e sostituzione di cavi danneggiati</p>
+                </div>
+                <div class="issue-card fade-in-right">
+                    <div class="issue-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Meccanismi Bloccati</h3>
+                    <p>Interventi su meccanismi di trasporto e sistemi di movimento bloccati</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servizi-assistenza" class="services-detail">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>I Nostri Servizi di Assistenza</h2>
+                <p>Soluzioni complete per la tua macchina da cucire</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in-left">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Assistenza a Domicilio</h3>
+                    <p>Interventi direttamente a casa tua in tutta Firenze e provincia</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Riparazioni in Laboratorio</h3>
+                    <p>Riparazioni complesse nel nostro laboratorio specializzato</p>
+                </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Manutenzione Ordinaria</h3>
+                    <p>Pulizia, lubrificazione e controlli periodici</p>
+                </div>
+                <div class="service-card fade-in-right">
+                    <div class="service-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Revisione Completa</h3>
+                    <p>Smontaggio, pulizia e rimontaggio di tutte le componenti</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="processo" class="home-service">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Il Nostro Processo di Assistenza</h2>
+            </div>
+            <div class="service-content">
+                <div class="text-content fade-in-left">
+                    <h3>Come Lavoriamo</h3>
+                    <p>Il nostro processo di assistenza è studiato per garantire la massima efficienza e trasparenza. Ogni intervento segue un protocollo preciso che ci permette di identificare rapidamente il problema e risolverlo in modo definitivo.</p>
+                    <ol class="process-steps">
+                        <li><strong>Diagnosi</strong>: Analisi approfondita del problema</li>
+                        <li><strong>Preventivo</strong>: Costi trasparenti senza sorprese</li>
+                        <li><strong>Riparazione</strong>: Intervento professionale con ricambi originali</li>
+                        <li><strong>Test</strong>: Verifica completa del funzionamento</li>
+                        <li><strong>Garanzia</strong>: Tutti i nostri interventi sono garantiti</li>
+                    </ol>
+                    <div class="button-group mt-4">
+                        <a href="#footer" class="button button-primary">
+                            <span>Richiedi Assistenza</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-image fade-in-right">
+                    <div class="gallery-item">
+                        <img src="https://live.staticflickr.com/65535/54375000187_74cd3fa3c5_h.jpg" 
+                             alt="Processo di assistenza"
+                             style="width: 100%; border-radius: 1rem;"
+                             onclick="openLightbox(this.src)">
+                        <div class="gallery-overlay">
+                            <span>Assistenza Professionale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Domande Frequenti sull'Assistenza</h2>
+                <p>Risposte alle domande più comuni sulla riparazione delle macchine da cucire</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Costi e Tempistiche</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h2>Quanto costa la riparazione di una macchina da cucire?</h2>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Il costo della riparazione dipende dal tipo di intervento necessario. Offriamo sempre un preventivo gratuito e trasparente prima di procedere con qualsiasi riparazione. Contattaci per ricevere una valutazione personalizzata in base alle tue esigenze.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h2>Quanto tempo richiede una riparazione?</h2>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>I tempi di riparazione variano in base alla complessità del problema e alla disponibilità dei ricambi. Ti forniremo una stima precisa dopo aver valutato la tua macchina da cucire.</p>
+                                <p>In caso di necessità, offriamo anche un servizio di riparazione rapida con tempi ridotti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <h3>Servizi e Garanzie</h3>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h2>Offrite assistenza a domicilio?</h2>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Sì, offriamo un servizio di assistenza a domicilio in tutta Firenze e provincia. Il nostro tecnico verrà direttamente a casa tua per diagnosticare e, quando possibile, riparare la macchina sul posto. Per riparazioni più complesse potrebbe essere necessario portare la macchina in laboratorio.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h2>Che garanzia offrite sulle riparazioni?</h2>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Tutte le nostre riparazioni sono coperte da garanzia. La durata della garanzia varia in base al tipo di intervento effettuato e ai componenti sostituiti.</p>
+                                <p>In caso di problemi dopo la riparazione, interveniamo nuovamente senza costi aggiuntivi entro il periodo di garanzia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h3>Collegamenti Rapidi</h3>
+                    <a href="index.html">Home</a>
+                    <a href="ricambi.html">Ricambi</a>
+                    <a href="#problematiche">Problematiche</a>
+                    <a href="#servizi-assistenza">Servizi</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+                <div class="footer-social">
+                    <h3>Social</h3>
+                    <a href="https://facebook.com/groups/riparazionimacchinedacucire" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <div class="contact-list">
+                        <div class="contact-item fade-in-left">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Cellulare</span>
+                                <a href="tel:+393343156903">+39 334 315 6903</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-up">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Telefono Fisso</span>
+                                <a href="tel:+390552696823">+39 055 2696823</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-right">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">WhatsApp</span>
+                                <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <p class="copyright">&copy; 2024 Stefano Ricci - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="imageLightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestione menu mobile
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navDesktop = document.querySelector('.nav-desktop');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                navDesktop.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        navDesktop.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                    }
+                });
+            });
+
+            // Gestione scroll progress
+            const scrollProgress = document.querySelector('.scroll-progress');
+            
+            function updateScrollProgress() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercentage = (scrollTop / scrollHeight) * 100;
+                scrollProgress.style.width = scrollPercentage + '%';
+            }
+            
+            window.addEventListener('scroll', updateScrollProgress);
+            
+            // Gestione header visibilità
+            let lastScrollTop = 0;
+            const header = document.querySelector('.header');
+            const scrollThreshold = 100;
+
+            function handleHeader() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (currentScroll <= scrollThreshold) {
+                    header.classList.remove('hide');
+                    header.classList.add('show');
+                    return;
+                }
+                
+                if (currentScroll > lastScrollTop) {
+                    header.classList.remove('show');
+                    header.classList.add('hide');
+                } else {
+                    header.classList.remove('hide');
+                    header.classList.add('show');
+                }
+                
+                lastScrollTop = currentScroll;
+            }
+
+            window.addEventListener('scroll', handleHeader);
+            
+            // Gestione link attivi
+            function setActiveNavLink() {
+                const sections = document.querySelectorAll('section[id]');
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}` || 
+                                (link.getAttribute('href') === 'assistenza.html' && window.location.pathname.includes('assistenza.html'))) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+                
+                // Imposta attivo il link della pagina corrente
+                if (window.location.pathname.includes('assistenza.html')) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        if (link.getAttribute('href') === 'assistenza.html' || link.getAttribute('href') === '#problematiche') {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            }
+            
+            window.addEventListener('scroll', setActiveNavLink);
+            setActiveNavLink();
+            
+            // Gestione animazioni
+            function handleScrollAnimations() {
+                const elements = document.querySelectorAll(
+                    '.fade-in-up:not(.visible), .fade-in-left:not(.visible), .fade-in-right:not(.visible), ' +
+                    '.service-card:not(.visible), .issue-card:not(.visible), .pricing-card:not(.visible), ' +
+                    '.problem-card:not(.visible), .social-link.facebook:not(.visible), .section-header:not(.visible)'
+                );
+                
+                elements.forEach(element => {
+                    element.classList.add('visible');
+                });
+            }
+
+            let isScrolling;
+            handleScrollAnimations();
+            
+            window.addEventListener('scroll', function() {
+                window.clearTimeout(isScrolling);
+                
+                isScrolling = setTimeout(function() {
+                    handleScrollAnimations();
+                }, 30); // Ridotto da 66ms a 30ms
+            }, false);
+            
+            // Gestione accordion per FAQ
+            document.querySelectorAll('.accordion-header').forEach(button => {
+                button.addEventListener('click', () => {
+                    const accordionContent = button.nextElementSibling;
+                    button.classList.toggle('active');
+                    
+                    if (button.classList.contains('active')) {
+                        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                    } else {
+                        accordionContent.style.maxHeight = 0;
+                    }
+                    
+                    // Chiudi gli altri accordion
+                    document.querySelectorAll('.accordion-header').forEach(otherButton => {
+                        if (otherButton !== button) {
+                            otherButton.classList.remove('active');
+                            otherButton.nextElementSibling.style.maxHeight = 0;
+                        }
+                    });
+                });
+            });
+        });
+
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = "block";
+            lightboxImg.src = imgSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        document.querySelector('.lightbox-close').onclick = function() {
+            document.getElementById('imageLightbox').style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('imageLightbox').onclick = function(e) {
+            if (e.target === this) {
+                this.style.display = "none";
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html> 

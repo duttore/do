@@ -1,0 +1,345 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header.show {
+    transform: translateY(0);
+}
+
+.header.hide {
+    transform: translateY(-100%);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+/* Nuovo stile per la navbar */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+}
+
+/* Contenitore per i link principali (sempre presenti) */
+.nav-primary {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1.5rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-right: 1.5rem;
+}
+
+/* Contenitore per i link secondari (specifici per pagina) */
+.nav-secondary {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--dark-color);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-link i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    background: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.nav-link:hover i {
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    background: rgba(var(--primary-color-rgb), 0.1);
+}
+
+.nav-link.active::after {
+    width: 80%;
+}
+
+/* Stile per il pulsante del menu mobile */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-btn.active {
+    color: var(--primary-color);
+}
+
+/* Scroll Progress */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    z-index: 1001;
+    transition: width 0.1s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-desktop {
+        position: fixed;
+        top: 4rem;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        opacity: 0;
+        transition: all 0.3s ease;
+        z-index: 999;
+        gap: 0.5rem;
+    }
+    
+    .nav-desktop.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .nav-primary, .nav-secondary {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+    }
+    
+    .nav-primary {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .nav-link:hover {
+        background: rgba(var(--primary-color-rgb), 0.05);
+    }
+}
+
+/* Sezioni generali */
+section {
+    padding: 5rem 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-nav,
+.footer-social,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-content h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-content a {
+    color: #f8fafc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: var(--primary-color);
+}
+
+.footer-contact p, 
+.footer-contact a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #f8fafc;
+}
+
+.copyright {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.map-container {
+    width: 100%;
+    height: 300px;
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Contact list nel footer */
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 0.875rem;
+    color: var(--accent-color);
+}
+
+.contact-details a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--accent-color);
+}
+
+.contact-item i {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--accent-color);
+}
