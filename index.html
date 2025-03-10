@@ -42,6 +42,148 @@
                 background-position: right center;
             }
         }
+        
+        /* Stili per la scheda modale dei contatti */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Stile per i contatti nella modal */
+        .modal .contact-item a,
+        .modal .contact-item span:not(.contact-label) {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .modal .contact-item a:hover {
+            color: #4361ee;
+        }
+        
+        .modal .contact-label {
+            color: #666;
+            font-weight: 600;
+        }
+        
+        /* Stile specifico per il bottone contatti - priorità massima */
+        .header .nav-desktop .nav-group .nav-link#contatti-link {
+            background-color: #f5f5f5 !important;
+            border-radius: 5px !important;
+            transition: background-color 0.3s ease, color 0.3s ease !important;
+            border-bottom: none !important;
+        }
+        
+        /* Assicuriamo che non ci siano conflitti con altri stili */
+        .header .nav-desktop .nav-group .nav-link#contatti-link::after {
+            display: none !important;
+        }
+        
+        .header .nav-desktop .nav-group .nav-link#contatti-link:hover {
+            background-color: #e0e0e0 !important;
+            color: #4361ee !important;
+        }
+        
+        .header .nav-desktop .nav-group .nav-link#contatti-link.active {
+            background-color: #e0e0e0 !important;
+            color: #4361ee !important;
+            border-bottom: none !important;
+        }
+        
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalFadeIn 0.5s;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @keyframes modalFadeIn {
+            from {transform: translateY(-50px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+        
+        .modal-header {
+            padding: 20px 30px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .modal-close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .modal-close:hover {
+            color: #4361ee;
+        }
+        
+        .modal-body {
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .contatti-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .contatti-info h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .contatti-mappa {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .contatti-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+            }
+            
+            .contatti-mappa {
+                height: 300px;
+            }
+        }
     </style>
 </head>
 <body itemscope itemtype="https://schema.org/LocalBusiness">
@@ -56,21 +198,6 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <nav class="nav-desktop">
-                    <div class="nav-group dynamic-links">
-                        <a href="#servizi" class="nav-link">
-                            <i class="fas fa-wrench"></i>
-                            <span>Servizi</span>
-                        </a>
-                        <a href="#chi-sono" class="nav-link">
-                            <i class="fas fa-info-circle"></i>
-                            <span>Chi Sono</span>
-                        </a>
-                        <a href="#contatti" class="nav-link">
-                            <i class="fas fa-phone"></i>
-                            <span>Contatti</span>
-                        </a>
-                    </div>
-                    <div class="nav-separator"></div>
                     <div class="nav-group fixed-links">
                         <a href="index.html" class="nav-link active">
                             <i class="fas fa-home"></i>
@@ -84,6 +211,10 @@
                             <i class="fas fa-tools"></i>
                             <span>Assistenza</span>
                         </a>
+                        <a href="#" class="nav-link" id="contatti-link">
+                            <i class="fas fa-phone"></i>
+                            <span>Contatti</span>
+                        </a>
                     </div>
                 </nav>
             </div>
@@ -93,7 +224,7 @@
     <div class="scroll-progress"></div>
 
     <section id="hero" class="hero-section">
-        <div class="hero-background" style="background-image: url('https://live.staticflickr.com/65535/54376140553_61f0b52e72_h.jpg');"></div>
+        <div class="hero-background" style="background-image: url('https://live.staticflickr.com/65535/54376140553_ccd24a44c2_h.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-wrapper">
@@ -699,10 +830,24 @@
                             <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
                         </div>
                     </div>
-                    <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" style="display:none;">
-                        <span itemprop="addressLocality">Firenze</span>,
-                        <span itemprop="addressRegion">FI</span>,
-                        <span itemprop="addressCountry">IT</span>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:riparazioni.ricci@gmail.com" itemprop="email">riparazioni.ricci@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Indirizzo</span>
+                            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">Via Rocco Benini, 16 F/G</span>,
+                                <span itemprop="postalCode">50013</span>
+                                <span itemprop="addressLocality">Campi Bisenzio</span>
+                                <span itemprop="addressRegion">FI</span>
+                            </span>
+                        </div>
                     </div>
                     <div itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification" style="display:none;">
                         <meta itemprop="dayOfWeek" content="Monday Tuesday Wednesday Thursday Friday">
@@ -730,6 +875,77 @@
         <span class="lightbox-close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
+
+    <!-- Modal Contatti -->
+    <div class="modal" id="contatti-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contattaci</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="contatti-grid">
+                    <div class="contatti-info">
+                        <h3>I Nostri Contatti</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Cellulare</span>
+                                    <a href="tel:+393343156903">+39 334 315 6903</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Telefono Fisso</span>
+                                    <a href="tel:+390557876543">+39 055 2696823</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:riparazioni.ricci@gmail.com">riparazioni.ricci@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Indirizzo</span>
+                                    <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="streetAddress">Via Rocco Benini, 16 F/G</span>,
+                                        <span itemprop="postalCode">50013</span>
+                                        <span itemprop="addressLocality">Campi Bisenzio</span>
+                                        <span itemprop="addressRegion">FI</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contatti-mappa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                            width="100%"
+                            height="100%"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Gestione menu mobile
@@ -748,6 +964,29 @@
                         mobileMenuBtn.classList.remove('active');
                     }
                 });
+            });
+
+            // Gestione modal contatti
+            const contattiLink = document.getElementById('contatti-link');
+            const contattiModal = document.getElementById('contatti-modal');
+            const modalClose = document.querySelector('.modal-close');
+            
+            contattiLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                contattiModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            modalClose.addEventListener('click', function() {
+                contattiModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+            
+            contattiModal.addEventListener('click', function(e) {
+                if (e.target === contattiModal) {
+                    contattiModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
             });
 
             // Gestione scroll progress
@@ -916,8 +1155,10 @@
       "description": "Servizio professionale di riparazione macchine da cucire a Firenze e provincia. Interventi a domicilio e preventivi gratuiti.",
       "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Firenze",
+          "streetAddress": "Via Rocco Benini, 16 F/G",
+          "addressLocality": "Campi Bisenzio",
           "addressRegion": "FI",
+          "postalCode": "50013",
           "addressCountry": "IT"
       },
       "geo": {
@@ -927,6 +1168,7 @@
       },
       "url": "https://www.macchinedacucirefirenze.it/",
       "telephone": "+393343156903",
+      "email": "riparazioni.ricci@gmail.com",
       "priceRange": "€€",
       "openingHours": "Mo-Fr 09:00-18:00"
   }
