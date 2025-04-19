@@ -1,0 +1,385 @@
+/* Main CSS File */
+
+/* Import Reset and Variables */
+@import url('reset.css');
+
+/* Import Layout */
+@import url('layout.css');
+
+/* Import Components */
+@import url('components.css');
+
+/* Import Sections */
+@import url('sections.css');
+
+/* Import Utilities */
+@import url('utilities.css');
+
+/* Import Animations */
+@import url('animations.css');
+
+/* Import Responsive */
+@import url('responsive.css');
+
+/* Import Hero Section */
+@import 'hero.css';
+
+/* Stile della navbar aggiornato */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-group {
+    display: flex;
+    align-items: center;
+}
+
+.nav-separator {
+    width: 1px;
+    height: 24px;
+    background-color: #e0e0e0;
+    margin: 0 15px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.nav-link i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #3498db;
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+.nav-link.active {
+    color: #3498db;
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        justify-content: flex-start;
+    }
+    
+    .nav-desktop.active {
+        display: flex;
+    }
+    
+    .nav-group {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .fixed-links {
+        order: 1;
+    }
+
+    .dynamic-links {
+        order: 2;
+    }
+    
+    .nav-separator {
+        width: 100%;
+        height: 1px;
+        margin: 10px 0;
+    }
+    
+    .nav-link {
+        width: 100%;
+        padding: 12px;
+        margin: 5px 0;
+    }
+}
+
+/* Hero Section modernizzata */
+.hero-section {
+    position: relative;
+    padding: 8rem 0 4rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    transform: scale(1);
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hero-section:hover .hero-background {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: -1;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-feature {
+    flex: 0 0 300px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background: rgba(52, 152, 219, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    background: rgba(52, 152, 219, 0.2);
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.hero-divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 1;
+}
+
+.hero-divider svg {
+    width: 100%;
+    height: 48px;
+}
+
+@media (max-width: 992px) {
+    .hero-wrapper {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 7rem 0 3rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+.article-image-container {
+    margin: 2rem 0;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.article-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.article-image-container:hover img {
+    transform: scale(1.03);
+}
+
+.rounded-img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.simple-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.simple-list li {
+    margin-bottom: 0.5rem;
+}
+
+.instruction-steps.simplified li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Miglioramenti per mobile */
+@media (max-width: 768px) {
+    .hero-image-container .rounded-img {
+        max-height: 250px;
+        object-fit: cover;
+        object-position: center 30%;
+    }
+    
+    .article-featured-image.rounded-img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .article-image-container {
+        margin: 1.5rem 0;
+    }
+    
+    .wiki-content h4 {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .wiki-content p, 
+    .wiki-content li {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .tip-box, 
+    .warning-box {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .tip-box p, 
+    .warning-box p {
+        font-size: 0.9rem;
+    }
+    
+    .table-of-contents {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .table-of-contents ul {
+        padding-left: 1rem;
+    }
+    
+    .table-of-contents a {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #1877F2;
+    --primary-color-rgb: 24, 119, 242;
+    --secondary-color: #000957;
+    --dark-color: #2c3e50;
+    --light-gray: #f4f4f9;
+    --whatsapp-color: #25D366;
+    --accent-color: #4A90E2;
+    --text-light: #6c757d;
+    --bg-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition-smooth: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+/* Nascondere la scrollbar per Chrome, Safari e Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}

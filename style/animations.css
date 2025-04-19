@@ -1,0 +1,243 @@
+/* Animations */
+
+/* Fade In Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade In Left */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade In Right */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zoom In */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Float Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Slide Track Animation */
+@keyframes slideTrack {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    z-index: 1001;
+    transition: width 0.3s ease;
+}
+
+/* Header Show/Hide Animation */
+.header.show {
+    transform: translateY(0);
+}
+
+.header.hide {
+    transform: translateY(-100%);
+}
+
+/* Accordion Animation */
+.accordion-item {
+    transition: all 0.3s ease;
+}
+
+.accordion-content {
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+/* Button Hover Animation */
+.button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Hover Animation */
+.service-card,
+.pricing-card,
+.issue-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Gallery Overlay Animation */
+.gallery-overlay {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Social Link Animation */
+.social-link {
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-link.facebook::before {
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+/* Lightbox Animation */
+.lightbox {
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-content {
+    transition: transform 0.3s ease;
+}
+
+/* Text Underline Animation */
+.text-content h2::after {
+    transition: width 0.3s ease;
+}
+
+/* Animazioni ottimizzate */
+.fade-in-up, .fade-in-left, .fade-in-right, 
+.service-card, .issue-card, .pricing-card, .problem-card, 
+.social-link.facebook, .section-header {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    will-change: opacity, transform;
+}
+
+.fade-in-left {
+    transform: translateX(-10px);
+}
+
+.fade-in-right {
+    transform: translateX(10px);
+}
+
+.fade-in-up.visible, 
+.fade-in-left.visible, 
+.fade-in-right.visible, 
+.service-card.visible, 
+.issue-card.visible, 
+.pricing-card.visible, 
+.problem-card.visible, 
+.social-link.facebook.visible, 
+.section-header.visible {
+    opacity: 1;
+    transform: translate(0);
+}

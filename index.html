@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riparazioni Macchine da Cucire Firenze - Riparazioni Ricci</title>
+    <meta name="description" content="Riparazione professionale di macchine da cucire a Firenze. Servizio a domicilio, preventivi gratuiti. Esperti in riparazioni Singer, Brother, Pfaff e altre marche.">
+    <meta name="keywords" content="riparazione macchine cucire, macchine da cucire Firenze, assistenza Singer, riparazioni Brother, Pfaff, ricambi macchine cucire">
+    <meta name="author" content="Riparazioni Ricci">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.macchinedacucirefirenze.it/">
+    <meta property="og:title" content="Riparazioni Macchine da Cucire - Riparazioni Ricci">
+    <meta property="og:description" content="Servizio professionale di riparazione macchine da cucire a Firenze e provincia. Interventi a domicilio e preventivi gratuiti.">
+    <meta property="og:image" content="https://live.staticflickr.com/65535/54376140553_61f0b52e72_h.jpg">
+    <meta property="og:site_name" content="Riparazioni Ricci">
+    <meta property="og:locale" content="it_IT">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.macchinedacucirefirenze.it/">
+    <meta name="twitter:title" content="Riparazioni Macchine da Cucire - Riparazioni Ricci">
+    <meta name="twitter:description" content="Servizio professionale di riparazione macchine da cucire a Firenze e provincia. Interventi a domicilio e preventivi gratuiti.">
+    <meta name="twitter:image" content="https://live.staticflickr.com/65535/54376140553_61f0b52e72_h.jpg">
+    
+    <link rel="canonical" href="https://www.macchinedacucirefirenze.it/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <meta name="google-site-verification" content="4DQbxm7mC-3ZBQga6WRoKdVxbFbTv-qb9X4nwkDLUOQ"/>
+    
+    <style>
+        /* Stile personalizzato per spostare gli elementi del hero verso sinistra solo in desktop */
+        @media screen and (min-width: 768px) {
+            #hero .hero-wrapper {
+                padding-left: 0;
+                margin-left: -5%;
+            }
+            
+            #hero .hero-background {
+                background-position: right center;
+            }
+        }
+        
+        /* Stili per la scheda modale dei contatti */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Stile per i contatti nella modal */
+        .modal .contact-item a,
+        .modal .contact-item span:not(.contact-label) {
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .modal .contact-item a:hover {
+            color: #4361ee;
+        }
+        
+        .modal .contact-label {
+            color: #666;
+            font-weight: 600;
+        }
+        
+        /* Stile specifico per il bottone contatti - priorità massima */
+        .header .nav-desktop .nav-group .nav-link#contatti-link {
+            background-color: #f5f5f5 !important;
+            border-radius: 5px !important;
+            transition: background-color 0.3s ease, color 0.3s ease !important;
+            border-bottom: none !important;
+        }
+        
+        /* Assicuriamo che non ci siano conflitti con altri stili */
+        .header .nav-desktop .nav-group .nav-link#contatti-link::after {
+            display: none !important;
+        }
+        
+        .header .nav-desktop .nav-group .nav-link#contatti-link:hover {
+            background-color: #e0e0e0 !important;
+            color: #4361ee !important;
+        }
+        
+        .header .nav-desktop .nav-group .nav-link#contatti-link.active {
+            background-color: #e0e0e0 !important;
+            color: #4361ee !important;
+            border-bottom: none !important;
+        }
+        
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalFadeIn 0.5s;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @keyframes modalFadeIn {
+            from {transform: translateY(-50px); opacity: 0;}
+            to {transform: translateY(0); opacity: 1;}
+        }
+        
+        .modal-header {
+            padding: 20px 30px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .modal-close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .modal-close:hover {
+            color: #4361ee;
+        }
+        
+        .modal-body {
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .contatti-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .contatti-info h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .contatti-mappa {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 768px) {
+            .contatti-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                margin: 10% auto;
+                width: 95%;
+            }
+            
+            .contatti-mappa {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body itemscope itemtype="https://schema.org/LocalBusiness">
+    <link itemprop="url" href="https://www.macchinedacucirefirenze.it/">
+    <meta itemprop="logo" content="https://www.macchinedacucirefirenze.it/logo.png">
+    <meta itemprop="priceRange" content="€€">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo" itemprop="name">Riparazioni Ricci</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav-desktop">
+                    <div class="nav-group fixed-links">
+                        <a href="index.html" class="nav-link active">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="ricambi.html" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Ricambi</span>
+                        </a>
+                        <a href="assistenza.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Assistenza</span>
+                        </a>
+                        <a href="#guide-informative" class="nav-link">
+                            <i class="fas fa-book"></i>
+                            <span>Guide</span>
+                        </a>
+                        <a href="#" class="nav-link" id="contatti-link">
+                            <i class="fas fa-phone"></i>
+                            <span>Contatti</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="scroll-progress"></div>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-background" style="background-image: url('https://live.staticflickr.com/65535/54376140553_ccd24a44c2_h.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-feature">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Riparazioni Professionali</h3>
+                        <p>Interventi rapidi e di qualità per risolvere qualsiasi problema con la tua macchina da cucire.</p>
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <h1 itemprop="description">Riparazione Macchine da Cucire a Firenze</h1>
+                    <p>Servizio professionale di riparazione e assistenza per ogni tipo di macchina da cucire. Interventi a domicilio in tutta la provincia di Firenze.</p>
+                    <div class="hero-buttons">
+                        <a href="#servizi-riparazione" class="button button-primary">
+                            <span>Scopri i servizi</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="https://wa.me/393343156903" target="_blank" rel="noopener noreferrer" class="button button-whatsapp" itemprop="telephone" content="+393343156903">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+39 334 315 6903</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-divider">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 48" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="1" d="M0,0L120,5.3C240,11,480,21,720,26.7C960,32,1200,32,1320,32L1440,32L1440,48L1320,48C1200,48,960,48,720,48C480,48,240,48,120,48L0,48Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="servizi" class="intro-section">
+      <div class="container">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>Assistenza per Macchine da Cucire Singer e Altre Marche a Firenze</h2>
+                    <p>Offriamo servizi specializzati per la riparazione di macchine da cucire professionali Firenze, garantendo ricambi originali e una manutenzione accurata. </p>
+                    <p>Che tu sia a Firenze, Scandicci o Sesto Fiorentino, il nostro team è pronto a intervenire.</p>
+                    <p>Contattaci oggi stesso per prenotare un intervento o visita uno dei nostri centri specializzati per ricevere assistenza immediata. Il tuo strumento di lavoro è in buone mani.</p>
+                </div>
+                <div class="image-gallery">
+                    <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
+                        <div class="gallery-item">
+                            <img src="https://live.staticflickr.com/65535/54376140543_02f385a06f_h.jpg"
+                                 alt="Officina riparazioni"
+                                 onclick="openLightbox(this.src)"
+                                 itemprop="contentUrl">
+                            <div class="gallery-overlay">
+                                <span itemprop="name">Officina Specializzata</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
+                        <div class="gallery-item">
+                            <img src="https://live.staticflickr.com/65535/54376107139_72c74b05fe_h.jpg" 
+                                 alt="Riparazione in corso"
+                                 onclick="openLightbox(this.src)">
+                            <div class="gallery-overlay">
+                                <span itemprop="name">Riparazioni Professionali</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </section>
+
+  <section id="servizi-riparazione" class="services-detail">
+      <div class="container">
+          <div class="section-header">
+              <h2>Perché Scegliere il Nostro Servizio di Riparazione a Firenze?</h2>
+              <p>Siamo specializzati nella riparazione macchine da cucire a Firenze e nelle aree circostanti. I nostri punti di forza includono:</p>
+          </div>
+          <div class="services-grid" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/OfferCatalog">
+              <div itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                  <div class="service-card">
+                      <div class="service-icon">
+                          <i class="fas fa-tools"></i>
+                      </div>
+                      <h3 itemprop="itemOffered" itemscope itemtype="https://schema.org/Service">
+                          <span itemprop="name">Manutenzione Certificata</span>
+                      </h3>
+                      <p itemprop="description">Utilizziamo solo ricambi originali per garantire la massima affidabilità delle vostre macchine da cucire domestiche e industriali.</p>
+                  </div>
+              </div>
+              
+              <div itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                  <div class="service-card">
+                      <div class="service-icon">
+                          <i class="fas fa-user-cog"></i>
+                      </div>
+                      <h3 itemprop="itemOffered" itemscope itemtype="https://schema.org/Service">
+                          <span itemprop="name">Tecnici con Esperienza</span>
+                      </h3>
+                      <p itemprop="description">Il nostro team di tecnici specializzati ha oltre 30 anni di esperienza nella riparazione di macchine da cucire di ogni marca e modello.</p>
+                  </div>
+              </div>
+              
+              <div itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                  <div class="service-card">
+                      <div class="service-icon">
+                          <i class="fas fa-home"></i>
+                      </div>
+                      <h3 itemprop="itemOffered" itemscope itemtype="https://schema.org/Service">
+                          <span itemprop="name">Assistenza a Domicilio</span>
+                      </h3>
+                      <p itemprop="description">Offriamo un servizio di assistenza a domicilio in tutta Firenze e provincia per macchine da cucire industriali e domestiche.</p>
+                  </div>
+              </div>
+              
+              <div itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                  <div class="service-card">
+                      <div class="service-icon">
+                          <i class="fas fa-truck"></i>
+                      </div>
+                      <h3 itemprop="itemOffered" itemscope itemtype="https://schema.org/Service">
+                          <span itemprop="name">Ritiro e Consegna</span>
+                      </h3>
+                      <p itemprop="description">Servizio di ritiro e consegna a domicilio della vostra macchina da cucire per riparazioni che richiedono interventi in officina.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+<!--  <section class="forum-preview">
+      <div class="container">
+          <div class="section-header">
+              <h2>Forum della Community</h2>
+              <p>Unisciti alle discussioni sulla riparazione di macchine da cucire</p>
+          </div>
+          <div class="forum-topics">
+              <div class="forum-topic">
+                  <h3><a href="/forum/guide-riparazioni">Guide alle Riparazioni</a></h3>
+                  <p>Tutorial e consigli pratici dalla community</p>
+              </div>
+              <div class="forum-topic">
+                  <h3><a href="/forum/problemi-comuni">Problemi Comuni</a></h3>
+                  <p>Discussioni su problematiche frequenti</p>
+              </div>
+              <div class="forum-topic">
+                  <h3><a href="/forum/macchine-vintage">Macchine Vintage</a></h3>
+                  <p>Tutto sul restauro e la manutenzione di macchine d'epoca</p>
+              </div>
+              <div class="forum-topic">
+                  <h3><a href="/forum/ricambi">Ricambi e Accessori</a></h3>
+                  <p>Dove trovare pezzi di ricambio e accessori</p>
+              </div>
+              <div class="forum-topic">
+                  <h3><a href="/forum/progetti">Progetti e Creazioni</a></h3>
+                  <p>Condividi i tuoi progetti di cucito</p>
+              </div>
+          </div>
+      </div>
+  </section> -->
+
+  <section id="community" class="community-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>La Nostra Community</h2>
+            <p>Unisciti alla nostra community su Facebook</p>
+        </div>
+        <div class="social-links">
+            <a href="https://facebook.com/groups/riparazionimacchinedacucire" class="social-link facebook" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook"></i>
+                <span>Gruppo Facebook</span>
+                <p>Un gruppo dedicato a chi ama il cucito e la creatività!</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+  <section id="guide-informative" class="services-detail bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Guide Informative</h2>
+            <p>Tutto quello che devi sapere sul mondo delle macchine da cucire</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Manutenzione delle Macchine</h3>
+                <p>Impara come mantenere la tua macchina da cucire in perfetta efficienza, con consigli pratici su pulizia, lubrificazione e problemi comuni.</p>
+                <div class="button-group">
+                    <a href="manutenzione-macchine.html" class="button button-primary">
+                        <span>Leggi la guida</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>Come Scegliere la Macchina</h3>
+                <p>Criteri per selezionare la macchina da cucire perfetta per le tue esigenze, confronti tra modelli e consigli professionali per ogni budget.</p>
+                <div class="button-group">
+                    <a href="scelta-macchine.html" class="button button-primary">
+                        <span>Leggi la guida</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Recensioni Marche</h3>
+                <p>Confronto dettagliato tra le principali marche di macchine da cucire, con analisi dei punti di forza e punti deboli di ciascun produttore.</p>
+                <div class="button-group">
+                    <a href="recensioni-marche.html" class="button button-primary">
+                        <span>Leggi la guida</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="pricing-section">
+      <div class="container">
+          <div class="section-header">
+              <h2>Prezzi Trasparenti</h2>
+              <p>La qualità al giusto prezzo, con preventivi sempre gratuiti e senza impegno</p>
+          </div>
+          <div class="pricing-grid" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
+              <div class="pricing-card">
+                  <div class="pricing-header">
+                      <i class="fas fa-check-circle"></i>
+                      <h3 itemprop="name">Preventivo Gratuito</h3>
+                  </div>
+                  <ul class="pricing-features">
+                      <li><i class="fas fa-check"></i> Diagnostica professionale completa</li>
+                      <li><i class="fas fa-check"></i> Analisi dettagliata dei componenti</li>
+                      <li><i class="fas fa-check"></i> Valutazione costi ricambi</li>
+                      <li><i class="fas fa-check"></i> Stima tempi di intervento</li>
+                  </ul>
+                  <meta itemprop="price" content="0">
+                  <meta itemprop="priceCurrency" content="EUR">
+              </div>
+              <div class="pricing-card featured" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
+                  <div class="pricing-header">
+                      <i class="fas fa-star"></i>
+                      <h3 itemprop="name">Riparazioni Complete</h3>
+                  </div>
+                  <ul class="pricing-features">
+                      <li><i class="fas fa-check"></i> Utilizzo ricambi originali</li>
+                      <li><i class="fas fa-check"></i> Garanzia sugli interventi</li>
+                      <li><i class="fas fa-check"></i> Test approfonditi post-riparazione</li>
+                      <li><i class="fas fa-check"></i> Consulenza tecnica inclusa</li>
+                  </ul>
+                  <meta itemprop="priceSpecification" itemscope itemtype="https://schema.org/PriceSpecification">
+                  <meta itemprop="priceCurrency" content="EUR">
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="ricambi-preview-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Ricambi Originali</h2>
+            <p>Ampia disponibilità di ricambi per tutte le marche di macchine da cucire</p>
+        </div>
+        <div class="ricambi-preview-content">
+            <div class="ricambi-text">
+                <h3>Scopri la Nostra Selezione di Ricambi</h3>
+                <ul class="ricambi-features">
+                    <li><i class="fas fa-check"></i> Aghi professionali per ogni tipo di tessuto</li>
+                    <li><i class="fas fa-check"></i> Bobine e porta-bobine originali</li>
+                    <li><i class="fas fa-check"></i> Pedali e componenti elettronici</li>
+                    <li><i class="fas fa-check"></i> Cinghie e parti meccaniche</li>
+                </ul>
+                <a href="ricambi.html" class="button button-primary">
+                    <span>Esplora i Ricambi</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="ricambi-image">
+                <div class="gallery-item">
+                    <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" 
+                         alt="Ricambi macchine da cucire"
+                         class="gallery-image"
+                         onclick="openLightbox(this.src)">
+                    <div class="gallery-overlay">
+                        <span>Ricambi Originali</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <section class="home-service">
+      <div class="container">
+          <div class="service-content">
+              <div class="service-text">
+                  <h2>Servizio a Domicilio</h2>
+                  <p>Offriamo servizi specializzati per la riparazione di macchine da cucire professionali Firenze, garantendo ricambi originali e una manutenzione accurata. Che tu sia a Firenze, Scandicci, Sesto Fiorentino o nelle zone sotto indicate, il nostro team è pronto a intervenire:</p>
+                  <div class="service-areas">
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Scandicci</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Sesto Fiorentino</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Prato</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Bagno a Ripoli</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Fiesole</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Impruneta</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Greve in Chianti</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Signa</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Pontassieve</span>
+                      </div>
+                      <div class="service-area-item" itemprop="areaServed" itemscope itemtype="https://schema.org/City">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span itemprop="name">Vaglia</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="service-image">
+                <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
+                    <div class="gallery-item">
+                        <img src="https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg" alt="Servizio a domicilio" style="width: 100%; border-radius: 1rem;"
+                             alt="Officina riparazioni"
+                             class="gallery-image"
+                             onclick="openLightbox(this.src)"
+                             itemprop="contentUrl">
+                        <div class="gallery-overlay">
+                            <span itemprop="name">Officina Specializzata</span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+  <section class="common-issues">
+      <div class="container">
+          <div class="section-header">
+              <h2>Problemi Comuni</h2>
+              <p>Analisi tecnica delle problematiche più frequenti e relative soluzioni</p>
+          </div>
+          <div class="issues-grid">
+              <div class="issue-card">
+                  <div class="issue-icon">
+                      <i class="fas fa-exclamation-circle"></i>
+                  </div>
+                  <h3>Malfunzionamento del Sistema di Cucito</h3>
+                  <ul class="issue-checklist">
+                      <li>Verifica della <span class="technical-term">sincronizzazione crochet-ago</span> con analisi della temporizzazione del movimento</li>
+                      <li>Ispezione approfondita del <span class="technical-term">sistema di infilatura multilivello</span> e tensionamento dinamico</li>
+                      <li>Controllo del <span class="technical-term">meccanismo oscillante</span> della bobina e allineamento della capsula</li>
+                      <li>Analisi della <span class="technical-term">griffa di trasporto differenziale</span> e della sua sincronizzazione con il piedino</li>
+                  </ul>
+              </div>
+              <div class="issue-card">
+                  <div class="issue-icon">
+                      <i class="fas fa-cut"></i>
+                  </div>
+                  <h3>Problematiche di Tensionamento</h3>
+                  <ul class="issue-checklist">
+                      <li>Calibrazione del <span class="technical-term">sistema di tensionamento superiore</span> con regolazione micrometrica dei dischi tensionatori</li>
+                      <li>Verifica dell'integrità del <span class="technical-term">guidafilo pretensionatore</span> e del percorso del filo</li>
+                      <li>Analisi dell'usura dell'ago mediante <span class="technical-term">ispezione micrometrica</span> della punta e dell'occhiello</li>
+                      <li>Valutazione della <span class="technical-term">pressione del piedino compensata</span> in relazione allo spessore del tessuto</li>
+                  </ul>
+              </div>
+              <div class="issue-card">
+                  <div class="issue-icon">
+                      <i class="fas fa-lock"></i>
+                  </div>
+                  <h3>Blocco Meccanico del Sistema</h3>
+                  <ul class="issue-checklist">
+                      <li>Pulizia profonda del <span class="technical-term">gruppo crochet rotativo</span> con rimozione di residui mediante ultrasuoni</li>
+                      <li>Estrazione accurata di filamenti dal <span class="technical-term">meccanismo di avanzamento differenziale</span></li>
+                      <li>Ispezione del <span class="technical-term">sistema di trasporto a griffa ellittica</span> e della sua cinematica</li>
+                      <li>Lubrificazione dei <span class="technical-term">cuscinetti a sfere micrometrici</span> con oli specifici per alte velocità</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Domande Frequenti (FAQ)</h2>
+            <p>Tutto quello che devi sapere sulle riparazioni</p>
+        </div>
+        <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="faq-item">
+                <h3>Costi e Servizi</h3>
+                <div class="accordion">
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Quanto costa la riparazione di una macchina da cucire a Firenze?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Il costo della riparazione dipende dal tipo di intervento necessario e dalla marca della macchina da cucire. Ogni intervento è valutato singolarmente in base alla complessità e ai componenti da sostituire. Offriamo preventivi gratuiti e trasparenti prima di procedere con qualsiasi riparazione.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Effettuate riparazioni di macchine da cucire a domicilio?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Sì, per le macchine da cucire Singer e altre marche, offriamo un servizio a domicilio nelle zone di Firenze, Scandicci e Sesto Fiorentino. Contattaci per verificare la disponibilità del servizio nella tua area.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Riparate anche macchine da cucire industriali?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Certamente! Siamo specializzati nella riparazione sia di macchine da cucire domestiche che industriali, garantendo un'assistenza completa per ogni esigenza.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Quanto tempo richiede la riparazione di una macchina da cucire?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">La maggior parte delle riparazioni viene completata entro 3-5 giorni lavorativi, ma per guasti complessi o pezzi di ricambio non immediatamente disponibili, il tempo potrebbe variare. Ti aggiorniamo costantemente sullo stato della riparazione.</p>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Quanto dura una macchina da cucire?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">La durata di una macchina da cucire dipende dall'uso e dalla manutenzione. Con una buona cura e controlli regolari, una macchina da cucire può durare anche 20-30 anni. È importante eseguire pulizie periodiche e lubrificazioni per garantire la massima longevità.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3>Problemi Comuni</h3>
+                <div class="accordion">
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Perché la mia macchina da cucire non cuce?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">La tua macchina da cucire potrebbe non cucire a causa di diversi motivi:</p>
+                            <ul>
+                                <li>L'ago potrebbe essere piegato o non inserito correttamente</li>
+                                <li>Il filo potrebbe non essere infilato correttamente nel percorso superiore o inferiore</li>
+                                <li>La bobina potrebbe non essere caricata o posizionata correttamente</li>
+                            </ul>
+                            <p>Controlla questi elementi e, se il problema persiste, contattaci per un controllo tecnico.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Come mai si spezza il filo della macchina da cucire?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Il filo potrebbe spezzarsi per le seguenti ragioni:</p>
+                            <ul>
+                                <li>Tensione del filo troppo alta</li>
+                                <li>Filo di bassa qualità o non adatto al tessuto</li>
+                                <li>Ago usurato o inadatto</li>
+                            </ul>
+                            <p>Assicurati di utilizzare un filo di qualità e di regolare correttamente la tensione del filo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Perché si blocca la macchina da cucire?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">La macchina da cucire può bloccarsi a causa di:</p>
+                            <ul>
+                                <li>Accumulo di polvere o residui di tessuto nell'area della bobina o delle griffa di trasporto</li>
+                                <li>Ago danneggiato o filo inceppato</li>
+                            </ul>
+                            <p>Pulire regolarmente la macchina e controllare che tutte le parti siano in buone condizioni può prevenire blocchi.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Cosa fare quando la macchina da cucire non fa i punti?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Se la macchina non esegue i punti, ecco cosa verificare:</p>
+                            <ul>
+                                <li>L'ago potrebbe essere piegato, smussato o non compatibile con il tessuto.</li>
+                                <li>La tensione del filo superiore o inferiore potrebbe essere sbagliata.</li>
+                                <li>La bobina potrebbe non essere inserita correttamente</li>
+                            </ul>
+                            <p>Prova a risolvere questi problemi e, se necessario, richiedi assistenza tecnica.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" itemscope itemtype="https://schema.org/Question">
+                        <button class="accordion-header">
+                            <span class="accordion-title" itemprop="name">Offrite assistenza per altre marche oltre a Singer?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" itemscope itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Sì, oltre a Singer, forniamo assistenza per Bernina, Pfaff e molte altre marche di macchine da cucire, garantendo competenza e qualità in ogni intervento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <section class="work-gallery">
+      <div class="container">
+          <div class="section-header">
+              <h2>I Nostri Lavori</h2>
+              <p>Galleria dei nostri interventi di riparazione</p>
+          </div>
+
+          
+          <div class="gallery-grid">
+              <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
+                  <div class="gallery-item">
+                      <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" alt="Servizio a domicilio" style="width: 100%; border-radius: 1rem;"
+                           alt="Officina riparazioni"
+                           class="gallery-image"
+                           onclick="openLightbox(this.src)"
+                           itemprop="contentUrl">
+                      <div class="gallery-overlay">
+                          <span itemprop="name">Officina Specializzata</span>
+                      </div>
+                  </div>
+              </div>
+
+
+
+              <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
+                  <div class="gallery-item">
+                      <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg" alt="Servizio a domicilio" style="width: 100%; border-radius: 1rem;"
+                           alt="Officina riparazioni"
+                           class="gallery-image"
+                           onclick="openLightbox(this.src)"
+                           itemprop="contentUrl">
+                      <div class="gallery-overlay">
+                          <span itemprop="name">Officina Specializzata</span>
+                      </div>
+                  </div>
+              </div>
+              <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
+                <div class="gallery-item">
+                    <img src="https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg" alt="Servizio a domicilio" style="width: 100%; border-radius: 1rem;"
+                         alt="Officina riparazioni"
+                         class="gallery-image"
+                         onclick="openLightbox(this.src)"
+                         itemprop="contentUrl">
+                    <div class="gallery-overlay">
+                        <span itemprop="name">Officina Specializzata</span>
+                    </div>
+                </div>
+
+              </div>
+          </div>
+      </div>
+  </section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-nav">
+                <h3>Collegamenti Rapidi</h3>
+                <a href="#servizi">Servizi</a>
+                <a href="#chi-sono">Chi Sono</a>
+                <a href="ricambi.html">Ricambi</a>
+                <a href="assistenza.html">Assistenza</a>
+                <a href="#contatti">Contatti</a>
+            </div>
+            <div class="footer-social">
+                <h3>Social</h3>
+                <a href="https://facebook.com/groups/riparazionimacchinedacucire" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </div>
+            <div class="footer-contact">
+                <h3>Contatti</h3>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Cellulare</span>
+                            <a href="tel:+393343156903" itemprop="telephone">+39 334 315 6903</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Telefono Fisso</span>
+                            <a href="tel:+390557876543" itemprop="telephone">+39 055 2696823</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">WhatsApp</span>
+                            <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:riparazioni.ricci@gmail.com" itemprop="email">riparazioni.ricci@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">Indirizzo</span>
+                            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                <span itemprop="streetAddress">Via Rocco Benini, 16 F/G</span>,
+                                <span itemprop="postalCode">50013</span>
+                                <span itemprop="addressLocality">Campi Bisenzio</span>
+                                <span itemprop="addressRegion">FI</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div itemprop="openingHoursSpecification" itemscope itemtype="https://schema.org/OpeningHoursSpecification" style="display:none;">
+                        <meta itemprop="dayOfWeek" content="Monday Tuesday Wednesday Thursday Friday">
+                        <meta itemprop="opens" content="09:00">
+                        <meta itemprop="closes" content="18:00">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <p class="copyright">&copy; 2024 Stefano Ricci - Tutti i diritti riservati</p>
+    </div>
+</footer>
+    <div class="lightbox" id="imageLightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Modal Contatti -->
+    <div class="modal" id="contatti-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contattaci</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="contatti-grid">
+                    <div class="contatti-info">
+                        <h3>I Nostri Contatti</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Cellulare</span>
+                                    <a href="tel:+393343156903">+39 334 315 6903</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Telefono Fisso</span>
+                                    <a href="tel:+390557876543">+39 055 2696823</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:riparazioni.ricci@gmail.com">riparazioni.ricci@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Indirizzo</span>
+                                    <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                                        <span itemprop="streetAddress">Via Rocco Benini, 16 F/G</span>,
+                                        <span itemprop="postalCode">50013</span>
+                                        <span itemprop="addressLocality">Campi Bisenzio</span>
+                                        <span itemprop="addressRegion">FI</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contatti-mappa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                            width="100%"
+                            height="100%"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestione menu mobile
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navDesktop = document.querySelector('.nav-desktop');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                navDesktop.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        navDesktop.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                    }
+                });
+            });
+
+            // Gestione modal contatti
+            const contattiLink = document.getElementById('contatti-link');
+            const contattiModal = document.getElementById('contatti-modal');
+            const modalClose = document.querySelector('.modal-close');
+            
+            contattiLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                contattiModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            modalClose.addEventListener('click', function() {
+                contattiModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+            
+            contattiModal.addEventListener('click', function(e) {
+                if (e.target === contattiModal) {
+                    contattiModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Gestione scroll progress
+            const scrollProgress = document.createElement('div');
+            scrollProgress.className = 'scroll-progress';
+            document.body.appendChild(scrollProgress);
+            
+            function updateScrollProgress() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercentage = (scrollTop / scrollHeight) * 100;
+                scrollProgress.style.width = scrollPercentage + '%';
+            }
+            
+            window.addEventListener('scroll', updateScrollProgress);
+            
+            // Gestione header visibilità
+            let lastScrollTop = 0;
+            const header = document.querySelector('.header');
+            const scrollThreshold = 100;
+
+            function handleHeader() {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (currentScroll <= scrollThreshold) {
+                    header.classList.remove('hide');
+                    header.classList.add('show');
+                    return;
+                }
+                
+                if (currentScroll > lastScrollTop) {
+                    header.classList.remove('show');
+                    header.classList.add('hide');
+                } else {
+                    header.classList.remove('hide');
+                    header.classList.add('show');
+                }
+                
+                lastScrollTop = currentScroll;
+            }
+
+            window.addEventListener('scroll', handleHeader);
+            
+            // Gestione link attivi
+            function setActiveNavLink() {
+                const sections = document.querySelectorAll('section[id]');
+                const scrollPosition = window.scrollY + 100;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${sectionId}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+                
+                // Imposta attivo il link della home page
+                if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
+                    const scrollPosition = window.scrollY;
+                    if (scrollPosition < 100) {
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        const homeLink = document.querySelector('.nav-link[href="#servizi"]');
+                        if (homeLink) homeLink.classList.add('active');
+                    }
+                }
+            }
+            
+            window.addEventListener('scroll', setActiveNavLink);
+            setActiveNavLink();
+            
+            // Gestione animazioni
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                
+                return (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2);
+            }
+
+            function handleScrollAnimations() {
+                const animatedElements = document.querySelectorAll(
+                    '.fade-in-up, .fade-in-left, .fade-in-right, ' +
+                    '.service-card, .issue-card, .pricing-card, .problem-card, ' +
+                    '.social-link.facebook, .section-header'
+                );
+                
+                animatedElements.forEach(element => {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+
+            let isScrolling;
+            handleScrollAnimations();
+            
+            window.addEventListener('scroll', function() {
+                window.clearTimeout(isScrolling);
+                
+                isScrolling = setTimeout(function() {
+                    handleScrollAnimations();
+                }, 66);
+            }, false);
+            
+            // Gestione accordion
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordionContent = header.nextElementSibling;
+                    header.classList.toggle('active');
+                    
+                    if (header.classList.contains('active')) {
+                        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                    } else {
+                        accordionContent.style.maxHeight = 0;
+                    }
+                    
+                    // Chiudi gli altri accordion
+                    document.querySelectorAll('.accordion-header').forEach(otherHeader => {
+                        if (otherHeader !== header) {
+                            otherHeader.classList.remove('active');
+                            otherHeader.nextElementSibling.style.maxHeight = 0;
+                        }
+                    });
+                });
+            });
+        });
+
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = "block";
+            lightboxImg.src = imgSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        document.querySelector('.lightbox-close').onclick = function() {
+            document.getElementById('imageLightbox').style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('imageLightbox').onclick = function(e) {
+            if (e.target === this) {
+                this.style.display = "none";
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+
+
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Stefano Ricci - Riparazione Macchine da Cucire",
+      "image": "https://i.ibb.co/XtgdB17/Whats-App-Image-2024-12-27-at-15-33-53.jpg",
+      "description": "Servizio professionale di riparazione macchine da cucire a Firenze e provincia. Interventi a domicilio e preventivi gratuiti.",
+      "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Via Rocco Benini, 16 F/G",
+          "addressLocality": "Campi Bisenzio",
+          "addressRegion": "FI",
+          "postalCode": "50013",
+          "addressCountry": "IT"
+      },
+      "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 43.7696,
+          "longitude": 11.2558
+      },
+      "url": "https://www.macchinedacucirefirenze.it/",
+      "telephone": "+393343156903",
+      "email": "riparazioni.ricci@gmail.com",
+      "priceRange": "€€",
+      "openingHours": "Mo-Fr 09:00-18:00"
+  }
+  </script>
+
+
+  <script>
+function openLightbox(imgSrc) {
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightbox.style.display = "block";
+    lightboxImg.src = imgSrc;
+    document.body.style.overflow = 'hidden';
+}
+
+document.querySelector('.lightbox-close').onclick = function() {
+    document.getElementById('imageLightbox').style.display = "none";
+    document.body.style.overflow = 'auto';
+}
+
+document.getElementById('imageLightbox').onclick = function(e) {
+    if (e.target === this) {
+        this.style.display = "none";
+        document.body.style.overflow = 'auto';
+    }
+}
+</script>
+
+<script>
+// Funzione per controllare se un elemento è visibile nel viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    
+    // Trigger quando l'elemento è visibile per almeno il 50%
+    return (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2);
+}
+
+// Funzione per gestire tutte le animazioni
+function handleScrollAnimations() {
+    // Seleziona tutti gli elementi che devono essere animati
+    const animatedElements = document.querySelectorAll(
+        '.fade-in-up, .fade-in-left, .fade-in-right, ' +
+        '.service-card, .issue-card, .pricing-card, .problem-card, ' +
+        '.social-link.facebook, .section-header'
+    );
+    
+    animatedElements.forEach(element => {
+        if (isElementInViewport(element)) {
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Inizializzazione e gestione scroll con throttle per performance
+let isScrolling;
+document.addEventListener('DOMContentLoaded', function() {
+    // Check iniziale
+    handleScrollAnimations();
+    
+    // Gestione scroll ottimizzata
+    window.addEventListener('scroll', function() {
+        // Clear il timeout precedente
+        window.clearTimeout(isScrolling);
+        
+        // Imposta un timeout per controllare quando lo scroll è finito
+        isScrolling = setTimeout(function() {
+            handleScrollAnimations();
+        }, 66); // circa 15fps per performance
+    }, false);
+});
+</script>
+</body>
+</html>

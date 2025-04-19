@@ -1,0 +1,334 @@
+/* Hero Section - Stile completo */
+.hero-section {
+    position: relative;
+    padding: 8rem 0 4rem;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    z-index: -2;
+    transform: scale(1);
+    transition: transform 0.8s ease;
+}
+
+.hero-section:hover .hero-background {
+    transform: scale(1.05);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: -1;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: #ffffff;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Stili per i pulsanti nella hero */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: #4361ee;
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: #3a56d4;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.2);
+}
+
+.button-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+
+.button-whatsapp:hover {
+    background-color: #20bd5a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+}
+
+.hero-feature {
+    flex: 0 0 300px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #4361ee;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: rgba(67, 97, 238, 0.25);
+    box-shadow: 0 10px 20px rgba(67, 97, 238, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+    background: rgba(67, 97, 238, 0.35);
+    color: #4361ee;
+    box-shadow: 0 15px 30px rgba(67, 97, 238, 0.3);
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.hero-divider {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 1;
+}
+
+.hero-divider svg {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .hero-wrapper {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 7rem 0 3rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Simple Hero per pagine secondarie */
+.simple-hero {
+    position: relative;
+    padding: 0;
+    height: 40vh;
+    min-height: 300px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    background-color: #ffffff;
+}
+
+.hero-image-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    transition: transform 0.5s ease;
+}
+
+.rounded-img.hero-image {
+    object-position: center 40%;
+}
+
+.hero-image-container:hover .hero-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    background-color: rgba(52, 58, 64, 0.85); /* Colore esatto 343a40 con opacity */
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.image-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+
+@media (max-width: 768px) {
+    .simple-hero {
+        height: 35vh;
+        min-height: 250px;
+    }
+    
+    .image-overlay h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-image-container {
+        border-radius: 8px;
+    }
+    
+    .image-overlay {
+        padding: 1.5rem;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-image-container {
+        height: 300px;
+    }
+    
+    .hero-image {
+        object-position: center 35%;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-hero {
+        height: 30vh;
+        min-height: 200px;
+    }
+    
+    .image-overlay h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-image-container {
+        height: 250px;
+    }
+}
+
+/* Stile container migliorato */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+} 
