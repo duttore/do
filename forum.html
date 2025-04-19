@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forum di Discussione | Riparazioni Ricci</title>
+    <meta name="description" content="Forum dedicato a macchine da cucire, discussioni sulla manutenzione, riparazioni, tecniche di cucito e scambio di informazioni tra appassionati.">
+    <meta name="keywords" content="forum macchine cucire, discussioni cucito, problemi macchine cucire, riparazioni, community cucito">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/components.css">
+    <link rel="stylesheet" href="style/sections.css">
+    <link rel="stylesheet" href="style/utilities.css">
+    <link rel="stylesheet" href="style/animations.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/forum.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Riparazioni Ricci</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav-desktop">
+                    <div class="nav-group fixed-links">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="ricambi.html" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Ricambi</span>
+                        </a>
+                        <a href="assistenza.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Assistenza</span>
+                        </a>
+                        <a href="index.html#guide-informative" class="nav-link">
+                            <i class="fas fa-book"></i>
+                            <span>Guide</span>
+                        </a>
+                        <a href="#" class="nav-link" id="contatti-link">
+                            <i class="fas fa-phone"></i>
+                            <span>Contatti</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="scroll-progress"></div>
+
+    <section id="hero" class="simple-hero">
+        <div class="container">
+            <div class="hero-image-container">
+                <img src="https://live.staticflickr.com/65535/54376140543_02f385a06f_h.jpg" 
+                     alt="Community di cucito e riparazioni macchine" 
+                     class="hero-image rounded-img">
+                <div class="image-overlay">
+                    <h1>Forum della Community</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forum-intro" class="intro-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Benvenuto nella Nostra Community</h2>
+                <p>Uno spazio per condividere esperienze e ricevere supporto</p>
+            </div>
+            
+            <div class="content-wrapper">
+                <div class="text-content fade-in-left" style="width: 100%; max-width: 1200px; margin: 0 auto;">
+                    <div class="forum-tabs">
+                        <div class="forum-tab active">Tutte</div>
+                        <div class="forum-tab">Recenti</div>
+                        <div class="forum-tab">Popolari</div>
+                        <div class="forum-tab">Risolti</div>
+                    </div>
+                    
+                    <div class="forum-columns">
+                        <div class="forum-main">
+                            <h3 class="mb-3">Discussioni in evidenza</h3>
+                            
+                            <div class="forum-post">
+                                <div class="post-header">
+                                    <h3>Come regolare la tensione del filo?</h3>
+                                    <div class="post-meta">
+                                        <span><i class="fas fa-user"></i> Maria B.</span>
+                                        <span><i class="fas fa-calendar"></i> 2 giorni fa</span>
+                                        <span class="post-category manutenzione">Manutenzione</span>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p>Ho acquistato una Singer Heavy Duty 4423 e sto avendo problemi con la tensione del filo superiore. Ho provato a regolarla ma continuo ad avere problemi con punti troppo stretti...</p>
+                                </div>
+                                <div class="post-footer">
+                                    <a href="#" class="button button-small">Leggi discussione</a>
+                                </div>
+                            </div>
+                            
+                            <div class="forum-post">
+                                <div class="post-header">
+                                    <h3>Consiglio per macchina da ricamo</h3>
+                                    <div class="post-meta">
+                                        <span><i class="fas fa-user"></i> Luca R.</span>
+                                        <span><i class="fas fa-calendar"></i> 4 giorni fa</span>
+                                        <span class="post-category acquisto">Acquisto</span>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p>Sto cercando una macchina da ricamo con un buon rapporto qualità-prezzo, con un budget di massimo 500€. Vorrei qualcosa di affidabile, semplice ma con possibilità di crescita...</p>
+                                </div>
+                                <div class="post-footer">
+                                    <a href="#" class="button button-small">Leggi discussione</a>
+                                </div>
+                            </div>
+                            
+                            <div class="forum-post">
+                                <div class="post-header">
+                                    <h3>La Janome non prende il filo</h3>
+                                    <div class="post-meta">
+                                        <span><i class="fas fa-user"></i> Alessandro V.</span>
+                                        <span><i class="fas fa-calendar"></i> 1 settimana fa</span>
+                                        <span class="post-category solved">Risolto</span>
+                                    </div>
+                                </div>
+                                <div class="post-content">
+                                    <p>La mia Janome DC5100 non prende più il filo dalla bobina. Ho verificato che sia inserita correttamente, ho cambiato ago e pulito l'area della navetta, ma il problema persiste...</p>
+                                </div>
+                                <div class="post-footer">
+                                    <a href="#" class="button button-small">Leggi discussione</a>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="#" class="button button-primary">
+                                    <span>Altre discussioni</span>
+                                    <i class="fas fa-sync"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="forum-sidebar">
+                            <div class="sidebar-widget">
+                                <h3>Fai una domanda</h3>
+                                <p>Hai un problema con la tua macchina? Chiedi alla nostra community.</p>
+                                <a href="#nuova-discussione" class="ask-question">
+                                    <span>Nuova discussione</span>
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="sidebar-widget">
+                                <h3>Argomenti popolari</h3>
+                                <div class="popular-topics">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <span class="topic-title">Manutenzione Singer 4423</span>
+                                                <span class="view-count">328 views</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="topic-title">Macchine per principianti</span>
+                                                <span class="view-count">256 views</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="topic-title">Piedini per jeans e pelle</span>
+                                                <span class="view-count">213 views</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forum-stats" class="services-detail bg-light">
+        <div class="container">
+            <div class="forum-stats">
+                <div class="stat-heading">
+                    <h3>La Nostra Community in Numeri</h3>
+                    <p>Unisciti a migliaia di appassionati di cucito da tutta Italia</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-users fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="stat-number">1,245</h4>
+                        <p class="stat-label">Membri attivi</p>
+                    </div>
+                    
+                    <div class="stat-card text-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="stat-number">3,876</h4>
+                        <p class="stat-label">Discussioni totali</p>
+                    </div>
+                    
+                    <div class="stat-card text-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-reply fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="stat-number">15,932</h4>
+                        <p class="stat-label">Risposte</p>
+                    </div>
+                    
+                    <div class="stat-card text-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-check-circle fa-3x text-primary"></i>
+                        </div>
+                        <h4 class="stat-number">1,128</h4>
+                        <p class="stat-label">Problemi risolti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nuova-discussione" class="intro-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Inizia una Nuova Discussione</h2>
+                <p>Condividi il tuo problema o fai una domanda alla community</p>
+            </div>
+            
+            <div class="content-wrapper">
+                <div class="text-content fade-in-up" style="width: 100%; max-width: 800px; margin: 0 auto;">
+                    <div class="form-header">
+                        <h3>La tua domanda</h3>
+                        <p>Fornisci più dettagli possibili per ricevere risposte precise e utili.</p>
+                    </div>
+                    
+                    <form id="question-form" class="forum-form">
+                        <div class="form-group">
+                            <label for="question-title">Titolo della discussione*</label>
+                            <input type="text" id="question-title" placeholder="Es. Problema con la tensione del filo sulla Janome 2200XT" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="question-category">Categoria*</label>
+                            <select id="question-category" required>
+                                <option value="">Seleziona una categoria</option>
+                                <option value="manutenzione">Manutenzione</option>
+                                <option value="problemi">Problemi tecnici</option>
+                                <option value="acquisto">Acquisto e consigli</option>
+                                <option value="tecniche">Tecniche di cucito</option>
+                                <option value="progetti">Progetti e idee</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="question-content">Descrivi il tuo problema o la tua domanda*</label>
+                            <textarea id="question-content" rows="8" placeholder="Descrivi il problema in modo dettagliato. Includi marca e modello della macchina, cosa hai già provato, quando è iniziato il problema, ecc." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="question-model">Modello della macchina da cucire (se applicabile)</label>
+                            <input type="text" id="question-model" placeholder="Es. Brother CS7000X">
+                        </div>
+                        
+                        <div class="form-hint">
+                            <p><i class="fas fa-info-circle"></i> Prima di pubblicare, controlla se esiste già una discussione simile utilizzando la funzione di ricerca.</p>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="button button-outline">Anteprima</button>
+                            <button type="submit" class="button button-primary">Pubblica discussione</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community-section">
+        <div class="container">
+            <div class="section-header fade-in-up">
+                <h2>Unisciti alla Nostra Community</h2>
+                <p>Condividi le tue esperienze e impara da migliaia di appassionati di cucito</p>
+            </div>
+            <div class="social-links fade-in-up">
+                <a href="https://facebook.com/groups/riparazionimacchinedacucire" target="_blank" rel="noopener noreferrer" class="social-link facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Gruppo Facebook</span>
+                    <p>Unisciti al nostro gruppo Facebook con oltre 1.200 appassionati di cucito. Condividi progetti, chiedi consigli e scopri nuove tecniche.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h3>Collegamenti Rapidi</h3>
+                    <a href="index.html">Home</a>
+                    <a href="ricambi.html">Ricambi</a>
+                    <a href="assistenza.html">Assistenza</a>
+                    <a href="forum.html">Forum</a>
+                    <a href="guida-scelta-macchine.html">Guida Macchine</a>
+                </div>
+                <div class="footer-social">
+                    <h3>Social</h3>
+                    <a href="https://facebook.com/groups/riparazionimacchinedacucire" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <div class="contact-list">
+                        <div class="contact-item fade-in-left">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Cellulare</span>
+                                <a href="tel:+393343156903">+39 334 315 6903</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-up">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Telefono Fisso</span>
+                                <a href="tel:+390552696823">+39 055 2696823</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-right">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">WhatsApp</span>
+                                <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-right">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:riparazioni.ricci@gmail.com">riparazioni.ricci@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-right">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Indirizzo</span>
+                                <span>Via Rocco Benini, 16 F/G, 50013 Campi Bisenzio FI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <p class="copyright">&copy; 2024 Riparazioni Ricci - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="imageLightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <!-- Modal Contatti -->
+    <div class="modal" id="contatti-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contattaci</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="contatti-grid">
+                    <div class="contatti-info">
+                        <h3>I Nostri Contatti</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Cellulare</span>
+                                    <a href="tel:+393343156903">+39 334 315 6903</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Telefono Fisso</span>
+                                    <a href="tel:+390552696823">+39 055 2696823</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:riparazioni.ricci@gmail.com">riparazioni.ricci@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Indirizzo</span>
+                                    <span>Via Rocco Benini, 16 F/G, 50013 Campi Bisenzio FI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contatti-mappa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                            width="100%"
+                            height="100%"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestione menu mobile
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navDesktop = document.querySelector('.nav-desktop');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                navDesktop.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        navDesktop.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                    }
+                });
+            });
+
+            // Gestione modal contatti
+            const contattiLink = document.getElementById('contatti-link');
+            const contattiModal = document.getElementById('contatti-modal');
+            const modalClose = document.querySelector('.modal-close');
+            
+            contattiLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                contattiModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            modalClose.addEventListener('click', function() {
+                contattiModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+            
+            contattiModal.addEventListener('click', function(e) {
+                if (e.target === contattiModal) {
+                    contattiModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            // Gestione scroll progress
+            const scrollProgress = document.querySelector('.scroll-progress');
+            
+            function updateScrollProgress() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrollPercentage = (scrollTop / scrollHeight) * 100;
+                scrollProgress.style.width = scrollPercentage + '%';
+            }
+            
+            window.addEventListener('scroll', updateScrollProgress);
+            
+            // Gestione animazioni
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                
+                return (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2);
+            }
+
+            function handleScrollAnimations() {
+                const animatedElements = document.querySelectorAll(
+                    '.fade-in-up, .fade-in-left, .fade-in-right, ' +
+                    '.service-card, .forum-post, ' +
+                    '.social-link.facebook, .section-header'
+                );
+                
+                animatedElements.forEach(element => {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+
+            let isScrolling;
+            handleScrollAnimations();
+            
+            window.addEventListener('scroll', function() {
+                window.clearTimeout(isScrolling);
+                
+                isScrolling = setTimeout(function() {
+                    handleScrollAnimations();
+                }, 30);
+            }, false);
+            
+            // Gestione tabs forum
+            document.querySelectorAll('.forum-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    document.querySelectorAll('.forum-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Prevenzione invio form demo
+            const questionForm = document.getElementById('question-form');
+            if (questionForm) {
+                questionForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('In una versione reale, la tua domanda sarebbe stata inviata. Questa è una demo.');
+                    this.reset();
+                });
+            }
+
+            // Verifica pagina corrente per attivare il link nel menu
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === 'index.html' && window.location.pathname === '/' || 
+                    window.location.pathname.endsWith('index.html') ||
+                    (link.getAttribute('href') === 'forum.html' && window.location.pathname.includes('forum.html'))) {
+                    link.classList.add('active');
+                }
+            });
+            
+            if (window.location.pathname.includes('forum.html')) {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    if (link.getAttribute('href') === 'forum.html') {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+        });
+
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = "block";
+            lightboxImg.src = imgSrc;
+            document.body.style.overflow = 'hidden';
+        }
+
+        document.querySelector('.lightbox-close').onclick = function() {
+            document.getElementById('imageLightbox').style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+
+        document.getElementById('imageLightbox').onclick = function(e) {
+            if (e.target === this) {
+                this.style.display = "none";
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+</body>
+</html>

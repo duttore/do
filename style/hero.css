@@ -212,4 +212,123 @@
     .hero-content p {
         font-size: 1rem;
     }
+}
+
+/* Simple Hero per pagine secondarie */
+.simple-hero {
+    position: relative;
+    padding: 0;
+    height: 40vh;
+    min-height: 300px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    background-color: #ffffff;
+}
+
+.hero-image-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    transition: transform 0.5s ease;
+}
+
+.rounded-img.hero-image {
+    object-position: center 40%;
+}
+
+.hero-image-container:hover .hero-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    background-color: rgba(52, 58, 64, 0.85); /* Colore esatto 343a40 con opacity */
+    color: #fff;
+    text-align: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.image-overlay h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+
+@media (max-width: 768px) {
+    .simple-hero {
+        height: 35vh;
+        min-height: 250px;
+    }
+    
+    .image-overlay h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-image-container {
+        border-radius: 8px;
+    }
+    
+    .image-overlay {
+        padding: 1.5rem;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-image-container {
+        height: 300px;
+    }
+    
+    .hero-image {
+        object-position: center 35%;
+    }
+}
+
+@media (max-width: 480px) {
+    .simple-hero {
+        height: 30vh;
+        min-height: 200px;
+    }
+    
+    .image-overlay h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-image-container {
+        height: 250px;
+    }
+}
+
+/* Stile container migliorato */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 } 

@@ -291,3 +291,95 @@
         font-size: 1rem;
     }
 }
+
+.article-image-container {
+    margin: 2rem 0;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.article-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.article-image-container:hover img {
+    transform: scale(1.03);
+}
+
+.rounded-img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.simple-list {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.simple-list li {
+    margin-bottom: 0.5rem;
+}
+
+.instruction-steps.simplified li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* Miglioramenti per mobile */
+@media (max-width: 768px) {
+    .hero-image-container .rounded-img {
+        max-height: 250px;
+        object-fit: cover;
+        object-position: center 30%;
+    }
+    
+    .article-featured-image.rounded-img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .article-image-container {
+        margin: 1.5rem 0;
+    }
+    
+    .wiki-content h4 {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .wiki-content p, 
+    .wiki-content li {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .tip-box, 
+    .warning-box {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .tip-box p, 
+    .warning-box p {
+        font-size: 0.9rem;
+    }
+    
+    .table-of-contents {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .table-of-contents ul {
+        padding-left: 1rem;
+    }
+    
+    .table-of-contents a {
+        font-size: 0.9rem;
+    }
+}
