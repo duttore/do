@@ -133,6 +133,11 @@
                 background: rgba(255, 255, 255, 0.1);
                 padding: 0.8rem;
                 border-radius: 8px;
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            #hero .highlight-item strong {
+                color: rgba(255, 255, 255, 0.9);
             }
 
             #hero .highlight-item i {
@@ -1210,6 +1215,83 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 66); // circa 15fps per performance
     }, false);
 });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestione menu mobile
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navDesktop = document.querySelector('.nav-desktop');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            navDesktop.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navDesktop.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                }
+            });
+        });
+
+        // Gestione modal contatti
+        const contattiLink = document.getElementById('contatti-link');
+        const contattiModal = document.getElementById('contatti-modal');
+        const modalClose = document.querySelector('.modal-close');
+        
+        contattiLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            contattiModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        modalClose.addEventListener('click', function() {
+            contattiModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+        
+        contattiModal.addEventListener('click', function(e) {
+            if (e.target === contattiModal) {
+                contattiModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Gestione scroll progress
+        const scrollProgress = document.querySelector('.scroll-progress');
+        
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Gestione header scroll
+        let lastScroll = 0;
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+                // Scroll Down
+                header.classList.add('hide');
+            } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+                // Scroll Up
+                header.classList.remove('hide');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    });
 </script>
 </body>
 </html>
