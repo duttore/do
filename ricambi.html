@@ -163,6 +163,106 @@
                 height: 300px;
             }
         }
+
+        /* FAQ - stile come index.html */
+        .faq-section {
+            padding: 5rem 0;
+            background-color: #f9f9f9;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item h3 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        .accordion-item {
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background-color: #fff;
+        }
+
+        .accordion-header {
+            width: 100%;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-header h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+            color: #333;
+        }
+
+        .accordion-header i {
+            transition: transform 0.3s ease;
+            color: #4361ee;
+        }
+
+        .accordion-header.active {
+            background-color: #f5f7ff;
+        }
+
+        .accordion-header.active i {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.2rem;
+        }
+
+        .accordion-content p {
+            margin: 0;
+            padding: 0.5rem 0 1.2rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Animazioni veloci come index */
+        .fade-in-up, .fade-in-left, .fade-in-right, 
+        .service-card, .issue-card, .pricing-card, .problem-card, 
+        .social-link.facebook, .section-header {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-left { transform: translateX(-10px); }
+        .fade-in-right { transform: translateX(10px); }
+
+        .fade-in-up.visible, 
+        .fade-in-left.visible, 
+        .fade-in-right.visible, 
+        .service-card.visible, 
+        .issue-card.visible, 
+        .pricing-card.visible, 
+        .problem-card.visible, 
+        .social-link.facebook.visible, 
+        .section-header.visible {
+            opacity: 1;
+            transform: translate(0);
+        }
     </style>
 </head>
 <body>

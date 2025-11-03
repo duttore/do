@@ -27,7 +27,16 @@
     
     <link rel="canonical" href="https://www.macchinedacucirefirenze.it/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/components.css">
+    <link rel="stylesheet" href="style/sections.css">
+    <link rel="stylesheet" href="style/utilities.css">
+    <link rel="stylesheet" href="style/animations.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/macchine-cucire.css">
     <meta name="google-site-verification" content="4DQbxm7mC-3ZBQga6WRoKdVxbFbTv-qb9X4nwkDLUOQ"/>
     
     <style>
@@ -40,6 +49,109 @@
             
             #hero .hero-background {
                 background-position: right center;
+            }
+
+            /* Centraggio degli elementi della feature card */
+            #hero .feature-card {
+                text-align: center;
+            }
+
+            #hero .feature-icon {
+                margin: 0 auto;
+            }
+
+            #hero .feature-card h3,
+            #hero .feature-card p {
+                text-align: center;
+                max-width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Centraggio dei bottoni e del contenuto */
+            #hero .hero-content {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #hero .hero-highlights {
+                justify-content: center;
+                width: 100%;
+            }
+
+            #hero .hero-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            #hero .button {
+                margin: 0;
+            }
+        }
+        
+        /* Stile globale per gli highlight items */
+        #hero .highlight-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+            margin: 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.8rem;
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        
+        #hero .highlight-item * {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        
+        #hero .highlight-item strong,
+        #hero .highlight-item strong * {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        #hero .highlight-item i {
+            color: #4361ee !important;
+        }
+
+        #hero .hero-highlights p {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        
+        /* Stile per mobile */
+        @media screen and (max-width: 767px) {
+            #hero .hero-background {
+                background-position: 50% 30%;
+                background-size: cover;
+                height: 100%;
+                width: 100%;
+            }
+            
+            #hero .hero-feature {
+                display: none;
+            }
+
+            #hero .hero-content {
+                text-align: center;
+                padding: 2rem 1rem;
+            }
+
+            #hero .hero-content h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            #hero .hero-highlights {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-bottom: 2rem;
             }
         }
         
@@ -58,7 +170,6 @@
             transition: opacity 0.3s ease;
         }
         
-        /* Stile per i contatti nella modal */
         .modal .contact-item a,
         .modal .contact-item span:not(.contact-label) {
             color: #333;
@@ -237,13 +348,26 @@
                         <div class="feature-icon">
                             <i class="fas fa-tools"></i>
                         </div>
-                        <h3>Riparazioni Professionali</h3>
-                        <p>Interventi rapidi e di qualità per risolvere qualsiasi problema con la tua macchina da cucire.</p>
+                        <h3>Riparazioni con Ricambi Originali</h3>
+                        <p>Preventivi sempre gratuiti e utilizzo esclusivo di ricambi originali per garantire la massima qualità del servizio.</p>
                     </div>
                 </div>
                 <div class="hero-content">
                     <h1 itemprop="description">Riparazione Macchine da Cucire a Firenze</h1>
-                    <p>Servizio professionale di riparazione e assistenza per ogni tipo di macchina da cucire. Interventi a domicilio in tutta la provincia di Firenze.</p>
+                    <div class="hero-highlights">
+                        <p class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <strong>Preventivi Sempre Gratuiti</strong>
+                        </p>
+                        <p class="highlight-item">
+                            <i class="fas fa-cog"></i>
+                            <strong>Solo Ricambi Originali</strong>
+                        </p>
+                        <p class="highlight-item">
+                            <i class="fas fa-home"></i>
+                            <strong>Interventi a Domicilio</strong>
+                        </p>
+                    </div>
                     <div class="hero-buttons">
                         <a href="#servizi-riparazione" class="button button-primary">
                             <span>Scopri i servizi</span>
@@ -275,24 +399,21 @@
                 </div>
                 <div class="image-gallery">
                     <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
-                        <div class="gallery-item">
-                            <img src="https://live.staticflickr.com/65535/54376140543_02f385a06f_h.jpg"
-                                 alt="Officina riparazioni"
-                                 onclick="openLightbox(this.src)"
-                                 itemprop="contentUrl">
-                            <div class="gallery-overlay">
-                                <span itemprop="name">Officina Specializzata</span>
-                            </div>
+                        <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" 
+                             alt="Servizio a domicilio"
+                             onclick="openLightbox(this.src)"
+                             itemprop="contentUrl">
+                        <div class="gallery-overlay">
+                            <span itemprop="name">Servizio a domicilio</span>
                         </div>
                     </div>
                     <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
-                        <div class="gallery-item">
-                            <img src="https://live.staticflickr.com/65535/54376107139_72c74b05fe_h.jpg" 
-                                 alt="Riparazione in corso"
-                                 onclick="openLightbox(this.src)">
-                            <div class="gallery-overlay">
-                                <span itemprop="name">Riparazioni Professionali</span>
-                            </div>
+                        <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg"
+                             alt="Officina Specializzata"
+                             onclick="openLightbox(this.src)"
+                             itemprop="contentUrl">
+                        <div class="gallery-overlay">
+                            <span itemprop="name">Officina Specializzata</span>
                         </div>
                     </div>
                 </div>
@@ -1002,205 +1123,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Gestione menu mobile
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navDesktop = document.querySelector('.nav-desktop');
-
-            mobileMenuBtn.addEventListener('click', function() {
-                navDesktop.classList.toggle('active');
-                this.classList.toggle('active');
-            });
-
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', () => {
-                    if (window.innerWidth <= 768) {
-                        navDesktop.classList.remove('active');
-                        mobileMenuBtn.classList.remove('active');
-                    }
-                });
-            });
-
-            // Gestione modal contatti
-            const contattiLink = document.getElementById('contatti-link');
-            const contattiModal = document.getElementById('contatti-modal');
-            const modalClose = document.querySelector('.modal-close');
-            
-            contattiLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                contattiModal.classList.add('show');
-                document.body.style.overflow = 'hidden';
-            });
-            
-            modalClose.addEventListener('click', function() {
-                contattiModal.classList.remove('show');
-                document.body.style.overflow = 'auto';
-            });
-            
-            contattiModal.addEventListener('click', function(e) {
-                if (e.target === contattiModal) {
-                    contattiModal.classList.remove('show');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-
-            // Gestione scroll progress
-            const scrollProgress = document.createElement('div');
-            scrollProgress.className = 'scroll-progress';
-            document.body.appendChild(scrollProgress);
-            
-            function updateScrollProgress() {
-                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrollPercentage = (scrollTop / scrollHeight) * 100;
-                scrollProgress.style.width = scrollPercentage + '%';
-            }
-            
-            window.addEventListener('scroll', updateScrollProgress);
-            
-            // Gestione header visibilità
-            let lastScrollTop = 0;
-            const header = document.querySelector('.header');
-            const scrollThreshold = 100;
-
-            function handleHeader() {
-                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                
-                if (currentScroll <= scrollThreshold) {
-                    header.classList.remove('hide');
-                    header.classList.add('show');
-                    return;
-                }
-                
-                if (currentScroll > lastScrollTop) {
-                    header.classList.remove('show');
-                    header.classList.add('hide');
-                } else {
-                    header.classList.remove('hide');
-                    header.classList.add('show');
-                }
-                
-                lastScrollTop = currentScroll;
-            }
-
-            window.addEventListener('scroll', handleHeader);
-            
-            // Gestione link attivi
-            function setActiveNavLink() {
-                const sections = document.querySelectorAll('section[id]');
-                const scrollPosition = window.scrollY + 100;
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.offsetHeight;
-                    const sectionId = section.getAttribute('id');
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href') === `#${sectionId}`) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-                
-                // Imposta attivo il link della home page
-                if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
-                    const scrollPosition = window.scrollY;
-                    if (scrollPosition < 100) {
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        const homeLink = document.querySelector('.nav-link[href="#servizi"]');
-                        if (homeLink) homeLink.classList.add('active');
-                    }
-                }
-            }
-            
-            window.addEventListener('scroll', setActiveNavLink);
-            setActiveNavLink();
-            
-            // Gestione animazioni
-            function isElementInViewport(el) {
-                const rect = el.getBoundingClientRect();
-                const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-                
-                return (rect.top <= windowHeight * 0.8 && rect.bottom >= windowHeight * 0.2);
-            }
-
-            function handleScrollAnimations() {
-                const animatedElements = document.querySelectorAll(
-                    '.fade-in-up, .fade-in-left, .fade-in-right, ' +
-                    '.service-card, .issue-card, .pricing-card, .problem-card, ' +
-                    '.social-link.facebook, .section-header'
-                );
-                
-                animatedElements.forEach(element => {
-                    if (isElementInViewport(element)) {
-                        element.classList.add('visible');
-                    }
-                });
-            }
-
-            let isScrolling;
-            handleScrollAnimations();
-            
-            window.addEventListener('scroll', function() {
-                window.clearTimeout(isScrolling);
-                
-                isScrolling = setTimeout(function() {
-                    handleScrollAnimations();
-                }, 66);
-            }, false);
-            
-            // Gestione accordion
-            const accordionHeaders = document.querySelectorAll('.accordion-header');
-            
-            accordionHeaders.forEach(header => {
-                header.addEventListener('click', () => {
-                    const accordionContent = header.nextElementSibling;
-                    header.classList.toggle('active');
-                    
-                    if (header.classList.contains('active')) {
-                        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                    } else {
-                        accordionContent.style.maxHeight = 0;
-                    }
-                    
-                    // Chiudi gli altri accordion
-                    document.querySelectorAll('.accordion-header').forEach(otherHeader => {
-                        if (otherHeader !== header) {
-                            otherHeader.classList.remove('active');
-                            otherHeader.nextElementSibling.style.maxHeight = 0;
-                        }
-                    });
-                });
-            });
-        });
-
-        function openLightbox(imgSrc) {
-            const lightbox = document.getElementById('imageLightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightbox.style.display = "block";
-            lightboxImg.src = imgSrc;
-            document.body.style.overflow = 'hidden';
-        }
-
-        document.querySelector('.lightbox-close').onclick = function() {
-            document.getElementById('imageLightbox').style.display = "none";
-            document.body.style.overflow = 'auto';
-        }
-
-        document.getElementById('imageLightbox').onclick = function(e) {
-            if (e.target === this) {
-                this.style.display = "none";
-                document.body.style.overflow = 'auto';
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
 
   <script type="application/ld+json">
   {
@@ -1296,6 +1219,107 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 66); // circa 15fps per performance
     }, false);
 });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Gestione menu mobile
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navDesktop = document.querySelector('.nav-desktop');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            navDesktop.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navDesktop.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+                }
+            });
+        });
+
+        // Gestione modal contatti
+        const contattiLink = document.getElementById('contatti-link');
+        const contattiModal = document.getElementById('contatti-modal');
+        const modalClose = document.querySelector('.modal-close');
+        
+        contattiLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            contattiModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        modalClose.addEventListener('click', function() {
+            contattiModal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+        
+        contattiModal.addEventListener('click', function(e) {
+            if (e.target === contattiModal) {
+                contattiModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Gestione scroll progress
+        const scrollProgress = document.querySelector('.scroll-progress');
+        
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Gestione header scroll
+        let lastScroll = 0;
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('hide');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('hide')) {
+                // Scroll Down
+                header.classList.add('hide');
+            } else if (currentScroll < lastScroll && header.classList.contains('hide')) {
+                // Scroll Up
+                header.classList.remove('hide');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Gestione accordion per FAQ (replica comportamento ricambi.html)
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionContent = header.nextElementSibling;
+                header.classList.toggle('active');
+
+                if (header.classList.contains('active')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                }
+
+                // Chiudi le altre voci
+                document.querySelectorAll('.accordion-header').forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        otherHeader.classList.remove('active');
+                        if (otherHeader.nextElementSibling) {
+                            otherHeader.nextElementSibling.style.maxHeight = 0;
+                        }
+                    }
+                });
+            });
+        });
+    });
 </script>
 </body>
 </html>

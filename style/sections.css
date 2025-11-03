@@ -313,6 +313,125 @@
     gap: 1rem;
 }
 
+/* Per la sezione servizi, layout vetrina: testo + 2 immagini affiancate */
+/* Forzo selettori specifici per evitare conflitti */
+/* Colonne della sezione: testo a sinistra, immagini a destra */
+@media (min-width: 992px) {
+    #servizi.intro-section .content-wrapper {
+        display: grid !important; /* ripristina la griglia contro override globali */
+        grid-template-columns: 1fr !important; /* testo sopra, gallery sotto */
+        align-items: start !important;
+        gap: 2rem !important;
+    }
+}
+
+#servizi.intro-section .content-wrapper .image-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(280px, 420px)) !important; /* due card affiancate */
+    gap: 1.5rem !important;
+    align-items: stretch !important;
+    justify-content: center !important; /* centrato su asse X */
+    width: 100% !important;
+}
+
+/* Forzo l'ordine corretto entro #servizi anche se altri CSS impostano colonne fisse */
+#servizi.intro-section .text-content {
+    grid-column: 1 !important;
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+#servizi.intro-section .image-gallery {
+    grid-column: 1 !important; /* sotto al testo */
+}
+
+/* Ripristino larghezza container standard entro la sezione servizi,
+   per annullare override globali provenienti da altri fogli */
+#servizi .container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Desktop: due card non a tutta larghezza e allineate verso il testo (a destra) */
+@media (min-width: 992px) {
+    #servizi.intro-section .content-wrapper .image-gallery {
+        grid-template-columns: repeat(2, minmax(320px, 460px)) !important;
+        justify-content: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+#servizi.intro-section .content-wrapper .image-gallery .gallery-item {
+    position: relative !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+    overflow: hidden !important;
+    aspect-ratio: 4/3 !important; /* formato vetrina più ampio */
+    min-height: 220px !important;
+    background: #f8f9fa !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#servizi.intro-section .content-wrapper .image-gallery .gallery-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+#servizi.intro-section .content-wrapper .image-gallery .gallery-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 1rem !important;
+    transition: transform 0.3s ease !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#servizi.intro-section .content-wrapper .image-gallery .gallery-item:hover img {
+    transform: scale(1.05) !important;
+}
+
+#servizi.intro-section .content-wrapper .image-gallery .gallery-item .gallery-overlay {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.4), transparent) !important;
+    padding: 1.5rem !important;
+    color: white !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+}
+
+#servizi.intro-section .content-wrapper .image-gallery .gallery-item .gallery-overlay span {
+    display: block !important;
+    text-align: center !important;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+/* Responsive per la sezione servizi */
+@media (max-width: 768px) {
+    #servizi.intro-section .content-wrapper .image-gallery {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    #servizi.intro-section .content-wrapper .image-gallery .gallery-item {
+        aspect-ratio: 4/3 !important;
+        min-height: 200px !important;
+    }
+}
+
 /* Services Detail Section */
 .services-detail {
     padding: 5rem 0;

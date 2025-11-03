@@ -1,0 +1,142 @@
+# COMPONENTI MODULARI DEL SITO RIPARAZIONI RICCI
+
+## STRUTTURA BASE
+- **Header** (layout.css): Intestazione del sito con logo e navigazione
+- **Footer** (layout.css): Piè di pagina con contatti, mappa e copyright
+- **Container** (layout.css): Contenitore principale per limitare la larghezza del contenuto
+
+## COMPONENTI DI NAVIGAZIONE
+- **Nav Desktop** (layout.css): Menu di navigazione desktop con due gruppi di link separati da una linea verticale
+  - Nav Group: Gruppo di link di navigazione (fixed-links e dynamic-links)
+  - Nav Separator: Separatore verticale tra i gruppi di link
+  - Nav Link: Link di navigazione con icona e testo
+- **Nav Mobile** (layout.css, responsive.css): Menu di navigazione mobile con hamburger
+- **Logo** (layout.css): Logo del sito
+- **Breadcrumb** (sections.css): Navigazione a breadcrumb per pagine secondarie
+
+## COMPONENTI HERO
+- **Hero Section** (sections.css): Sezione hero moderna con effetti hover
+  - Hero Background: Sfondo con effetto zoom e luminosità al passaggio del mouse
+  - Hero Overlay: Overlay gradiente per migliorare la leggibilità
+  - Hero Wrapper: Contenitore flessibile per contenuto e feature
+  - Hero Content: Area testo con titolo, descrizione e pulsanti
+  - Hero Feature: Area per la card in evidenza
+  - Feature Card: Card con effetto hover e glassmorphism
+  - Feature Icon: Icona circolare con effetto hover
+  - Hero Divider: Separatore moderno tra hero e contenuto successivo
+
+## COMPONENTI INTERATTIVI
+- **Button** (components.css): Pulsanti standard
+  - Button Primary: Pulsante principale blu
+  - Button WhatsApp: Pulsante verde WhatsApp
+- **Button Group** (components.css): Gruppo di pulsanti
+- **Accordion** (components.css): Elemento a fisarmonica per FAQ
+- **Lightbox** (components.css): Visualizzatore immagini a schermo intero
+- **Scroll Progress** (animations.css): Barra di avanzamento scorrimento
+
+## COMPONENTI CARD
+- **Service Card** (components.css): Card per servizi
+- **Pricing Card** (components.css): Card per prezzi
+- **Issue Card** (sections.css): Card per problemi comuni
+- **Forum Topic** (sections.css): Card per argomenti del forum
+- **Compact Card** (ricambi.html): Card compatta per ricambi
+
+## COMPONENTI GALLERY
+- **Gallery Item** (components.css): Elemento galleria
+- **Gallery Overlay** (components.css): Overlay per elementi galleria
+- **Gallery Grid** (sections.css): Griglia per galleria
+- **Image Gallery** (sections.css): Galleria immagini
+
+## SEZIONI PAGINA INDEX.HTML
+- **Hero** (sections.css): Sezione principale con immagine di sfondo e effetti moderni
+- **Intro Section** (sections.css): Sezione introduttiva
+- **Services Detail** (sections.css): Dettaglio servizi
+- **Pricing Section** (sections.css): Sezione prezzi
+- **Home Service** (sections.css): Servizio a domicilio
+- **Common Issues** (sections.css): Problemi comuni
+- **FAQ Section** (sections.css): Domande frequenti
+- **Work Gallery** (sections.css): Galleria lavori
+- **Community Section** (sections.css): Sezione community
+- **Ricambi Preview** (sections.css): Anteprima ricambi
+
+## SEZIONI PAGINA RICAMBI.HTML
+- **Hero Section** (sections.css): Sezione principale ricambi con design moderno
+- **Info Section** (sections.css): Sezione informativa ricambi
+- **Features Section** (sections.css): Caratteristiche ricambi
+- **Why Us Section** (sections.css): Perché sceglierci
+- **Maintenance Section** (sections.css): Manutenzione
+- **FAQ Section** (sections.css): Domande frequenti
+- **Compact Section** (sections.css): Sezione compatta ricambi
+- **Guarantee Section** (sections.css): Garanzia
+- **Services Section** (sections.css): Servizi
+- **Brands Section** (sections.css): Marche supportate
+
+## SEZIONI PAGINA ASSISTENZA.HTML
+- **Hero Section** (sections.css): Sezione principale assistenza con design moderno
+- **Marche Supportate** (sections.css): Marche supportate per assistenza
+- **Problematiche** (sections.css): Problematiche risolte
+- **Servizi Assistenza** (sections.css): Servizi di assistenza
+- **Processo** (sections.css): Processo di assistenza
+- **FAQ Assistenza** (sections.css): Domande frequenti sull'assistenza
+- **Contatti** (sections.css): Sezione contatti
+
+## COMPONENTI CONTATTI
+- **Contact List** (layout.css): Lista contatti
+- **Contact Item** (layout.css): Elemento contatto
+- **Contact Details** (layout.css): Dettagli contatto
+- **Map Container** (layout.css): Contenitore mappa Google
+
+## ANIMAZIONI
+- **Fade In Up** (animations.css): Animazione dal basso verso l'alto
+- **Fade In Left** (animations.css): Animazione da sinistra
+- **Fade In Right** (animations.css): Animazione da destra
+- **Zoom In** (animations.css): Animazione zoom
+- **Float** (animations.css): Animazione fluttuante
+- **Pulse** (animations.css): Animazione pulsante
+- **Header Show/Hide** (animations.css): Mostra/nascondi header durante lo scroll
+- **Hero Background** (animations.css): Effetto zoom e luminosità al passaggio del mouse
+- **Feature Icon** (animations.css): Effetto scala e cambio background al passaggio del mouse
+
+## UTILITY CLASSES
+- **Text Utilities** (utilities.css): Classi per formattazione testo
+- **Margin Utilities** (utilities.css): Classi per margini
+- **Padding Utilities** (utilities.css): Classi per padding
+- **Display Utilities** (utilities.css): Classi per display
+- **Flex Utilities** (utilities.css): Classi per flexbox
+- **Width Utilities** (utilities.css): Classi per larghezza
+- **Background Utilities** (utilities.css): Classi per sfondi
+- **Border Utilities** (utilities.css): Classi per bordi
+- **Shadow Utilities** (utilities.css): Classi per ombre
+- **Position Utilities** (utilities.css): Classi per posizionamento
+- **Visibility Utilities** (utilities.css): Classi per visibilità
+- **Overflow Utilities** (utilities.css): Classi per overflow
+- **Z-index Utilities** (utilities.css): Classi per z-index
+
+## RESPONSIVE
+- **Mobile Menu** (responsive.css): Menu mobile
+- **Typography Responsive** (responsive.css): Tipografia responsive
+- **Layout Responsive** (responsive.css): Layout responsive
+- **Grid Responsive** (responsive.css): Griglie responsive
+- **Footer Responsive** (responsive.css): Footer responsive
+- **Lightbox Responsive** (responsive.css): Lightbox responsive
+- **Social Link Responsive** (responsive.css): Link social responsive
+
+## UNIFORMITÀ TRA PAGINE
+- **Navbar**: Struttura identica in tutte le pagine con separatore verticale tra link fissi e dinamici
+- **Hero Section**: Design moderno e coerente in tutte le pagine con effetti hover migliorati
+- **Footer**: Struttura identica in tutte le pagine
+- **Animazioni**: Velocità e stile coerenti in tutte le pagine
+- **Colori**: Palette di colori coerente in tutto il sito
+
+## TEMPLATE RIUTILIZZABILI
+- **Header Template**: Header con logo e navigazione a due gruppi
+- **Footer Template**: Footer con contatti, social e mappa
+- **Hero Template**: Sezione hero moderna con effetti hover
+- **Card Grid Template**: Griglia di card per servizi o prodotti
+- **Gallery Template**: Galleria immagini con lightbox
+- **FAQ Template**: Sezione FAQ con accordion
+- **Contact Template**: Sezione contatti con icone
+- **Feature List Template**: Lista di caratteristiche con icone
+- **Pricing Template**: Template per prezzi
+- **Service Areas Template**: Template per aree di servizio
+- **Brands Template**: Template per marche supportate 
