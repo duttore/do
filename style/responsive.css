@@ -127,6 +127,12 @@
         order: 0;
         margin-bottom: 1rem;
     }
+    
+    /* Escludo la sezione servizi dalla regola generale */
+    #servizi.intro-section .content-wrapper .image-gallery {
+        order: 2 !important;
+        margin-bottom: 0 !important;
+    }
 
     .services-grid,
     .pricing-grid,

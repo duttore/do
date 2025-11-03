@@ -399,27 +399,21 @@
                 </div>
                 <div class="image-gallery">
                     <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
-                        <div class="gallery-item">
-                            <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" 
-                                 alt="Servizio a domicilio"
-                                 style="width: 100%; border-radius: 1rem;"
-                                 onclick="openLightbox(this.src)"
-                                 itemprop="contentUrl">
-                            <div class="gallery-overlay">
-                                <span itemprop="name">Officina Specializzata</span>
-                            </div>
+                        <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" 
+                             alt="Servizio a domicilio"
+                             onclick="openLightbox(this.src)"
+                             itemprop="contentUrl">
+                        <div class="gallery-overlay">
+                            <span itemprop="name">Servizio a domicilio</span>
                         </div>
                     </div>
                     <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
-                        <div class="gallery-item">
-                            <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg"
-                                 alt="Servizio a domicilio"
-                                 style="width: 100%; border-radius: 1rem;"
-                                 onclick="openLightbox(this.src)"
-                                 itemprop="contentUrl">
-                            <div class="gallery-overlay">
-                                <span itemprop="name">Officina Specializzata</span>
-                            </div>
+                        <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg"
+                             alt="Officina Specializzata"
+                             onclick="openLightbox(this.src)"
+                             itemprop="contentUrl">
+                        <div class="gallery-overlay">
+                            <span itemprop="name">Officina Specializzata</span>
                         </div>
                     </div>
                 </div>
@@ -1300,6 +1294,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             lastScroll = currentScroll;
+        });
+
+        // Gestione accordion per FAQ (replica comportamento ricambi.html)
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionContent = header.nextElementSibling;
+                header.classList.toggle('active');
+
+                if (header.classList.contains('active')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                }
+
+                // Chiudi le altre voci
+                document.querySelectorAll('.accordion-header').forEach(otherHeader => {
+                    if (otherHeader !== header) {
+                        otherHeader.classList.remove('active');
+                        if (otherHeader.nextElementSibling) {
+                            otherHeader.nextElementSibling.style.maxHeight = 0;
+                        }
+                    }
+                });
+            });
         });
     });
 </script>

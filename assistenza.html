@@ -1060,23 +1060,24 @@
                 }, 30); // Ridotto da 66ms a 30ms
             }, false);
             
-            // Gestione accordion per FAQ
-            document.querySelectorAll('.accordion-header').forEach(button => {
-                button.addEventListener('click', () => {
-                    const accordionContent = button.nextElementSibling;
-                    button.classList.toggle('active');
-                    
-                    if (button.classList.contains('active')) {
+            // Gestione accordion per FAQ (stesso meccanismo di ricambi.html)
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const accordionContent = header.nextElementSibling;
+                    header.classList.toggle('active');
+
+                    if (header.classList.contains('active')) {
                         accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
                     } else {
                         accordionContent.style.maxHeight = 0;
                     }
-                    
-                    // Chiudi gli altri accordion
-                    document.querySelectorAll('.accordion-header').forEach(otherButton => {
-                        if (otherButton !== button) {
-                            otherButton.classList.remove('active');
-                            otherButton.nextElementSibling.style.maxHeight = 0;
+
+                    document.querySelectorAll('.accordion-header').forEach(otherHeader => {
+                        if (otherHeader !== header) {
+                            otherHeader.classList.remove('active');
+                            if (otherHeader.nextElementSibling) {
+                                otherHeader.nextElementSibling.style.maxHeight = 0;
+                            }
                         }
                     });
                 });
