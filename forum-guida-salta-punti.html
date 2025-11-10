@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guida passo passo in stile wikiHow per risolvere una macchina da cucire che salta i punti. Diagnostica, pulizia, regolazioni della tensione e quando contattare un tecnico.">
+    <meta name="keywords" content="macchina da cucire salta i punti, guida passo passo, tensione filo, manutenzione macchina da cucire, wikiHow macchine da cucire">
+    <meta name="ga-measurement-id" content="G-XXXXXXXXXX">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Come Risolvere una Macchina da Cucire che Salta i Punti | Guida wikiHow</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/components.css">
+    <link rel="stylesheet" href="style/sections.css">
+    <link rel="stylesheet" href="style/utilities.css">
+    <link rel="stylesheet" href="style/animations.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/forum.css">
+    <script defer src="contact-tracking.js"></script>
+    <style>
+        .guide-hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .guide-hero img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+        .guide-hero .guide-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(19, 30, 63, 0.15) 0%, rgba(19, 30, 63, 0.55) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 2.5rem;
+            color: #fff;
+        }
+        .guide-breadcrumb {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        .guide-breadcrumb a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+        .guide-wrapper {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        .guide-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 18px 45px -20px rgba(15, 23, 42, 0.25);
+            padding: 2.2rem;
+        }
+        .guide-card h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            color: #13203f;
+        }
+        .guide-card p {
+            color: #4a5568;
+            line-height: 1.65;
+        }
+        .quick-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+        .quick-fact {
+            background: #f8fbff;
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            border: 1px solid #e3eefc;
+        }
+        .quick-fact strong {
+            display: block;
+            font-size: 0.95rem;
+            color: #0d47a1;
+            margin-bottom: 0.25rem;
+        }
+        .step-list {
+            counter-reset: step;
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .step-item {
+            position: relative;
+            padding: 1.8rem 1.8rem 1.8rem 4.5rem;
+            background: #fdfdff;
+            border-radius: 18px;
+            border: 1px solid #e7ecf5;
+            box-shadow: 0 14px 40px -30px rgba(15, 23, 42, 0.35);
+        }
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: 50%;
+            left: 1.6rem;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #0d6efd;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        .step-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: #13203f;
+        }
+        .step-item ul {
+            margin: 0.75rem 0 0 1.25rem;
+            color: #4a5568;
+        }
+        .tip-box,
+        .warning-box {
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            margin-top: 1.2rem;
+            display: flex;
+            gap: 0.9rem;
+            align-items: flex-start;
+        }
+        .tip-box {
+            background: #f1f9ff;
+            border: 1px solid #d7ecff;
+            color: #1d4ed8;
+        }
+        .warning-box {
+            background: #fff6f6;
+            border: 1px solid #ffdddd;
+            color: #b91c1c;
+        }
+        .guide-sidebar {
+            display: grid;
+            gap: 1.5rem;
+        }
+        .resource-card {
+            padding: 1.5rem;
+            border-radius: 16px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+        }
+        .resource-card h3 {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            color: #0f172a;
+        }
+        .resource-card ul {
+            margin: 0;
+            padding-left: 1.1rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+        .faq-list {
+            margin-top: 1.5rem;
+            display: grid;
+            gap: 1rem;
+        }
+        .faq-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            background: #fff;
+            box-shadow: 0 12px 35px -25px rgba(15, 23, 42, 0.35);
+        }
+        .faq-item h3 {
+            font-size: 1rem;
+            margin-bottom: 0.6rem;
+            color: #1f2a37;
+        }
+        .cta-guide {
+            margin-top: 3rem;
+            padding: 2.5rem;
+            border-radius: 18px;
+            background: linear-gradient(120deg, #1e3a8a 0%, #2563eb 60%, #38bdf8 100%);
+            color: #fff;
+            display: grid;
+            gap: 1.25rem;
+        }
+        .cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .cta-actions a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.9rem 1.5rem;
+            border-radius: 999px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .cta-actions a.cta-primary {
+            background: #fff;
+            color: #0f172a;
+        }
+        .cta-actions a.cta-outline {
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: #fff;
+        }
+        .checklist {
+            display: grid;
+            gap: 0.9rem;
+            margin-top: 1rem;
+        }
+        .checklist-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+        .checklist-item span {
+            font-weight: 600;
+            color: #0f172a;
+        }
+        @media (max-width: 1024px) {
+            .guide-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .guide-sidebar {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+        }
+        @media (max-width: 768px) {
+            .guide-hero img {
+                height: 280px;
+            }
+            .guide-wrapper {
+                gap: 1.75rem;
+            }
+            .guide-card {
+                padding: 1.5rem;
+            }
+            .step-item {
+                padding: 1.6rem 1.2rem 1.6rem 3.8rem;
+            }
+            .step-item::before {
+                left: 1rem;
+                width: 46px;
+                height: 46px;
+                font-size: 1.1rem;
+            }
+            .cta-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Riparazioni Ricci</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav-desktop">
+                    <div class="nav-group fixed-links">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Home</span>
+                        </a>
+                        <a href="ricambi.html" class="nav-link">
+                            <i class="fas fa-cog"></i>
+                            <span>Ricambi</span>
+                        </a>
+                        <a href="assistenza.html" class="nav-link">
+                            <i class="fas fa-tools"></i>
+                            <span>Assistenza</span>
+                        </a>
+                        <a href="forum.html" class="nav-link active">
+                            <i class="fas fa-users"></i>
+                            <span>Forum</span>
+                        </a>
+                        <a href="#" class="nav-link" id="contatti-link">
+                            <i class="fas fa-phone"></i>
+                            <span>Contatti</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="scroll-progress"></div>
+
+    <main>
+        <section class="container" style="margin-top: 2rem;">
+            <nav class="guide-breadcrumb fade-in-up">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="forum.html">Forum</a>
+                <span>/</span>
+                <span>Guida: macchina che salta i punti</span>
+            </nav>
+            <div class="guide-hero fade-in-up">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80" alt="Tecnico che regola una macchina da cucire professionale">
+                <div class="guide-hero-overlay">
+                    <div>
+                        <p class="highlight-item" style="background: rgba(15, 23, 42, 0.3); width: fit-content; padding: 0.4rem 0.8rem; border-radius: 999px; font-size: 0.85rem;">Guida wikiHow verificata dai tecnici Ricci</p>
+                        <h1 style="font-size: 2.6rem; font-weight: 700; margin: 0.5rem 0;">Come Risolvere una Macchina da Cucire che Salta i Punti</h1>
+                        <p style="max-width: 620px; font-size: 1.05rem; line-height: 1.7;">Segui i passaggi controllati dai nostri tecnici per identificare rapidamente la causa, effettuare la manutenzione corretta e capire quando fermarti per evitare danni costosi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-wrapper">
+                <article class="guide-card fade-in-left">
+                    <h2>Prima di iniziare</h2>
+                    <p>
+                        Il salto dei punti è uno dei problemi più comuni nelle macchine da cucire domestiche e industriali. Può dipendere da un ago danneggiato, dalla tensione del filo fuori calibrazione, da residui nella navetta o da un disallineamento meccanico. In questa guida strutturata in stile wikiHow trovi controlli rapidi, passaggi step-by-step e segnali che richiedono l’intervento di un tecnico.
+                    </p>
+
+                    <div class="quick-facts" style="margin-top: 1.5rem;">
+                        <div class="quick-fact">
+                            <strong>Livello</strong>
+                            Principiante/intermedio
+                        </div>
+                        <div class="quick-fact">
+                            <strong>Tempo stimato</strong>
+                            35-45 minuti
+                        </div>
+                        <div class="quick-fact">
+                            <strong>Occorrente</strong>
+                            Ago nuovo, pennello, olio specifico, tessuto test
+                        </div>
+                        <div class="quick-fact">
+                            <strong>Rischio danni</strong>
+                            Medio (fermati se senti rumori metallici)
+                        </div>
+                    </div>
+
+                    <section aria-labelledby="step-list-title" style="margin-top: 2.5rem;">
+                        <h2 id="step-list-title">Procedura passo passo</h2>
+                        <ol class="step-list">
+                            <li class="step-item">
+                                <h3>Controlla e sostituisci l'ago</h3>
+                                <p>Il 70% dei casi si risolve con un ago nuovo. Utilizza un ago compatibile con tessuto e filato (es. 80/12 universale per cotone, 90/14 per jeans).</p>
+                                <ul>
+                                    <li>Ispeziona l'ago contro la luce: se è storto o opaco, sostituiscilo.</li>
+                                    <li>Inserisci l'ago fino a battere sul fermo e stringi bene la vite di bloccaggio.</li>
+                                </ul>
+                                <div class="tip-box">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <p>Annota data e tipo di ago usato: ti aiuterà a capire la frequenza di sostituzione in base ai materiali che lavori.</p>
+                                </div>
+                            </li>
+                            <li class="step-item">
+                                <h3>Pulisci crochet, navetta e placca ago</h3>
+                                <p>Polvere, residui di filo e lanugine impediscono al crochet di agganciare correttamente il filo superiore.</p>
+                                <ul>
+                                    <li>Scollega la macchina dalla corrente.</li>
+                                    <li>Rimuovi la placca ago e la bobina, poi aspira con una peretta o un pennello.</li>
+                                    <li>Controlla che la navetta non presenti graffi o scheggiature.</li>
+                                </ul>
+                                <div class="warning-box">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Evita l’aria compressa: può spingere lo sporco più in profondità e compromettere gli ingranaggi.</p>
+                                </div>
+                            </li>
+                            <li class="step-item">
+                                <h3>Regola la tensione del filo superiore</h3>
+                                <p>Una tensione troppo bassa o troppo alta altera la formazione del punto annodato.</p>
+                                <ul>
+                                    <li>Rimetti filo e bobina, poi imposta la tensione su un valore medio (es. 4 su Singer).</li>
+                                    <li>Esegui una cucitura di prova su doppio strato del tessuto che userai.</li>
+                                    <li>Se il filo di sotto emerge sul diritto, aumenta di mezzo punto. Se il filo superiore resta visibile sotto, riduci la tensione.</li>
+                                </ul>
+                            </li>
+                            <li class="step-item">
+                                <h3>Verifica la sincronizzazione crochet/ago</h3>
+                                <p>Se dopo i passaggi precedenti il problema persiste, controlla la sincronizzazione.</p>
+                                <ul>
+                                    <li>Ruota a mano il volantino verso di te: il crochet deve intercettare il filo poco sotto l'occhiello dell'ago.</li>
+                                    <li>Se il crochet arriva in ritardo o troppo presto, evita ulteriori test: c’è rischio di danneggiare la barra ago.</li>
+                                </ul>
+                                <div class="warning-box">
+                                    <i class="fas fa-user-shield"></i>
+                                    <p>Una sincronizzazione errata richiede strumenti professionali. In questo caso è consigliato prenotare un intervento tecnico.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section style="margin-top: 3rem;">
+                        <h2>Checklist rapida di controllo</h2>
+                        <div class="checklist">
+                            <div class="checklist-item">
+                                <span>✔ Ago corretto e nuovo</span>
+                                <p>Assicurati di usare un ago compatibile con filo e tessuto.</p>
+                            </div>
+                            <div class="checklist-item">
+                                <span>✔ Navetta pulita</span>
+                                <p>Rimuovi lanugine e residui dal crochet ad ogni cambio bobina.</p>
+                            </div>
+                            <div class="checklist-item">
+                                <span>✔ Tensione equilibrata</span>
+                                <p>I punti devono annodarsi al centro del tessuto, senza fili visibili sopra o sotto.</p>
+                            </div>
+                            <div class="checklist-item">
+                                <span>✔ Tessuto test</span>
+                                <p>Conserva un campione con note sulle regolazioni funzionanti per riferimento futuro.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section style="margin-top: 3rem;">
+                        <h2>Domande frequenti</h2>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <h3>Perché la macchina salta i punti solo con tessuti elastici?</h3>
+                                <p>Serve un ago con punta a sfera (stretch o jersey) e, spesso, un piedino a doppio trasporto. Riduci leggermente la tensione del filo superiore e imposta un punto più lungo.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h3>Ogni quanto devo sostituire l'ago?</h3>
+                                <p>Ogni 6-8 ore di lavoro o dopo un progetto impegnativo. Se lavori materiali spessi o sintetici, cambia più spesso per evitare micro scheggiature.</p>
+                            </div>
+                            <div class="faq-item">
+                                <h3>Posso lubrificare da solo la navetta?</h3>
+                                <p>Sì, se il manuale lo prevede. Usa solo olio specifico per macchine da cucire e una goccia microscopica. Se noti residui scuri, contattaci per una pulizia professionale.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="cta-guide">
+                        <div>
+                            <h2>Hai ancora salti di punto o rumori metallici?</h2>
+                            <p>Probabilmente la sincronizzazione è fuori fase o c'è un danneggiamento della navetta. Evita di forzare la macchina: possiamo intervenire in laboratorio o a domicilio a Firenze e provincia.</p>
+                        </div>
+                        <div class="cta-actions">
+                            <a href="tel:+390552696823" class="cta-primary" data-contact-event="cta_telefono" data-contact-step="guide_cta">
+                                <i class="fas fa-phone-alt"></i>
+                                Chiama il laboratorio
+                            </a>
+                            <a href="https://wa.me/393343156903" target="_blank" rel="noopener noreferrer" class="cta-outline" data-contact-event="cta_whatsapp" data-contact-step="guide_cta">
+                                <i class="fab fa-whatsapp"></i>
+                                Scrivici su WhatsApp
+                            </a>
+                            <a href="mailto:riparazioni.ricci@gmail.com" class="cta-outline" data-contact-event="cta_email" data-contact-step="guide_cta">
+                                <i class="fas fa-envelope"></i>
+                                Invia foto del problema
+                            </a>
+                        </div>
+                    </section>
+                </article>
+
+                <aside class="guide-sidebar fade-in-right">
+                    <div class="resource-card">
+                        <h3>Segnali di allarme</h3>
+                        <ul>
+                            <li>Rumori metallici o colpi secchi durante la cucitura.</li>
+                            <li>Filo superiore che si spezza di continuo.</li>
+                            <li>Punti irregolari nonostante ago e tensione corretti.</li>
+                            <li>Tracce di olio sporco o limatura vicino alla navetta.</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Attrezzatura consigliata</h3>
+                        <ul>
+                            <li>Set aghi universali e stretch (80/12, 90/14, 75/11).</li>
+                            <li>Pennello morbido + mini aspiratore manuale.</li>
+                            <li>Olio professionale per macchine da cucire.</li>
+                            <li>Set cacciaviti corti e calamita per viti.</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Contenuti correlati</h3>
+                        <ul>
+                            <li><a href="manutenzione-macchine.html">Manutenzione periodica passo passo</a></li>
+                            <li><a href="recensioni-marche.html">Confronto marche: punti e affidabilità</a></li>
+                            <li><a href="assistenza.html#faq">Domande frequenti sull’assistenza a domicilio</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h3>Collegamenti Rapidi</h3>
+                    <a href="index.html">Home</a>
+                    <a href="ricambi.html">Ricambi</a>
+                    <a href="assistenza.html">Assistenza</a>
+                    <a href="forum.html">Forum</a>
+                    <a href="guida-scelta-macchine.html">Guida Macchine</a>
+                </div>
+                <div class="footer-social">
+                    <h3>Social</h3>
+                    <a href="https://facebook.com/groups/riparazionimacchinedacucire" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <div class="contact-list">
+                        <div class="contact-item fade-in-left">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Cellulare</span>
+                                <a href="tel:+393343156903">+39 334 315 6903</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-up">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Telefono Fisso</span>
+                                <a href="tel:+390552696823">+39 055 2696823</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-right">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">WhatsApp</span>
+                                <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-right">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:riparazioni.ricci@gmail.com">riparazioni.ricci@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item fade-in-right">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Indirizzo</span>
+                                <span>Via Rocco Benini, 16 F/G, 50013 Campi Bisenzio FI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <p class="copyright">&copy; 2024 Riparazioni Ricci - Tutti i diritti riservati</p>
+        </div>
+    </footer>
+
+    <!-- Modal Contatti -->
+    <div class="modal" id="contatti-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Contattaci</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="contatti-grid">
+                    <div class="contatti-info">
+                        <h3>I Nostri Contatti</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Cellulare</span>
+                                    <a href="tel:+393343156903">+39 334 315 6903</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Telefono Fisso</span>
+                                    <a href="tel:+390552696823">+39 055 2696823</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">WhatsApp</span>
+                                    <a href="https://wa.me/393343156903">Scrivici su WhatsApp</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:riparazioni.ricci@gmail.com">riparazioni.ricci@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-details">
+                                    <span class="contact-label">Indirizzo</span>
+                                    <span>Via Rocco Benini, 16 F/G, 50013 Campi Bisenzio FI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contatti-mappa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                            width="100%"
+                            height="100%"
+                            style="border:0; border-radius: 10px;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navDesktop = document.querySelector('.nav-desktop');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                navDesktop.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        navDesktop.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                    }
+                });
+            });
+
+            const contattiLink = document.getElementById('contatti-link');
+            const contattiModal = document.getElementById('contatti-modal');
+            const modalClose = document.querySelector('.modal-close');
+
+            contattiLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                contattiModal.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            });
+
+            modalClose.addEventListener('click', function() {
+                contattiModal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            });
+
+            contattiModal.addEventListener('click', function(e) {
+                if (e.target === contattiModal) {
+                    contattiModal.classList.remove('show');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+
+            const scrollProgress = document.querySelector('.scroll-progress');
+            window.addEventListener('scroll', () => {
+                const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (window.scrollY / windowHeight) * 100;
+                scrollProgress.style.width = scrolled + '%';
+            });
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Come risolvere una macchina da cucire che salta i punti",
+        "description": "Guida wikiHow realizzata dai tecnici Ricci per individuare e risolvere i salti di punto nelle macchine da cucire.",
+        "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+        "totalTime": "PT45M",
+        "supply": [
+            { "@type": "HowToSupply", "name": "Ago nuovo compatibile con il tessuto" },
+            { "@type": "HowToSupply", "name": "Olio per macchine da cucire" },
+            { "@type": "HowToSupply", "name": "Pennello morbido e aspiratore manuale" }
+        ],
+        "tool": [
+            { "@type": "HowToTool", "name": "Cacciavite corto" },
+            { "@type": "HowToTool", "name": "Tessuto di test" }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Controlla e sostituisci l'ago",
+                "text": "Ispeziona l'ago e sostituiscilo se danneggiato. Usa un ago adeguato al tessuto."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Pulisci crochet, navetta e placca ago",
+                "text": "Rimuovi placca ago e bobina, pulisci con pennello e aspira residui di tessuto."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Regola la tensione del filo superiore",
+                "text": "Imposta la tensione su un valore medio e testa su tessuto simile al lavoro finale."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Verifica la sincronizzazione crochet/ago",
+                "text": "Ruota il volantino e controlla che il crochet agganci il filo poco sotto l'occhiello."
+            }
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Riparazioni Ricci",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.macchinedacucirefirenze.it/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Perché la macchina salta i punti solo con tessuti elastici?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Serve un ago stretch o jersey e un punto più lungo. Riduci leggermente la tensione del filo superiore."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ogni quanto devo sostituire l'ago?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ogni 6-8 ore di lavoro o dopo un progetto impegnativo, soprattutto con materiali spessi."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Posso lubrificare da solo la navetta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Solo se il manuale lo prevede. Usa olio specifico e, se noti residui scuri, richiedi una pulizia professionale."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
+
