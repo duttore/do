@@ -37,7 +37,6 @@
     <link rel="stylesheet" href="style/animations.css">
     <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="style/hero.css">
-    <link rel="stylesheet" href="style/macchine-cucire.css">
     <meta name="google-site-verification" content="4DQbxm7mC-3ZBQga6WRoKdVxbFbTv-qb9X4nwkDLUOQ"/>
     <script defer src="contact-tracking.js"></script>
     
@@ -324,7 +323,7 @@
                             <i class="fas fa-tools"></i>
                             <span>Assistenza</span>
                         </a>
-                        <a href="#guide-informative" class="nav-link">
+                        <a href="guide.html" class="nav-link">
                             <i class="fas fa-book"></i>
                             <span>Guide</span>
                         </a>
@@ -528,54 +527,75 @@
     </div>
 </section>
 
-  <section id="guide-informative" class="services-detail bg-light">
+  <section id="guide-informative" class="guides-carousel-section bg-light">
     <div class="container">
         <div class="section-header">
             <h2>Guide Informative</h2>
             <p>Tutto quello che devi sapere sul mondo delle macchine da cucire</p>
         </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-tools"></i>
+        
+        <!-- Carousel Guide -->
+        <div class="guides-carousel-wrapper">
+            <div class="guides-carousel" id="guidesCarousel">
+                <!-- Guida 1 -->
+                <div class="carousel-item">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Manutenzione delle Macchine</h3>
+                        <p>Impara come mantenere la tua macchina da cucire in perfetta efficienza, con consigli pratici su pulizia, lubrificazione e problemi comuni.</p>
+                        <div class="button-group">
+                            <a href="manutenzione-macchine.html" class="button button-primary">
+                                <span>Leggi la guida</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <h3>Manutenzione delle Macchine</h3>
-                <p>Impara come mantenere la tua macchina da cucire in perfetta efficienza, con consigli pratici su pulizia, lubrificazione e problemi comuni.</p>
-                <div class="button-group">
-                    <a href="manutenzione-macchine.html" class="button button-primary">
-                        <span>Leggi la guida</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+                
+                <!-- Guida 2 -->
+                <div class="carousel-item">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Come Scegliere la Macchina</h3>
+                        <p>Criteri per selezionare la macchina da cucire perfetta per le tue esigenze, confronti tra modelli e consigli professionali per ogni budget.</p>
+                        <div class="button-group">
+                            <a href="scelta-macchine.html" class="button button-primary">
+                                <span>Leggi la guida</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Guida 3 -->
+                <div class="carousel-item">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Recensioni Marche</h3>
+                        <p>Confronto dettagliato tra le principali marche di macchine da cucire, con analisi dei punti di forza e punti deboli di ciascun produttore.</p>
+                        <div class="button-group">
+                            <a href="recensioni-marche.html" class="button button-primary">
+                                <span>Leggi la guida</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <h3>Come Scegliere la Macchina</h3>
-                <p>Criteri per selezionare la macchina da cucire perfetta per le tue esigenze, confronti tra modelli e consigli professionali per ogni budget.</p>
-                <div class="button-group">
-                    <a href="scelta-macchine.html" class="button button-primary">
-                        <span>Leggi la guida</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Recensioni Marche</h3>
-                <p>Confronto dettagliato tra le principali marche di macchine da cucire, con analisi dei punti di forza e punti deboli di ciascun produttore.</p>
-                <div class="button-group">
-                    <a href="recensioni-marche.html" class="button button-primary">
-                        <span>Leggi la guida</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
+        </div>
+        
+        <!-- Pulsante Vedi Tutte -->
+        <div class="guides-cta">
+            <a href="guide.html" class="button button-primary">
+                <i class="fas fa-book"></i>
+                <span>Vedi tutte le guide</span>
+            </a>
         </div>
     </div>
 </section>

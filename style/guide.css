@@ -1,0 +1,774 @@
+/* Guide - Design Moderno e Pulito */
+
+.guide-page {
+    color: var(--dark-color);
+    background-color: #ffffff;
+}
+
+/* ==========================
+   GUIDES SHOWCASE SEZIONE
+========================== */
+
+.guides-showcase {
+    padding: 4rem 0;
+}
+
+.guides-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.guides-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.guides-header p {
+    font-size: 1.15rem;
+    color: #6b7280;
+}
+
+/* Search */
+.guides-search {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.guides-search i {
+    position: absolute;
+    left: 1rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.guides-search input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 2.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.guides-search input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-color-rgb), 0.1);
+}
+
+/* ==========================
+   GRIGLIA GUIDE PULITA
+========================== */
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.guide-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.guide-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.guide-card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    border-color: var(--primary-color);
+}
+
+.guide-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+    border-radius: 12px;
+}
+
+.guide-card:hover::after {
+    left: 100%;
+}
+
+/* Shine effect per articoli inline (Prosegui con) */
+article[onclick]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+article[onclick]:hover::after {
+    left: 100%;
+}
+
+/* ==========================
+   HERO MODERNO GUIDE
+========================== */
+
+.guide-hero-modern {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.12) 0%, rgba(var(--primary-color-rgb), 0.03) 100%);
+    min-height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.guide-hero-modern .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Hero Left Content */
+.guide-hero-modern .hero-content {
+    z-index: 2;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.guide-hero-modern .hero-badge {
+    display: inline-block;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.guide-hero-modern h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.guide-hero-modern .hero-subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.guide-hero-modern .hero-meta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.guide-hero-modern .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.guide-hero-modern .hero-meta-item i {
+    color: var(--primary-color);
+}
+
+/* Hero Right Image */
+.guide-hero-modern .hero-image {
+    position: relative;
+    z-index: 1;
+    animation: slideInRight 0.8s ease-out;
+}
+
+.guide-hero-modern .hero-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2), 0 0 0 1px rgba(var(--primary-color-rgb), 0.1);
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.4s ease;
+    animation: scaleIn 0.8s ease-out;
+}
+
+.guide-hero-modern .hero-image img:hover {
+    transform: translateY(-5px);
+}
+
+/* Decorative blur shapes */
+.guide-hero-modern .hero-blur-1 {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    opacity: 0.15;
+    filter: blur(60px);
+    animation: float 6s ease-in-out infinite;
+}
+
+.guide-hero-modern .hero-blur-2 {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 250px;
+    height: 250px;
+    background: rgba(var(--primary-color-rgb), 0.2);
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(50px);
+    animation: float 8s ease-in-out infinite 1s;
+}
+
+.guide-hero-modern .hero-bg-accent {
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--primary-color), transparent);
+    opacity: 0.03;
+    z-index: 0;
+}
+
+/* Hero Animations */
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Immagine con slot */
+.guide-image-slot {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+.guide-image-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.guide-card:hover .guide-image-slot img {
+    transform: scale(1.05);
+}
+
+.guide-label {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+/* Contenuto */
+.guide-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    padding: 1.25rem 1.25rem 0.5rem;
+    margin: 0;
+}
+
+.guide-card p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 1.25rem;
+    margin: 0.5rem 0 1rem;
+    flex-grow: 1;
+}
+
+.guide-card a {
+    padding: 0 1.25rem 1.25rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+    align-self: flex-start;
+}
+
+.guide-card a:hover {
+    color: var(--accent-color);
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #9ca3af;
+}
+
+.no-results i {
+    font-size: 2.5rem;
+    color: #e5e7eb;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* ==========================
+   LEGENDA IMMAGINI SEZIONE
+========================== */
+
+.image-legend-section {
+    background: #f8fafc;
+    padding: 4rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.legend-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.legend-header h2 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.legend-header p {
+    color: #6b7280;
+    font-size: 1.05rem;
+}
+
+.legend-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.legend-item {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.legend-badge {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.legend-item h4 {
+    color: var(--dark-color);
+    font-weight: 600;
+    margin: 0.75rem 0 0.5rem;
+    font-size: 1.05rem;
+}
+
+.legend-item p {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.legend-item code {
+    background: #f3f4f6;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #374151;
+    display: block;
+    word-break: break-all;
+    margin: 0.5rem 0;
+    font-family: 'Courier New', monospace;
+}
+
+.legend-info {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.05), rgba(var(--primary-color-rgb), 0.02));
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.legend-info h4 {
+    color: var(--dark-color);
+    margin: 0 0 1rem;
+    font-size: 1.15rem;
+}
+
+.legend-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend-info li {
+    padding: 0.5rem 0;
+    color: #374151;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.legend-info li:before {
+    content: "✓ ";
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+/* ==========================
+   LAYOUT PER PAGINE GUIDE
+========================== */
+
+.guide-page .intro-section .content-wrapper {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    align-items: start;
+}
+
+.guide-page .table-of-contents {
+    position: sticky;
+    top: 6rem;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-left: 3px solid var(--primary-color);
+    grid-column: 1;
+    min-width: 260px;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+}
+
+.guide-page .table-of-contents h4 {
+    margin: 0 0 0.75rem 0;
+    padding-bottom: 0.75rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    border-bottom: 2px solid var(--primary-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.guide-page .table-of-contents a {
+    display: block;
+    color: #4b5563;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.guide-page .table-of-contents a:hover {
+    color: var(--primary-color);
+    background-color: rgba(var(--primary-color-rgb), 0.08);
+    padding-left: 1rem;
+}
+
+.guide-page .text-content,
+.guide-page .wiki-content {
+    grid-column: 2;
+    width: 100%;
+}
+
+.guide-page .text-content p,
+.guide-page .wiki-content p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.guide-page .wiki-step {
+    background: #ffffff;
+    border-left: 3px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    margin: 1.5rem 0;
+    transition: box-shadow 0.2s ease;
+}
+
+.guide-page .wiki-step:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.guide-page .wiki-step h3 {
+    color: var(--dark-color);
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.guide-page .importance-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.guide-page .importance-list li {
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1024px) {
+    .guide-page .intro-section .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .guide-page .table-of-contents {
+        position: relative;
+        top: 0;
+        max-height: none;
+    }
+
+    .guide-page .text-content,
+    .guide-page .wiki-content {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .guides-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .guides-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .legend-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .legend-info {
+        grid-column: 1;
+    }
+
+    .guide-image-slot {
+        height: 150px;
+    }
+
+    .guide-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .guide-card p {
+        font-size: 0.9rem;
+    }
+
+    .guides-search input {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guides-showcase {
+        padding: 2rem 0;
+    }
+
+    .guides-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .guides-header p {
+        font-size: 1rem;
+    }
+
+    .guide-card {
+        border-radius: 8px;
+    }
+
+    .guide-image-slot {
+        height: 130px;
+    }
+
+    .guide-card h3 {
+        font-size: 1rem;
+        padding: 1rem 1rem 0.5rem;
+    }
+
+    .guide-card p {
+        padding: 0 1rem;
+        font-size: 0.85rem;
+    }
+
+    .guide-card a {
+        padding: 0 1rem 1rem;
+    }
+
+    .legend-info {
+        padding: 1.5rem;
+    }
+
+    .legend-info li {
+        font-size: 0.85rem;
+    }
+
+    /* Hero Guide Responsive */
+    .guides-hero h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .guides-hero p {
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* Media Query 640px */
+@media (max-width: 640px) {
+    .guides-hero > div > div {
+        grid-template-columns: 1fr !important;
+    }
+
+    .guides-hero h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .guides-hero p {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* Media Query 768px */
+@media (max-width: 768px) {
+    .guides-hero {
+        padding: 4rem 0 !important;
+    }
+
+    .guides-hero h1 {
+        font-size: 2rem !important;
+    }
+
+    .guides-hero p {
+        font-size: 1rem !important;
+    }
+
+    /* Hero Moderno Responsive */
+    .guide-hero-modern .container {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+    .guide-hero-modern {
+        padding: 4rem 0 !important;
+        min-height: auto;
+    }
+
+    .guide-hero-modern h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .guide-hero-modern .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    .guide-hero-modern .hero-image {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+
+    .guide-hero-modern .hero-image img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .guide-hero-modern .hero-meta {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Media Query 640px */
+@media (max-width: 640px) {
+    .guide-hero-modern h1 {
+        font-size: 1.75rem !important;
+    }
+
+    .guide-hero-modern .hero-subtitle {
+        font-size: 0.95rem !important;
+    }
+
+    .guide-hero-modern .hero-badge {
+        font-size: 0.8rem !important;
+    }
+
+    .guide-hero-modern .hero-meta-item {
+        font-size: 0.8rem;
+    }
+}

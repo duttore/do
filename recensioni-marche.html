@@ -22,12 +22,11 @@
     <link rel="stylesheet" href="style/animations.css">
     <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="style/hero.css">
-    <link rel="stylesheet" href="style/forum.css">
-    <link rel="stylesheet" href="style/macchine-cucire.css">
+    <link rel="stylesheet" href="style/guide.css">
     <link rel="canonical" href="https://www.macchinedacucirefirenze.it/recensioni-marche.html">
     <script defer src="contact-tracking.js"></script>
 </head>
-<body>
+<body class="guide-page">
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -49,7 +48,7 @@
                             <i class="fas fa-tools"></i>
                             <span>Assistenza</span>
                         </a>
-                        <a href="index.html#guide-informative" class="nav-link active">
+                        <a href="guide.html" class="nav-link active">
                             <i class="fas fa-book"></i>
                             <span>Guide</span>
                         </a>
@@ -443,6 +442,75 @@
             </div>
         </div>
     </section>
+
+    <!-- Prosegui Con - Marche -->
+    <section style="padding: 4rem 0; background: #ffffff;">
+        <div class="container">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.6rem; margin: 0; color: var(--dark-color); font-weight: 700;">Prosegui con...</h3>
+                <div style="flex-grow: 1; height: 2px; background: linear-gradient(90deg, var(--primary-color), transparent);"></div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <!-- Card 1: Scelta -->
+                <article onclick="window.location.href='scelta-macchine.html'" style="background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #f0f0f0; display: flex; flex-direction: column; position: relative; cursor: pointer;">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 100px; height: 100px; background: rgba(var(--primary-color-rgb), 0.1); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+                    <div style="width: 100%; height: 160px; background-color: #f3f4f6; overflow: hidden;">
+                        <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" alt="Scelta" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+                    </div>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-search" style="font-size: 1.3rem; color: var(--primary-color);"></i>
+                            <span style="background: var(--primary-color); color: white; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase;">Scelta</span>
+                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-color); margin: 0 0 0.5rem;">Guida alla Scelta</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.5; margin: 0 0 1rem; flex-grow: 1;">Criteri di scelta, budget, fasce di prezzo e consigli per trovare la macchina perfetta.</p>
+                        <div style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Leggi <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></div>
+                    </div>
+                </article>
+
+                <!-- Card 2: Singer -->
+                <article onclick="window.location.href='riparazione-singer.html'" style="background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #f0f0f0; display: flex; flex-direction: column; position: relative; cursor: pointer;">
+                    <div style="position: absolute; top: -25px; right: -25px; width: 80px; height: 80px; background: rgba(var(--primary-color-rgb), 0.08); border-radius: 50%; animation: float 8s ease-in-out infinite 1s;"></div>
+                    <div style="width: 100%; height: 160px; background-color: #f3f4f6; overflow: hidden;">
+                        <img src="https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg" alt="Singer" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+                    </div>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-tools" style="font-size: 1.3rem; color: var(--primary-color);"></i>
+                            <span style="background: var(--primary-color); color: white; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase;">Marche</span>
+                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-color); margin: 0 0 0.5rem;">Riparazione Singer Firenze</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.5; margin: 0 0 1rem; flex-grow: 1;">Se hai scelto una Singer, affidati ai nostri esperti per riparazioni e assistenza garantita.</p>
+                        <div style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Leggi <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></div>
+                    </div>
+                </article>
+
+                <!-- Card 3: Necchi -->
+                <article onclick="window.location.href='riparazione-necchi.html'" style="background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #f0f0f0; display: flex; flex-direction: column; position: relative; cursor: pointer;">
+                    <div style="position: absolute; top: -35px; right: -35px; width: 110px; height: 110px; background: rgba(var(--primary-color-rgb), 0.12); border-radius: 50%; animation: float 7s ease-in-out infinite 0.5s;"></div>
+                    <div style="width: 100%; height: 160px; background-color: #f3f4f6; overflow: hidden;">
+                        <img src="https://live.staticflickr.com/65535/54375875071_fb1a4a5b6e_h.jpg" alt="Necchi" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
+                    </div>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-cog" style="font-size: 1.3rem; color: var(--primary-color);"></i>
+                            <span style="background: var(--primary-color); color: white; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase;">Marche</span>
+                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-color); margin: 0 0 0.5rem;">Riparazione Necchi Firenze</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.5; margin: 0 0 1rem; flex-grow: 1;">Se possiedi una Necchi, scopri come ripararla e mantenerla con la nostra guida.</p>
+                        <div style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Leggi <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
 
     <section id="argomenti-popolari" class="services-detail bg-light">
         <div class="container">

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Macchine da Cucire | Riparazioni Ricci Firenze</title>
+    <meta name="description" content="Guida complete alle macchine da cucire: scelta, manutenzione, riparazione e problemi comuni.">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/layout.css">
+    <link rel="stylesheet" href="style/components.css">
+    <link rel="stylesheet" href="style/sections.css">
+    <link rel="stylesheet" href="style/utilities.css">
+    <link rel="stylesheet" href="style/animations.css">
+    <link rel="stylesheet" href="style/responsive.css">
+    <link rel="stylesheet" href="style/hero.css">
+    <link rel="stylesheet" href="style/guide.css">
+    <link rel="canonical" href="https://www.macchinedacucirefirenze.it/guide.html">
+    <script defer src="contact-tracking.js"></script>
+</head>
+<body class="guide-page">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Riparazioni Ricci</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav class="nav-desktop">
+                    <div class="nav-group fixed-links">
+                        <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+                        <a href="ricambi.html" class="nav-link"><i class="fas fa-cog"></i><span>Ricambi</span></a>
+                        <a href="assistenza.html" class="nav-link"><i class="fas fa-tools"></i><span>Assistenza</span></a>
+                        <a href="guide.html" class="nav-link active"><i class="fas fa-book"></i><span>Guide</span></a>
+                        <a href="#" class="nav-link" id="contatti-link"><i class="fas fa-phone"></i><span>Contatti</span></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="scroll-progress"></div>
+
+    <!-- Hero Guide - Immersivo -->
+    <section class="guides-hero" style="position: relative; overflow: hidden; padding: 8rem 0; background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.12) 0%, rgba(var(--primary-color-rgb), 0.03) 100%); min-height: 60vh; display: flex; align-items: center;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <!-- Contenuto Sinistra -->
+                <div style="z-index: 2; animation: slideInLeft 0.8s ease-out;">
+                    <div style="display: inline-block; background: rgba(var(--primary-color-rgb), 0.1); color: var(--primary-color); padding: 0.75rem 1.5rem; border-radius: 30px; margin-bottom: 1.5rem; font-weight: 600; font-size: 0.9rem;">
+                        📚 Knowledge Hub per Macchine da Cucire
+                    </div>
+                    <h1 style="font-size: 3.5rem; font-weight: 800; color: var(--dark-color); margin-bottom: 1rem; line-height: 1.1;">
+                        Guide Complete<br><span style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Macchine da Cucire</span>
+                    </h1>
+                    <p style="font-size: 1.2rem; color: #6b7280; margin-bottom: 2rem; line-height: 1.7;">
+                        Dalle nozioni base al troubleshooting avanzato. Guide verificate da esperti di riparazioni a <strong>Firenze</strong>, seguite da migliaia di utenti.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                        <a href="#guidesGrid" style="padding: 1rem 2.5rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(var(--primary-color-rgb), 0.3); display: inline-flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-arrow-down"></i> Scopri le Guide
+                        </a>
+                        <a href="#" onclick="document.querySelector('.map-container iframe').scrollIntoView({behavior: 'smooth'});" style="padding: 0.8rem 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                            <i class="fas fa-map-marker-alt"></i> <span style="font-size: 0.9rem;">Visita a Firenze</span>
+                        </a>
+                    </div>
+                    <div style="margin-top: 2.5rem; display: flex; gap: 2rem; font-size: 0.9rem; color: #6b7280;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 8 Guide Complete</div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Sempre Aggiornate</div>
+                    </div>
+                </div>
+
+                <!-- Immagine Destra - Immersiva -->
+                <div style="position: relative; z-index: 1; animation: slideInRight 0.8s ease-out;">
+                    <!-- Decorazione Blur Backdrop -->
+                    <div style="position: absolute; top: -40px; right: -40px; width: 300px; height: 300px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 50%; opacity: 0.15; filter: blur(60px); animation: float 6s ease-in-out infinite;"></div>
+                    <div style="position: absolute; bottom: -30px; left: -30px; width: 250px; height: 250px; background: rgba(var(--primary-color-rgb), 0.2); border-radius: 50%; opacity: 0.1; filter: blur(50px); animation: float 8s ease-in-out infinite 1s;"></div>
+                    
+                    <!-- Immagine con effetto 3D -->
+                    <img src="https://live.staticflickr.com/65535/54376268795_a0c6725a8d_h.jpg" alt="Guide macchine da cucire Firenze" style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.2), 0 0 0 1px rgba(var(--primary-color-rgb), 0.1); object-fit: cover; position: relative; z-index: 2; transition: transform 0.4s ease; animation: scaleIn 0.8s ease-out;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Animazioni CSS -->
+        <style>
+            @keyframes slideInLeft {
+                from { opacity: 0; transform: translateX(-30px); }
+                to { opacity: 1; transform: translateX(0); }
+            }
+            @keyframes slideInRight {
+                from { opacity: 0; transform: translateX(30px); }
+                to { opacity: 1; transform: translateX(0); }
+            }
+            @keyframes scaleIn {
+                from { opacity: 0; transform: scale(0.95); }
+                to { opacity: 1; transform: scale(1); }
+            }
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+            }
+            .guides-hero img:hover {
+                transform: translateY(-5px);
+            }
+        </style>
+
+        <!-- Background Decorativo -->
+        <div style="position: absolute; bottom: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, var(--primary-color), transparent); opacity: 0.03; z-index: 0;"></div>
+    </section>
+
+    <!-- Guide Section - Moderna e Pulita -->
+    <section class="guides-showcase">
+        <div class="container">
+            <div class="guides-header">
+                <h2>Impara e Scopri</h2>
+                <p>Tutto quello che devi sapere sulle macchine da cucire</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="guides-search">
+                <i class="fas fa-search"></i>
+                <input type="search" id="guideSearch" placeholder="Cerca una guida...">
+            </div>
+
+            <!-- Griglia Guide - Pulita -->
+            <div class="guides-grid" id="guidesGrid">
+                
+                <article class="guide-card" data-tags="scelta guida budget marche" onclick="window.location.href='guida-scelta-macchine.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg" alt="Scelta macchina da cucire">
+                        <span class="guide-label">Essenziale</span>
+                    </div>
+                    <h3>Guida alla Scelta</h3>
+                    <p>Come scegliere la macchina da cucire giusta. Consigli per principianti e professionisti, fasce di budget, marche consigliate.</p>
+                    <a href="guida-scelta-macchine.html">Leggi →</a>
+                </article>
+
+                <article class="guide-card" data-tags="manutenzione pulizia lubrificazione" onclick="window.location.href='manutenzione-macchine.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg" alt="Manutenzione macchina">
+                        <span class="guide-label">Pratico</span>
+                    </div>
+                    <h3>Manutenzione Domestica</h3>
+                    <p>Impara a prenderti cura della tua macchina. Pulizia, lubrificazione e manutenzione ordinaria per mantenerla efficiente.</p>
+                    <a href="manutenzione-macchine.html">Leggi →</a>
+                </article>
+
+                <article class="guide-card" data-tags="modelli caratteristiche tecniche" onclick="window.location.href='scelta-macchine.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" alt="Modelli macchine">
+                        <span class="guide-label">Tecnico</span>
+                    </div>
+                    <h3>Modelli e Caratteristiche</h3>
+                    <p>Analisi delle categorie di macchine: caratteristiche tecniche, funzioni principali, differenze tra entry-level e professionali.</p>
+                    <a href="scelta-macchine.html">Leggi →</a>
+                </article>
+
+                <article class="guide-card" data-tags="marche singer brother janome bernina pfaff" onclick="window.location.href='recensioni-marche.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" alt="Marche macchine">
+                        <span class="guide-label">Confronto</span>
+                    </div>
+                    <h3>Marche e Recensioni</h3>
+                    <p>Confronto tra le migliori marche: Singer, Brother, Janome, Bernina, Pfaff. Qualità, prezzi, affidabilità e servizio.</p>
+                    <a href="recensioni-marche.html">Leggi →</a>
+                </article>
+
+                <article class="guide-card" data-tags="problemi punti saltano tensione crochet" onclick="window.location.href='punti-saltano.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg" alt="Problemi comuni">
+                        <span class="guide-label">Supporto</span>
+                    </div>
+                    <h3>Problemi Comuni</h3>
+                    <p>Guida ai problemi frequenti: punti che saltano, tensione del filo, problemi del crochet. Come diagnosticarli e risolverli.</p>
+                    <a href="punti-saltano.html">Leggi →</a>
+                </article>
+
+                <!-- SEO: Riparazione Singer Firenze -->
+                <article class="guide-card" data-tags="riparazione singer firenze assistenza domestica" onclick="window.location.href='riparazione-singer.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg" alt="Riparazione macchine Singer a Firenze">
+                        <span class="guide-label">Marche</span>
+                    </div>
+                    <h3>Riparazione Singer Firenze</h3>
+                    <p>Assistenza specializzata per macchine Singer a Firenze e provincia. Ricambi originali, interventi a domicilio, preventivi gratuiti per tutte le macchine Singer.</p>
+                    <a href="riparazione-singer.html">Leggi →</a>
+                </article>
+
+                <!-- SEO: Riparazione Necchi Firenze -->
+                <article class="guide-card" data-tags="riparazione necchi firenze assistenza vintage" onclick="window.location.href='riparazione-necchi.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg" alt="Riparazione macchine Necchi Firenze">
+                        <span class="guide-label">Vintage</span>
+                    </div>
+                    <h3>Riparazione Necchi Firenze</h3>
+                    <p>Riparazione macchine Necchi a Firenze con esperienza su modelli vintage e attuali. Restauro specializzato, manutenzione domestica, ricambi per Necchi.</p>
+                    <a href="riparazione-necchi.html">Leggi →</a>
+                </article>
+
+                <!-- SEO: Punti che Saltano -->
+                <article class="guide-card" data-tags="punti saltano ago tensione filo diagnostica" onclick="window.location.href='punti-saltano.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg" alt="Punti che saltano diagnosi">
+                        <span class="guide-label">DIY</span>
+                    </div>
+                    <h3>Punti che Saltano: Diagnosi Rapida</h3>
+                    <p>I punti che saltano sono il problema più frequente nelle macchine da cucire. Guida pratica con 4 soluzioni immediate: ago, tensione, filo e crochet.</p>
+                    <a href="punti-saltano.html">Leggi →</a>
+                </article>
+
+                <!-- SEO: Tensione Filo -->
+                <article class="guide-card" data-tags="tensione filo regolazione cucito qualità" onclick="window.location.href='tensione-filo.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" alt="Tensione filo macchina">
+                        <span class="guide-label">Tecnico</span>
+                    </div>
+                    <h3>Regolazione Tensione Filo</h3>
+                    <p>La tensione sbagliata causa la maggior parte dei problemi di cucito. Guida completa alla regolazione con valori corretti per ogni tessuto.</p>
+                    <a href="tensione-filo.html">Leggi →</a>
+                </article>
+
+                <!-- SEO: Pulizia Crochet -->
+                <article class="guide-card" data-tags="crochet pulizia manutenzione sporco fibre" onclick="window.location.href='pulizia-crochet.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg" alt="Pulizia crochet">
+                        <span class="guide-label">Manutenzione</span>
+                    </div>
+                    <h3>Pulizia del Crochet</h3>
+                    <p>Il crochet sporco causa punti irregolari. Scopri come pulirlo correttamente in pochi minuti con risultati immediati.</p>
+                    <a href="pulizia-crochet.html">Leggi →</a>
+                </article>
+
+                <!-- SEO: Riparazione Brother Firenze -->
+                <article class="guide-card" data-tags="brother firenze riparazione assistenza moderni" onclick="window.location.href='riparazione-brother.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg" alt="Brother Firenze">
+                        <span class="guide-label">Marche</span>
+                    </div>
+                    <h3>Riparazione Brother Firenze</h3>
+                    <p>Assistenza specializzata per le macchine Brother a Firenze. Diagnostica gratuita, ricambi originali, interventi rapidi garantiti.</p>
+                    <a href="riparazione-brother.html">Leggi →</a>
+                </article>
+
+                <!-- SEO: Riparazione Bernina Firenze -->
+                <article class="guide-card" data-tags="bernina firenze riparazione premium svizzera" onclick="window.location.href='riparazione-bernina.html'" style="cursor: pointer;">
+                    <div class="guide-image-slot">
+                        <img src="https://live.staticflickr.com/65535/54375875071_fb1a4a5b6e_h.jpg" alt="Bernina Firenze">
+                        <span class="guide-label">Premium</span>
+                    </div>
+                    <h3>Riparazione Bernina Firenze</h3>
+                    <p>Riparazione Bernina con assistenza premium. Macchine svizzere di eccellenza meritano expertise specializzata e ricambi originali.</p>
+                    <a href="riparazione-bernina.html">Leggi →</a>
+                </article>
+
+            </div>
+
+            <div id="noResults" class="no-results" style="display:none;">
+                <i class="fas fa-search"></i>
+                <p>Nessuna guida trovata</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+    ========================================
+    FOTO USATE NELLE CARD
+    ========================================
+    
+    Card 1 (Scelta): 54375875121 (Macchine professionali)
+    Card 2 (Manutenzione): 54375000122 (Servizio)
+    Card 3 (Modelli): 54376078574 (Servizio)
+    Card 4 (Marche): 54376140548 (Detail/Hero)
+    Card 5 (Problemi): 54376078589 (Servizio)
+    Card 6 (Singer): 54375875121 (Macchine)
+    Card 7 (Necchi): 54375875071 (Servizio)
+    Card 8 (Punti Saltano): 54376140548 (Detail)
+    
+    TUTTE LE FOTO SONO TUE DA FLICKR
+    Sostituire diversificando dai tuoi scatti
+    ======================================== 
+    -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h3>Collegamenti Rapidi</h3>
+                    <a href="index.html">Home</a>
+                    <a href="guide.html">Guide</a>
+                    <a href="ricambi.html">Ricambi</a>
+                    <a href="assistenza.html">Assistenza</a>
+                </div>
+                <div class="footer-social">
+                    <h3>Social</h3>
+                    <a href="https://facebook.com/groups/riparazionimacchinedacucire" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contatti</h3>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Cellulare</span>
+                                <a href="tel:+393343156903">+39 334 315 6903</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">WhatsApp</span>
+                                <a href="https://wa.me/393343156903">Scrivici</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:riparazioni.ricci@gmail.com">riparazioni.ricci@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="map-container" style="margin-top: 2rem;">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2878.3966017530565!2d11.114776076697392!3d43.82687394117999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x65ad9f07ac682309%3A0x730a943e48034a5c!2sRicci%20-%20Riparazioni%20Macchine%20Da%20Cucire%20Domestiche!5e0!3m2!1sit!2sit!4v1741454689471!5m2!1sit!2sit"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <p class="copyright">&copy; 2025 Stefano Ricci - Tutti i diritti riservati</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gestione menu mobile
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navDesktop = document.querySelector('.nav-desktop');
+
+            if (mobileMenuBtn && navDesktop) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navDesktop.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (window.innerWidth <= 768) {
+                            navDesktop.classList.remove('active');
+                            mobileMenuBtn.classList.remove('active');
+                        }
+                    });
+                });
+            }
+
+            // Gestione ricerca guide
+            const searchInput = document.getElementById('guideSearch');
+            const cards = document.querySelectorAll('.guide-card');
+            const noResults = document.getElementById('noResults');
+
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const term = e.target.value.toLowerCase();
+                    let visible = 0;
+
+                    cards.forEach(card => {
+                        const tags = card.getAttribute('data-tags').toLowerCase();
+                        const text = card.textContent.toLowerCase();
+                        const match = tags.includes(term) || text.includes(term);
+                        card.style.display = (match || !term) ? '' : 'none';
+                        if (match || !term) visible++;
+                    });
+
+                    noResults.style.display = visible === 0 && term ? '' : 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

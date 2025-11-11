@@ -22,12 +22,11 @@
     <link rel="stylesheet" href="style/animations.css">
     <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="style/hero.css">
-    <link rel="stylesheet" href="style/forum.css">
-    <link rel="stylesheet" href="style/macchine-cucire.css">
+    <link rel="stylesheet" href="style/guide.css">
     <link rel="canonical" href="https://www.macchinedacucirefirenze.it/scelta-macchine.html">
     <script defer src="contact-tracking.js"></script>
 </head>
-<body>
+<body class="guide-page">
     <header class="header">
         <div class="container">
             <div class="header-content">
@@ -49,7 +48,7 @@
                             <i class="fas fa-tools"></i>
                             <span>Assistenza</span>
                         </a>
-                        <a href="index.html#guide-informative" class="nav-link active">
+                        <a href="guide.html" class="nav-link active">
                             <i class="fas fa-book"></i>
                             <span>Guide</span>
                         </a>
@@ -65,17 +64,27 @@
 
     <div class="scroll-progress"></div>
 
-    <section id="hero" class="simple-hero">
+    <section id="hero" class="guide-hero-modern">
         <div class="container">
-            <div class="hero-image-container">
-                <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" 
-                     alt="Macchine da cucire moderne in primo piano" 
-                     class="hero-image rounded-img">
-                <div class="image-overlay">
-                    <h1>Come Scegliere la Macchina da Cucire</h1>
+            <!-- Contenuto Sinistra -->
+            <div class="hero-content">
+                <div class="hero-badge">🎯 Scelta Consapevole</div>
+                <h1>Come Scegliere la Macchina da Cucire Perfetta</h1>
+                <p class="hero-subtitle">Una guida completa ai criteri di scelta, caratteristiche tecniche, budget e consigli per principianti e professionisti. Scopri come trovare il modello ideale per le tue esigenze.</p>
+                <div class="hero-meta">
+                    <div class="hero-meta-item"><i class="fas fa-check-circle"></i> Budget e Fasce di Prezzo</div>
+                    <div class="hero-meta-item"><i class="fas fa-check-circle"></i> Marche Affidabili</div>
                 </div>
             </div>
+
+            <!-- Immagine Destra -->
+            <div class="hero-image">
+                <div class="hero-blur-1"></div>
+                <div class="hero-blur-2"></div>
+                <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" alt="Scelta macchina da cucire">
+            </div>
         </div>
+        <div class="hero-bg-accent"></div>
     </section>
 
     <section id="intro-scelta" class="intro-section">
@@ -302,99 +311,74 @@
         </div>
     </section>
 
-    <section id="argomenti-popolari" class="services-detail bg-light">
+    <!-- Prosegui Con - Scelta Macchine -->
+    <section style="padding: 4rem 0; background: #ffffff;">
         <div class="container">
-            <div class="section-header fade-in-up">
-                <h2>Argomenti Popolari sulla Scelta della Macchina</h2>
-                <p>Le discussioni più seguite dalla nostra community di appassionati</p>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+                <h3 style="font-size: 1.6rem; margin: 0; color: var(--dark-color); font-weight: 700;">Prosegui con...</h3>
+                <div style="flex-grow: 1; height: 2px; background: linear-gradient(90deg, var(--primary-color), transparent);"></div>
             </div>
-            
-            <div class="services-grid fade-in-up">
-                <div class="service-card forum-post">
-                    <div class="post-header">
-                        <div class="service-icon">
-                            <i class="fas fa-tags"></i>
-                        </div>
-                        <h3>Quale macchina per tessuti pesanti?</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                <!-- Card 1: Marche -->
+                <article onclick="window.location.href='recensioni-marche.html'" style="background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #f0f0f0; display: flex; flex-direction: column; position: relative; cursor: pointer;">
+                    <div style="position: absolute; top: -30px; right: -30px; width: 100px; height: 100px; background: rgba(var(--primary-color-rgb), 0.1); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+                    <div style="width: 100%; height: 160px; background-color: #f3f4f6; overflow: hidden;">
+                        <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" alt="Marche macchine" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
                     </div>
-                    <div class="post-content">
-                        <p>Confronto tra le migliori macchine da cucire per lavorare denim, pelle e tessuti spessi. Opinioni degli utenti, test di resistenza e consigli per evitare i problemi più comuni.</p>
-                        <div class="post-meta">
-                            <span class="post-replies"><i class="fas fa-comment"></i> 38 risposte</span>
-                            <span class="post-author">Iniziato da: <strong>RobertaQ</strong></span>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-star" style="font-size: 1.3rem; color: var(--primary-color);"></i>
+                            <span style="background: var(--primary-color); color: white; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase;">Marche</span>
                         </div>
-                        <div class="button-group">
-                            <a href="#" class="button button-small">Leggi la discussione</a>
-                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-color); margin: 0 0 0.5rem;">Marche e Recensioni</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.5; margin: 0 0 1rem; flex-grow: 1;">Confronto dettagliato tra Singer, Brother, Janome, Bernina e Pfaff per fare la scelta migliore.</p>
+                        <div style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Leggi <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></div>
                     </div>
-                </div>
-                
-                <div class="service-card forum-post">
-                    <div class="post-header">
-                        <div class="service-icon">
-                            <i class="fas fa-euro-sign"></i>
-                        </div>
-                        <h3>Macchine economiche: quali vale la pena acquistare?</h3>
+                </article>
+
+                <!-- Card 2: Manutenzione -->
+                <article onclick="window.location.href='manutenzione-macchine.html'" style="background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #f0f0f0; display: flex; flex-direction: column; position: relative; cursor: pointer;">
+                    <div style="position: absolute; top: -25px; right: -25px; width: 80px; height: 80px; background: rgba(var(--primary-color-rgb), 0.08); border-radius: 50%; animation: float 8s ease-in-out infinite 1s;"></div>
+                    <div style="width: 100%; height: 160px; background-color: #f3f4f6; overflow: hidden;">
+                        <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg" alt="Manutenzione" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
                     </div>
-                    <div class="post-content">
-                        <p>Recensioni e opinioni sulle macchine da cucire sotto i 150€. Quali sono affidabili e quali evitare. Esperienze di chi ha iniziato con modelli economici e consigli per principianti con budget limitato.</p>
-                        <div class="post-meta">
-                            <span class="post-replies"><i class="fas fa-comment"></i> 51 risposte</span>
-                            <span class="post-author">Iniziato da: <strong>MartaF</strong></span>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-wrench" style="font-size: 1.3rem; color: var(--primary-color);"></i>
+                            <span style="background: var(--primary-color); color: white; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase;">Pratico</span>
                         </div>
-                        <div class="button-group">
-                            <a href="#" class="button button-small">Leggi la discussione</a>
-                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-color); margin: 0 0 0.5rem;">Manutenzione Domestica</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.5; margin: 0 0 1rem; flex-grow: 1;">Dopo aver scelto, scopri come mantenerla perfetta con pulizia, lubrificazione e cura regolare.</p>
+                        <div style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Leggi <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></div>
                     </div>
-                </div>
-                
-                <div class="service-card forum-post">
-                    <div class="post-header">
-                        <div class="service-icon">
-                            <i class="fas fa-tshirt"></i>
-                        </div>
-                        <h3>Macchine per ricamo: vale la pena l'investimento?</h3>
+                </article>
+
+                <!-- Card 3: Guida Scelta -->
+                <article onclick="window.location.href='guida-scelta-macchine.html'" style="background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid #f0f0f0; display: flex; flex-direction: column; position: relative; cursor: pointer;">
+                    <div style="position: absolute; top: -35px; right: -35px; width: 110px; height: 110px; background: rgba(var(--primary-color-rgb), 0.12); border-radius: 50%; animation: float 7s ease-in-out infinite 0.5s;"></div>
+                    <div style="width: 100%; height: 160px; background-color: #f3f4f6; overflow: hidden;">
+                        <img src="https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg" alt="Guida scelta" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
                     </div>
-                    <div class="post-content">
-                        <p>Discussione sui vantaggi e svantaggi delle macchine da ricamo automatiche. Confronto tra ricamo manuale e computerizzato, analisi costi-benefici e showcase dei progetti realizzati dagli utenti.</p>
-                        <div class="post-meta">
-                            <span class="post-replies"><i class="fas fa-comment"></i> 27 risposte</span>
-                            <span class="post-author">Iniziato da: <strong>FrancescaP</strong></span>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                            <i class="fas fa-search" style="font-size: 1.3rem; color: var(--primary-color);"></i>
+                            <span style="background: var(--primary-color); color: white; padding: 0.3rem 0.75rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase;">Scelta</span>
                         </div>
-                        <div class="button-group">
-                            <a href="#" class="button button-small">Leggi la discussione</a>
-                        </div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-color); margin: 0 0 0.5rem;">Guida alla Scelta</h4>
+                        <p style="color: #6b7280; font-size: 0.9rem; line-height: 1.5; margin: 0 0 1rem; flex-grow: 1;">Guida completa ai criteri di scelta, budget, fasce di prezzo e consigli per principianti e professionisti.</p>
+                        <div style="color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">Leggi <i class="fas fa-arrow-right" style="font-size: 0.8rem;"></i></div>
                     </div>
-                </div>
-                
-                <div class="service-card forum-post">
-                    <div class="post-header">
-                        <div class="service-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3>Recensioni: macchine acquistate online vs negozio</h3>
-                    </div>
-                    <div class="post-content">
-                        <p>Dibattito sui pro e contro dell'acquisto di macchine da cucire online rispetto ai negozi fisici. Esperienze di acquisto, consigli per evitare truffe e opinioni su quali modelli è meglio vedere dal vivo prima dell'acquisto.</p>
-                        <div class="post-meta">
-                            <span class="post-replies"><i class="fas fa-comment"></i> 42 risposte</span>
-                            <span class="post-author">Iniziato da: <strong>GiuseppeT</strong></span>
-                        </div>
-                        <div class="button-group">
-                            <a href="#" class="button button-small">Leggi la discussione</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="button-group text-center mt-5">
-                <a href="#" class="button button-primary">
-                    <span>Esplora tutte le discussioni</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+                </article>
             </div>
         </div>
     </section>
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
 
     <section id="community" class="community-section">
         <div class="container">
