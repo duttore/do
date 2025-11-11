@@ -1,0 +1,24 @@
+# Robots.txt per SEO
+# Consenti a tutti i bot di crawlare
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /cgi-bin/
+
+# Specifico per Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Specifico per Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Rate limiting (ms tra richieste)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://www.macchinedacucirefirenze.it/sitemap.xml
+
