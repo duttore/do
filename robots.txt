@@ -1,24 +1,34 @@
-# Robots.txt per SEO
-# Consenti a tutti i bot di crawlare
+# Robots.txt - Riparazioni Ricci SEO
+# Consenti a tutti i bot di crawlare le pagine importanti
 
 User-agent: *
 Allow: /
+Allow: /riparazione-*.html
+Allow: /api/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 Disallow: /*.pdf$
 Disallow: /cgi-bin/
+Disallow: /*.js$
+Disallow: /*.css$
 
-# Specifico per Googlebot
+# Priorità Google
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
-# Specifico per Bingbot
+# Priorità Bing
 User-agent: Bingbot
 Allow: /
-
-# Rate limiting (ms tra richieste)
 Crawl-delay: 1
 
-# Sitemap location
+# Limita altri bot
+User-agent: *
+Crawl-delay: 2
+Request-rate: 30/60
+
+# Sitemaps
 Sitemap: https://www.macchinedacucirefirenze.it/sitemap.xml
 

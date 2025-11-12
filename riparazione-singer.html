@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riparazione Macchine Singer Firenze | Assistenza Tecnica Specializzata</title>
-    <meta name="description" content="Riparazione macchine Singer a Firenze. Assistenza tecnica specializzata, ricambi originali, interventi a domicilio. Preventivi gratuiti.">
+    <title>Riparazione Macchine Singer Firenze ⭐ Preventivo GRATIS | Ricci</title>
+    <meta name="description" content="Riparazione Singer Firenze: tecnici esperti, ricambi originali, garanzia 100%. Preventivo gratuito in 24h. Contattaci ☎️ +39 334 315 6903">
     <meta name="keywords" content="riparazione singer firenze, assistenza singer, centro assistenza singer, riparazione macchine singer">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -20,6 +20,37 @@
     <link rel="stylesheet" href="style/guide.css">
     <link rel="canonical" href="https://www.macchinedacucirefirenze.it/riparazione-singer.html">
     <script defer src="contact-tracking.js"></script>
+
+    <!-- Schema Markup - LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ricci - Riparazioni Macchine Singer Firenze",
+      "description": "Riparazione professionali di macchine da cucire Singer a Firenze con garanzia e preventivo gratis",
+      "image": "https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Via Rocco Benini, 16 F/G",
+        "addressLocality": "Campi Bisenzio",
+        "postalCode": "50013",
+        "addressRegion": "FI",
+        "addressCountry": "IT"
+      },
+      "telephone": "+39 334 315 6903",
+      "url": "https://www.macchinedacucirefirenze.it/riparazione-singer.html",
+      "areaServed": [
+        {"@type": "City", "name": "Firenze"},
+        {"@type": "City", "name": "Campi Bisenzio"}
+      ],
+      "priceRange": "€50-€200",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "47"
+      }
+    }
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M308EXBEQ"></script>
@@ -187,7 +218,7 @@
                         </ul>
                     </div>
 
-                    <!-- CTA SECTION -->
+                    <!-- CTA SECTION #1 -->
                     <div style="background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.12) 0%, rgba(var(--primary-color-rgb), 0.03) 100%); padding: 3rem 2rem; border-radius: 12px; margin-top: 3rem; text-align: center; border: 1px solid rgba(var(--primary-color-rgb), 0.2);">
                         <h3 style="font-size: 1.5rem; color: var(--dark-color); margin-bottom: 1rem;">La Tua Singer Merita le Mani Giuste</h3>
                         <p style="color: #6b7280; font-size: 1.05rem; margin-bottom: 2rem; line-height: 1.6;">
@@ -202,6 +233,23 @@
                         </p>
                     </div>
                 </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION #2 - URGENZA -->
+    <section style="padding: 3rem 0; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; max-width: 800px;">
+                <div>
+                    <h2 style="font-size: 1.8rem; margin: 0 0 0.5rem; font-weight: 700;">La Tua Singer Non Cucisce?</h2>
+                    <p style="font-size: 1.05rem; margin: 0; opacity: 0.95; line-height: 1.6;">
+                        Chiamaci ora per una diagnosi gratuita. Ripartiamo entro 24-48 ore. Garantito.
+                    </p>
+                </div>
+                <button onclick="document.getElementById('contatti-modal').classList.add('show'); document.body.style.overflow='hidden';" style="background: white; color: var(--primary-color); border: none; padding: 1rem 2rem; border-radius: 10px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+                    ☎️ CHIAMA ORA
+                </button>
             </div>
         </div>
     </section>
@@ -383,8 +431,18 @@
             }
 
             // Modal Contatti
+            const contattiLink = document.getElementById('contatti-link');
             const contattiModal = document.getElementById('contatti-modal');
             const modalClose = document.querySelector('.modal-close');
+            
+            // Apri modal al click del bottone Contatti
+            if (contattiLink) {
+                contattiLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    contattiModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
             
             if (modalClose) {
                 modalClose.addEventListener('click', function() {

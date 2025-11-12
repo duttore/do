@@ -359,8 +359,18 @@
             }
 
             // Modal Contatti
+            const contattiLink = document.getElementById('contatti-link');
             const contattiModal = document.getElementById('contatti-modal');
             const modalClose = document.querySelector('.modal-close');
+            
+            // Apri modal al click del bottone Contatti
+            if (contattiLink) {
+                contattiLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    contattiModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
             
             if (modalClose) {
                 modalClose.addEventListener('click', function() {

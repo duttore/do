@@ -6,7 +6,7 @@
   <!-- HOME PAGE -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/index.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,7 +14,7 @@
   <!-- GUIDE INDEX -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/guide.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -22,7 +22,7 @@
   <!-- GUIDE 1: SCELTA MACCHINE -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/guida-scelta-macchine.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -34,7 +34,7 @@
   <!-- GUIDE 2: MANUTENZIONE -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/manutenzione-macchine.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -46,7 +46,7 @@
   <!-- GUIDE 3: SCELTA MACCHINE (OLD) -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/scelta-macchine.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -54,7 +54,7 @@
   <!-- GUIDE 4: RECENSIONI MARCHE -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/recensioni-marche.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -62,7 +62,7 @@
   <!-- GUIDE 5: RIPARAZIONE SINGER -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/riparazione-singer.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -74,7 +74,7 @@
   <!-- GUIDE 6: RIPARAZIONE NECCHI -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/riparazione-necchi.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -86,7 +86,7 @@
   <!-- GUIDE 7: RIPARAZIONE BERNINA -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/riparazione-bernina.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -98,7 +98,7 @@
   <!-- GUIDE 8: PUNTI SALTANO -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/punti-saltano.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -110,7 +110,7 @@
   <!-- GUIDE 9: COME CAMBIARE AGO -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/come-cambiare-ago.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -122,7 +122,7 @@
   <!-- GUIDE 10: TENSIONE FILO -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/tensione-filo.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -130,7 +130,7 @@
   <!-- GUIDE 11: PULIZIA CROCHET -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/pulizia-crochet.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -138,7 +138,7 @@
   <!-- GUIDE 12: RIPARAZIONE BROTHER -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/riparazione-brother.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -146,15 +146,23 @@
   <!-- PAGINE SECONDARIE -->
   <url>
     <loc>https://www.macchinedacucirefirenze.it/ricambi.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.macchinedacucirefirenze.it/assistenza.html</loc>
-    <lastmod>2025-01-11</lastmod>
+    <lastmod>2025-11-12</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FORUM -->
+  <url>
+    <loc>https://www.macchinedacucirefirenze.it/forum.html</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 

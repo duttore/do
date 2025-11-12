@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riparazione Brother Firenze | Assistenza Specializzata</title>
-    <meta name="description" content="Riparazione macchine Brother a Firenze. Assistenza specializzata, ricambi originali e servizio rapido per tutte le macchine Brother domestiche e professionali.">
+    <title>Riparazione Macchine Brother Firenze ⭐ Preventivo GRATIS | Ricci</title>
+    <meta name="description" content="Riparazione Brother Firenze: tecnici esperti, ricambi originali, garanzia 100%. Preventivo gratuito in 24h. Contattaci ☎️ +39 334 315 6903">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style/reset.css">
@@ -208,6 +208,23 @@
         </div>
     </section>
 
+    <!-- CTA SECTION - URGENZA -->
+    <section style="padding: 3rem 0; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: center; max-width: 800px;">
+                <div>
+                    <h2 style="font-size: 1.8rem; margin: 0 0 0.5rem; font-weight: 700;">La Tua Brother Non Cucisce?</h2>
+                    <p style="font-size: 1.05rem; margin: 0; opacity: 0.95; line-height: 1.6;">
+                        Chiamaci ora per una diagnosi gratuita. Ripartiamo entro 24-48 ore. Garantito.
+                    </p>
+                </div>
+                <button onclick="document.getElementById('contatti-modal').classList.add('show'); document.body.style.overflow='hidden';" style="background: white; color: var(--primary-color); border: none; padding: 1rem 2rem; border-radius: 10px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; white-space: nowrap; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+                    ☎️ CHIAMA ORA
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Prosegui Con -->
     <section style="padding: 4rem 0; background: #ffffff;">
         <div class="container">
@@ -369,8 +386,18 @@
             }
 
             // Modal Contatti
+            const contattiLink = document.getElementById('contatti-link');
             const contattiModal = document.getElementById('contatti-modal');
             const modalClose = document.querySelector('.modal-close');
+            
+            // Apri modal al click del bottone Contatti
+            if (contattiLink) {
+                contattiLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    contattiModal.classList.add('show');
+                    document.body.style.overflow = 'hidden';
+                });
+            }
             
             if (modalClose) {
                 modalClose.addEventListener('click', function() {
