@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image SEO Optimizer - Converti Immagini in Formato SEO-Friendly</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 3rem 2rem;
+            max-width: 1400px;
+        }
+
+        @media (max-width: 1024px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid #e9ecef;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: 'Courier New', monospace;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .checkbox-item label {
+            margin-bottom: 0;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .button-secondary {
+            background: #6c757d;
+            margin-top: 0.5rem;
+        }
+
+        .button-secondary:hover {
+            background: #5a6268;
+            box-shadow: 0 10px 20px rgba(106, 117, 125, 0.3);
+        }
+
+        .output-box {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .copy-btn {
+            background: #28a745;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+        }
+
+        .preview-image {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 1rem;
+            max-height: 300px;
+            object-fit: cover;
+            display: none;
+        }
+
+        .success {
+            color: #28a745;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .info-box strong {
+            color: #667eea;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .benefits {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li {
+            padding: 0.5rem 0;
+            color: #555;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .benefits li:last-child {
+            border-bottom: none;
+        }
+
+        .benefits li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .result-section {
+            margin-top: 2rem;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tab-btn {
+            background: transparent;
+            color: #667eea;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            width: auto;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            border-bottom-color: #667eea;
+            color: #667eea;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            background: #fffacd;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+
+        footer {
+            background: #f8f9fa;
+            border-top: 1px solid #ddd;
+            padding: 2rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖼️ Image SEO Optimizer</h1>
+            <p>Converti le tue immagini in formato SEO-Friendly con WebP, Lazy Loading e Schema Markup</p>
+        </header>
+
+        <div class="content">
+            <!-- INPUT SECTION -->
+            <div class="section">
+                <h2>📝 Inserisci i Dati dell'Immagine</h2>
+
+                <div class="info-box">
+                    <strong>💡 Consiglio:</strong> Incolla il link dell'immagine Flickr, aggiungi alt text ottimizzato e scegli le opzioni SEO. Il tool genererà il codice HTML ottimizzato!
+                </div>
+
+                <div class="form-group">
+                    <label for="imageUrl">URL Immagine</label>
+                    <input type="text" id="imageUrl" placeholder="https://live.staticflickr.com/65535/..." value="https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg">
+                    <small style="color: #999; display: block; margin-top: 0.3rem;">✓ Flickr, Unsplash, o qualsiasi URL pubblico</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="altText">Alt Text (descrizione SEO)</label>
+                    <input type="text" id="altText" placeholder="es: Riparazione Singer Firenze tecnici esperti" value="Riparazione Singer Firenze">
+                    <small style="color: #999; display: block; margin-top: 0.3rem;">✓ Descrivi cosa vedi, includi keywords rilevanti</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="title">Title Immagine</label>
+                    <input type="text" id="title" placeholder="es: Manutenzione macchina da cucire Singer" value="Riparazione Singer Firenze">
+                    <small style="color: #999; display: block; margin-top: 0.3rem;">✓ Appare al mouseover, importante per UX</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="fileName">Nome File (per schema)</label>
+                    <input type="text" id="fileName" placeholder="es: riparazione-singer-firenze" value="riparazione-singer-firenze">
+                    <small style="color: #999; display: block; margin-top: 0.3rem;">✓ Nome descrittivo senza spazi</small>
+                </div>
+
+                <div class="form-group">
+                    <label>🎯 Opzioni SEO</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lazyLoad" checked>
+                            <label for="lazyLoad">Lazy Loading</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="responsive" checked>
+                            <label for="responsive">Responsive (srcset)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="webp" checked>
+                            <label for="webp">Formato WebP</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="schema" checked>
+                            <label for="schema">Schema Markup</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="context">Contesto Immagine</label>
+                    <select id="context">
+                        <option value="services">Servizi / Riparazioni</option>
+                        <option value="guide">Guida / Tutorial</option>
+                        <option value="hero">Hero / Banner</option>
+                        <option value="product">Prodotto / Ricambio</option>
+                        <option value="other">Altro</option>
+                    </select>
+                </div>
+
+                <button onclick="generateCode()">🚀 Genera Codice Ottimizzato</button>
+                <button class="button-secondary" onclick="loadExample()">📋 Carica Esempio</button>
+            </div>
+
+            <!-- OUTPUT SECTION -->
+            <div class="section">
+                <h2>📤 Codice SEO-Friendly Generato</h2>
+
+                <div class="info-box">
+                    <strong>✓ Questo codice include:</strong><br>
+                    • Lazy loading<br>
+                    • Responsive images (srcset)<br>
+                    • WebP conversion<br>
+                    • Schema markup ImageObject<br>
+                    • Alt text ottimizzato
+                </div>
+
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="switchTab('html')">HTML</button>
+                    <button class="tab-btn" onclick="switchTab('schema')">Schema Markup</button>
+                    <button class="tab-btn" onclick="switchTab('css')">CSS (opzionale)</button>
+                </div>
+
+                <div id="html" class="tab-content active">
+                    <div class="output-box" id="htmlOutput">
+                        <div style="color: #999;">Clicca su "Genera Codice" per visualizzare</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('htmlOutput')">📋 Copia HTML</button>
+                </div>
+
+                <div id="schema" class="tab-content">
+                    <div class="output-box" id="schemaOutput">
+                        <div style="color: #999;">Schema markup apparirà qui</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('schemaOutput')">📋 Copia Schema</button>
+                </div>
+
+                <div id="css" class="tab-content">
+                    <div class="output-box" id="cssOutput">
+                        <div style="color: #999;">CSS opzionale per ottimizzazione</div>
+                    </div>
+                    <button class="copy-btn" onclick="copyToClipboard('cssOutput')">📋 Copia CSS</button>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <img id="preview" class="preview-image" alt="Preview">
+                </div>
+            </div>
+        </div>
+
+        <!-- BENEFITS SECTION -->
+        <div style="padding: 3rem 2rem; background: #f8f9fa; border-top: 2px solid #e9ecef;">
+            <h2 style="color: #667eea; margin-bottom: 1.5rem; text-align: center;">🎯 Benefici SEO</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #667eea;">
+                    <h3 style="color: #667eea; margin-bottom: 0.5rem;">⚡ Performance</h3>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">WebP riduce le dimensioni fino al 80%. Lazy loading migliora il core web vitals. Schema markup aiuta Google a capire le immagini.</p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #764ba2;">
+                    <h3 style="color: #764ba2; margin-bottom: 0.5rem;">🔍 Ranking</h3>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Alt text ottimizzato = ranking su Google Images. Responsive images = mobile friendly. Tutto = ranking boost.</p>
+                </div>
+
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #667eea;">
+                    <h3 style="color: #667eea; margin-bottom: 0.5rem;">📱 Mobile</h3>
+                    <p style="color: #666; font-size: 0.9rem; line-height: 1.6;">Srcset automatico carica immagini giuste per ogni device. Lazy loading = meno bandwidth consumato.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- IMPLEMENTATION GUIDE -->
+        <div style="padding: 3rem 2rem; background: white; border-top: 2px solid #e9ecef;">
+            <h2 style="color: #667eea; margin-bottom: 1.5rem; text-align: center;">🚀 Come Implementare</h2>
+            
+            <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <h3 style="color: #333; margin-bottom: 1rem;">Step 1: Inserisci i Dati</h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                        1. Incolla l'URL dell'immagine<br>
+                        2. Aggiungi alt text descrittivo<br>
+                        3. Scegli le opzioni SEO
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="color: #333; margin-bottom: 1rem;">Step 2: Genera & Copia</h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                        1. Clicca "Genera Codice"<br>
+                        2. Copia il codice HTML<br>
+                        3. Incolla nel tuo file HTML
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="color: #333; margin-bottom: 1rem;">Step 3: Schema Markup</h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                        1. Copia lo schema JSON<br>
+                        2. Incolla in &lt;head&gt;<br>
+                        3. Valida con Schema Tester
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="color: #333; margin-bottom: 1rem;">Step 4: Verifica</h3>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 1rem;">
+                        1. Test con Lighthouse<br>
+                        2. Check pagespeed insights<br>
+                        3. Monitor su GSC
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>💡 <strong>Suggerimento:</strong> Usa questo tool per ogni immagine nel sito. Vedi il risultato su Google Core Web Vitals e ranking!</p>
+            <p style="margin-top: 1rem; color: #999;">Image SEO Optimizer v1.0 | Riparazioni Ricci</p>
+        </footer>
+    </div>
+
+    <script>
+        function generateCode() {
+            const imageUrl = document.getElementById('imageUrl').value;
+            const altText = document.getElementById('altText').value || 'Immagine';
+            const title = document.getElementById('title').value || altText;
+            const fileName = document.getElementById('fileName').value || 'image';
+            const context = document.getElementById('context').value;
+            
+            const lazyLoad = document.getElementById('lazyLoad').checked;
+            const responsive = document.getElementById('responsive').checked;
+            const webp = document.getElementById('webp').checked;
+            const schema = document.getElementById('schema').checked;
+
+            // Valida URL
+            if (!imageUrl.trim()) {
+                alert('⚠️ Inserisci un URL immagine valido!');
+                return;
+            }
+
+            // Preview immagine
+            document.getElementById('preview').src = imageUrl;
+            document.getElementById('preview').style.display = 'block';
+
+            // Genera HTML
+            generateHTML(imageUrl, altText, title, fileName, lazyLoad, responsive, webp, context);
+
+            // Genera Schema
+            generateSchema(imageUrl, altText, fileName, title, context);
+
+            // Genera CSS
+            generateCSS();
+        }
+
+        function generateHTML(imageUrl, altText, title, fileName, lazyLoad, responsive, webp, context) {
+            let html = '<picture>\n';
+
+            // WebP source
+            if (webp) {
+                const webpUrl = imageUrl.replace(/\.(jpg|png|jpeg)$/i, '.webp');
+                if (responsive) {
+                    html += `  <source srcset="\n`;
+                    html += `    ${webpUrl}?w=600 600w,\n`;
+                    html += `    ${webpUrl}?w=1200 1200w,\n`;
+                    html += `    ${webpUrl}?w=1920 1920w\n`;
+                    html += `  " type="image/webp">\n`;
+                } else {
+                    html += `  <source srcset="${webpUrl}" type="image/webp">\n`;
+                }
+            }
+
+            // Fallback JPEG/PNG
+            if (responsive) {
+                html += `  <source srcset="\n`;
+                html += `    ${imageUrl}?w=600 600w,\n`;
+                html += `    ${imageUrl}?w=1200 1200w,\n`;
+                html += `    ${imageUrl}?w=1920 1920w\n`;
+                html += `  " type="image/jpeg">\n`;
+            }
+
+            // IMG tag
+            html += `  <img\n`;
+            if (responsive) {
+                html += `    srcset="\n`;
+                html += `      ${imageUrl}?w=600 600w,\n`;
+                html += `      ${imageUrl}?w=1200 1200w,\n`;
+                html += `      ${imageUrl}?w=1920 1920w\n`;
+                html += `    "\n`;
+            } else {
+                html += `    src="${imageUrl}"\n`;
+            }
+
+            if (lazyLoad) {
+                html += `    loading="lazy"\n`;
+            }
+
+            html += `    alt="${escapeHtml(altText)}"\n`;
+            html += `    title="${escapeHtml(title)}"\n`;
+            html += `    width="1200"\n`;
+            html += `    height="800"\n`;
+            html += `    style="width: 100%; height: auto; border-radius: 8px; display: block;"\n`;
+            html += `    data-context="${context}"\n`;
+            html += `  >\n`;
+            html += `</picture>`;
+
+            document.getElementById('htmlOutput').innerHTML = '<pre>' + escapeHtml(html) + '</pre>';
+        }
+
+        function generateSchema(imageUrl, altText, fileName, title, context) {
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "ImageObject",
+                "name": title,
+                "url": imageUrl,
+                "description": altText,
+                "uploadDate": new Date().toISOString().split('T')[0],
+                "contentUrl": imageUrl,
+                "thumbnailUrl": imageUrl + "?w=200",
+                "width": 1200,
+                "height": 800,
+                "keywords": getKeywordsFromAlt(altText),
+                "author": {
+                    "@type": "Organization",
+                    "name": "Riparazioni Ricci"
+                }
+            };
+
+            const schemaJson = JSON.stringify(schema, null, 2);
+            const schemaHtml = `<script type="application/ld+json">\n${schemaJson}\n</script>`;
+
+            document.getElementById('schemaOutput').innerHTML = '<pre>' + escapeHtml(schemaHtml) + '</pre>';
+        }
+
+        function generateCSS() {
+            const css = `/* Image Optimization CSS */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+picture {
+    display: block;
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    /* Core Web Vitals: riduce layout shift */
+    aspect-ratio: 1.5;
+}
+
+/* Lazy Load effect */
+img[loading="lazy"] {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive images */
+@media (max-width: 768px) {
+    picture img {
+        border-radius: 6px;
+    }
+}`;
+
+            document.getElementById('cssOutput').innerHTML = '<pre>' + escapeHtml(css) + '</pre>';
+        }
+
+        function getKeywordsFromAlt(altText) {
+            return altText.split(' ').filter(word => word.length > 3).slice(0, 5).join(', ');
+        }
+
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.innerText;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copiato!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                alert('❌ Errore nella copia: ' + err);
+            });
+        }
+
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function loadExample() {
+            document.getElementById('imageUrl').value = 'https://live.staticflickr.com/65535/54376112663_57b3929906_h.jpg';
+            document.getElementById('altText').value = 'Manutenzione professionale macchina da cucire Singer Firenze';
+            document.getElementById('title').value = 'Manutenzione Singer Firenze';
+            document.getElementById('fileName').value = 'manutenzione-singer-firenze';
+            generateCode();
+        }
+
+        // Auto-generate su input
+        document.getElementById('altText').addEventListener('change', () => {
+            const alt = document.getElementById('altText').value;
+            if (!document.getElementById('fileName').value) {
+                document.getElementById('fileName').value = alt.toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/^-+|-+$/g, '');
+            }
+        });
+
+        // Load example on page load
+        window.addEventListener('load', () => {
+            loadExample();
+        });
+    </script>
+</body>
+</html>
+
