@@ -53,72 +53,31 @@
 
     <div class="scroll-progress"></div>
 
-    <!-- Hero Guide - Immersivo -->
-    <section class="guides-hero" style="position: relative; overflow: hidden; padding: 8rem 0; background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.12) 0%, rgba(var(--primary-color-rgb), 0.03) 100%); min-height: 60vh; display: flex; align-items: center;">
+    <!-- Hero Guide Hub - Stile WikiHow con Immagine -->
+    <section class="guides-hub-hero">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <!-- Contenuto Sinistra -->
-                <div style="z-index: 2; animation: slideInLeft 0.8s ease-out;">
-                    <div style="display: inline-block; background: rgba(var(--primary-color-rgb), 0.1); color: var(--primary-color); padding: 0.75rem 1.5rem; border-radius: 30px; margin-bottom: 1.5rem; font-weight: 600; font-size: 0.9rem;">
-                        📚 Knowledge Hub per Macchine da Cucire
-                    </div>
-                    <h1 style="font-size: 3.5rem; font-weight: 800; color: var(--dark-color); margin-bottom: 1rem; line-height: 1.1;">
-                        Guide Complete<br><span style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Macchine da Cucire</span>
-                    </h1>
-                    <p style="font-size: 1.2rem; color: #6b7280; margin-bottom: 2rem; line-height: 1.7;">
-                        Dalle nozioni base al troubleshooting avanzato. Guide verificate da esperti di riparazioni a <strong>Firenze</strong>, seguite da migliaia di utenti.
-                    </p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
-                        <a href="#guidesGrid" style="padding: 1rem 2.5rem; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); color: white; border-radius: 10px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(var(--primary-color-rgb), 0.3); display: inline-flex; align-items: center; gap: 0.5rem;">
-                            <i class="fas fa-arrow-down"></i> Scopri le Guide
-                        </a>
-                        <a href="#" onclick="document.querySelector('.map-container iframe').scrollIntoView({behavior: 'smooth'});" style="padding: 0.8rem 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
-                            <i class="fas fa-map-marker-alt"></i> <span style="font-size: 0.9rem;">Visita a Firenze</span>
-                        </a>
-                    </div>
-                    <div style="margin-top: 2.5rem; display: flex; gap: 2rem; font-size: 0.9rem; color: #6b7280;">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> 8 Guide Complete</div>
-                        <div style="display: flex; align-items: center; gap: 0.5rem;"><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Sempre Aggiornate</div>
+            <div class="guides-hub-hero-content">
+                <div class="guides-hub-hero-text">
+                    <h1>Guide Complete per Macchine da Cucire</h1>
+                    <p>Tutto quello che ti serve sapere per usare, riparare e manutenere la tua macchina da cucire. Guide pratiche verificate da tecnici esperti con oltre 30 anni di esperienza a Firenze.</p>
+                    
+                    <div class="hero-meta">
+                        <div class="hero-meta-item"><i class="fas fa-book-open"></i> <span id="guideCount">12</span> Guide Complete</div>
+                        <div class="hero-meta-item"><i class="fas fa-clock"></i> Risolvi in Minuti</div>
+                        <div class="hero-meta-item"><i class="fas fa-check-circle"></i> Verificate da Esperti</div>
                     </div>
                 </div>
-
-                <!-- Immagine Destra - Immersiva -->
-                <div style="position: relative; z-index: 1; animation: slideInRight 0.8s ease-out;">
-                    <!-- Decorazione Blur Backdrop -->
-                    <div style="position: absolute; top: -40px; right: -40px; width: 300px; height: 300px; background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); border-radius: 50%; opacity: 0.15; filter: blur(60px); animation: float 6s ease-in-out infinite;"></div>
-                    <div style="position: absolute; bottom: -30px; left: -30px; width: 250px; height: 250px; background: rgba(var(--primary-color-rgb), 0.2); border-radius: 50%; opacity: 0.1; filter: blur(50px); animation: float 8s ease-in-out infinite 1s;"></div>
-                    
-                    <!-- Immagine con effetto 3D -->
-                    <img src="https://live.staticflickr.com/65535/54376268795_a0c6725a8d_h.jpg" alt="Guide macchine da cucire Firenze" style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.2), 0 0 0 1px rgba(var(--primary-color-rgb), 0.1); object-fit: cover; position: relative; z-index: 2; transition: transform 0.4s ease; animation: scaleIn 0.8s ease-out;">
+                
+                <div class="guides-hub-hero-image">
+                    <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" alt="Tecnico ripara macchina da cucire" loading="eager">
                 </div>
             </div>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="guideSearch" placeholder="Cerca una guida... es: 'come cambiare ago', 'tensione filo'" />
+            </div>
         </div>
-
-        <!-- Animazioni CSS -->
-        <style>
-            @keyframes slideInLeft {
-                from { opacity: 0; transform: translateX(-30px); }
-                to { opacity: 1; transform: translateX(0); }
-            }
-            @keyframes slideInRight {
-                from { opacity: 0; transform: translateX(30px); }
-                to { opacity: 1; transform: translateX(0); }
-            }
-            @keyframes scaleIn {
-                from { opacity: 0; transform: scale(0.95); }
-                to { opacity: 1; transform: scale(1); }
-            }
-            @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-20px); }
-            }
-            .guides-hero img:hover {
-                transform: translateY(-5px);
-            }
-        </style>
-
-        <!-- Background Decorativo -->
-        <div style="position: absolute; bottom: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, var(--primary-color), transparent); opacity: 0.03; z-index: 0;"></div>
     </section>
 
     <!-- Guide Section - Moderna e Pulita -->
@@ -380,6 +339,12 @@
             const searchInput = document.getElementById('guideSearch');
             const cards = document.querySelectorAll('.guide-card');
             const noResults = document.getElementById('noResults');
+            const guideCount = document.getElementById('guideCount');
+
+            // Auto-count guide cards
+            if (guideCount) {
+                guideCount.textContent = cards.length;
+            }
 
             if (searchInput) {
                 searchInput.addEventListener('input', (e) => {

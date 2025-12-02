@@ -24,6 +24,13 @@
 /* Import Hero Section */
 @import 'hero.css';
 
+/* Enhanced Elements from note/ */
+@import url('button-enhanced.css');
+@import url('card-shine.css');
+
+/* Modern Guide Styling */
+@import url('guide-modern.css');
+
 /* Stile della navbar aggiornato */
 .nav-desktop {
     display: flex;

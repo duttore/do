@@ -13,7 +13,7 @@
 index.html  [HOME]
 ├── Header: Logo + Navbar (Home, Ricambi, Assistenza, Guide, Contatti)
 ├── Hero: Riparazione Macchine da Cucire Firenze
-├── Sezioni:
+├── Sezioni:il 
 │   ├── Servizi (a domicilio, workshop, vendita)
 │   ├── Chi Sono (Stefano Ricci)
 │   ├── Guide Carousel (3 guide principali)

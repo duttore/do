@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riparazione Macchine da Cucire Firenze ⭐ Preventivo GRATIS | Ricci</title>
-    <meta name="description" content="Riparazioni macchine da cucire Firenze: Singer, Brother, Bernina, Necchi. Preventivo gratuito, ricambi originali, garanzia 100%. Contattaci ☎️ +39 334 315 6903">
+    <title>Riparazione Macchine da Cucire Firenze | Tecnico Vicino a Te</title>
+    <meta name="description" content="Tecnico certificato a Firenze, Scandicci, Prato e Campi Bisenzio. Interventi a domicilio in 24h, ricambi originali, preventivo gratis via WhatsApp +39 334 315 6903.">
     <meta name="keywords" content="riparazione macchine cucire, macchine da cucire Firenze, assistenza Singer, riparazioni Brother, Pfaff, ricambi macchine cucire">
     <meta name="author" content="Riparazioni Ricci">
     <meta name="robots" content="index, follow">
@@ -37,6 +37,16 @@
     <link rel="stylesheet" href="style/animations.css">
     <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="style/hero.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image"
+          href="https://live.staticflickr.com/65535/54376140553_ccd24a44c2_h.jpg"
+          imagesizes="100vw"
+          imagesrcset="
+            https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376140553_ccd24a44c2_h.jpg&amp;w=768&amp;output=webp 768w,
+            https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376140553_ccd24a44c2_h.jpg&amp;w=1200&amp;output=webp 1200w,
+            https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376140553_ccd24a44c2_h.jpg&amp;w=1600&amp;output=webp 1600w">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
     <meta name="google-site-verification" content="4DQbxm7mC-3ZBQga6WRoKdVxbFbTv-qb9X4nwkDLUOQ"/>
     <script defer src="contact-tracking.js"></script>
 
@@ -196,6 +206,78 @@
             }
         }
         
+        /* Titolo brand con barra */
+        #hero .hero-heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.55rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+
+        #hero .hero-brand {
+            font-family: 'Bebas Neue', 'Impact', sans-serif;
+            font-size: clamp(2.4rem, 5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-shadow: 
+                0 2px 4px rgba(0,0,0,0.3),
+                0 6px 12px rgba(0,0,0,0.25);
+        }
+
+        .hero-heading-bar {
+            width: 140px;
+            height: 4px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #4338ca, #14b8a6, #22c55e);
+            box-shadow: 0 6px 16px rgba(20,184,166,0.45);
+        }
+
+        #hero .hero-content h1.hero-title {
+            font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+            font-size: clamp(1.9rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: 0.01em;
+            color: #ffffff;
+            text-align: center;
+            margin: 0;
+            text-shadow: 
+                0 3px 6px rgba(0,0,0,0.4),
+                0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        #hero .hero-subtitle {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.9);
+            max-width: 740px;
+            margin: 0 auto 1rem;
+            text-align: center;
+        }
+
+        /* Centrare i bottoni hero su tutte le risoluzioni */
+        #hero .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        /* Bottone telefonico grande sotto il testo hero */
+        #hero .phone-cta {
+            font-size: 1.8rem;
+            padding: 1.1rem 2.2rem;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin: 0.5rem 0 1.2rem;
+            font-weight: 800;
+        }
+        
         /* Stile globale per gli highlight items */
         #hero .highlight-item {
             display: flex;
@@ -226,6 +308,18 @@
         #hero .hero-highlights p {
             color: rgba(255, 255, 255, 0.7) !important;
         }
+
+        picture.optimized-media {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        picture.optimized-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         
         /* Stile per mobile */
         @media screen and (max-width: 767px) {
@@ -245,9 +339,12 @@
                 padding: 2rem 1rem;
             }
 
-            #hero .hero-content h1 {
-                font-size: 2rem;
-                margin-bottom: 1.5rem;
+            #hero .hero-brand {
+                font-size: 1.8rem;
+            }
+
+            #hero .hero-content h1.hero-title {
+                font-size: 1.6rem;
             }
 
             #hero .hero-highlights {
@@ -456,7 +553,17 @@
                     </div>
                 </div>
                 <div class="hero-content">
-                    <h1 itemprop="description">Riparazione Macchine da Cucire a Firenze</h1>
+                    <h1 class="hero-title-main" itemprop="description">
+                        Riparazione Macchine da Cucire a Firenze
+                    </h1>
+                    <p class="hero-subtitle">
+                        Tecnico certificato Singer, Necchi, Brother e Bernina per Firenze, Scandicci, Prato e Campi Bisenzio.
+                        Interventi entro 24h in laboratorio o a domicilio con ricambi originali e garanzia scritta.
+                    </p>
+                    <a href="https://wa.me/393343156903" target="_blank" rel="noopener noreferrer" class="button button-whatsapp button-whatsapp-enhanced phone-cta" itemprop="telephone" content="+393343156903" data-track-cta="hero_whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+39 334 315 6903</span>
+                    </a>
                     <div class="hero-highlights">
                         <p class="highlight-item">
                             <i class="fas fa-check-circle"></i>
@@ -472,13 +579,9 @@
                         </p>
                     </div>
                     <div class="hero-buttons">
-                        <a href="#servizi-riparazione" class="button button-primary">
+                        <a href="#servizi-riparazione" class="button button-primary" data-track-cta="hero_primary">
                             <span>Scopri i servizi</span>
                             <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="https://wa.me/393343156903" target="_blank" rel="noopener noreferrer" class="button button-whatsapp" itemprop="telephone" content="+393343156903">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>+39 334 315 6903</span>
                         </a>
                     </div>
                 </div>
@@ -502,19 +605,49 @@
                 </div>
                 <div class="image-gallery">
                     <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
-                        <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" 
-                             alt="Servizio a domicilio"
-                             onclick="openLightbox(this.src)"
-                             itemprop="contentUrl">
+                        <picture class="optimized-media">
+                            <source type="image/webp"
+                                    srcset="
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg&amp;w=640&amp;output=webp 640w,
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg&amp;w=960&amp;output=webp 960w,
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg&amp;w=1400&amp;output=webp 1400w"
+                                    sizes="(max-width: 1024px) 100vw, 45vw">
+                            <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" 
+                                 alt="Servizio a domicilio"
+                                 width="1600"
+                                 height="1067"
+                                 loading="lazy"
+                                 decoding="async"
+                                 fetchpriority="low"
+                                 sizes="(max-width: 1024px) 100vw, 45vw"
+                                 data-fullsize="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg"
+                                 onclick="openLightbox(this)"
+                                 itemprop="contentUrl">
+                        </picture>
                         <div class="gallery-overlay">
                             <span itemprop="name">Servizio a domicilio</span>
                         </div>
                     </div>
                     <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
-                        <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg"
-                             alt="Officina Specializzata"
-                             onclick="openLightbox(this.src)"
-                             itemprop="contentUrl">
+                        <picture class="optimized-media">
+                            <source type="image/webp"
+                                    srcset="
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg&amp;w=640&amp;output=webp 640w,
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg&amp;w=960&amp;output=webp 960w,
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg&amp;w=1400&amp;output=webp 1400w"
+                                    sizes="(max-width: 1024px) 100vw, 45vw">
+                            <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg"
+                                 alt="Officina Specializzata"
+                                 width="1600"
+                                 height="1067"
+                                 loading="lazy"
+                                 decoding="async"
+                                 fetchpriority="low"
+                                 sizes="(max-width: 1024px) 100vw, 45vw"
+                                 data-fullsize="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg"
+                                 onclick="openLightbox(this)"
+                                 itemprop="contentUrl">
+                        </picture>
                         <div class="gallery-overlay">
                             <span itemprop="name">Officina Specializzata</span>
                         </div>
@@ -736,6 +869,40 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Guida 4 -->
+                <div class="carousel-item">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Riparazione a Domicilio</h3>
+                        <p>Come funziona il servizio a domicilio a Firenze: diagnosi, tempi, ricambi e aree servite, con preventivo gratuito.</p>
+                        <div class="button-group">
+                            <a href="riparazione-a-domicilio-firenze.html" class="button button-primary">
+                                <span>Leggi la guida</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Guida 5 -->
+                <div class="carousel-item">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Dove Riparare a Firenze</h3>
+                        <p>Criteri per scegliere il centro giusto: specializzazione per marca, ricambi originali, garanzia e tempi certi.</p>
+                        <div class="button-group">
+                            <a href="dove-riparare-macchina-da-cucire-firenze.html" class="button button-primary">
+                                <span>Leggi la guida</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -749,44 +916,7 @@
     </div>
 </section>
 
-  <section class="pricing-section">
-      <div class="container">
-          <div class="section-header">
-              <h2>Prezzi Trasparenti</h2>
-              <p>La qualità al giusto prezzo, con preventivi sempre gratuiti e senza impegno</p>
-          </div>
-          <div class="pricing-grid" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
-              <div class="pricing-card">
-                  <div class="pricing-header">
-                      <i class="fas fa-check-circle"></i>
-                      <h3 itemprop="name">Preventivo Gratuito</h3>
-                  </div>
-                  <ul class="pricing-features">
-                      <li><i class="fas fa-check"></i> Diagnostica professionale completa</li>
-                      <li><i class="fas fa-check"></i> Analisi dettagliata dei componenti</li>
-                      <li><i class="fas fa-check"></i> Valutazione costi ricambi</li>
-                      <li><i class="fas fa-check"></i> Stima tempi di intervento</li>
-                  </ul>
-                  <meta itemprop="price" content="0">
-                  <meta itemprop="priceCurrency" content="EUR">
-              </div>
-              <div class="pricing-card featured" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
-                  <div class="pricing-header">
-                      <i class="fas fa-star"></i>
-                      <h3 itemprop="name">Riparazioni Complete</h3>
-                  </div>
-                  <ul class="pricing-features">
-                      <li><i class="fas fa-check"></i> Utilizzo ricambi originali</li>
-                      <li><i class="fas fa-check"></i> Garanzia sugli interventi</li>
-                      <li><i class="fas fa-check"></i> Test approfonditi post-riparazione</li>
-                      <li><i class="fas fa-check"></i> Consulenza tecnica inclusa</li>
-                  </ul>
-                  <meta itemprop="priceSpecification" itemscope itemtype="https://schema.org/PriceSpecification">
-                  <meta itemprop="priceCurrency" content="EUR">
-              </div>
-          </div>
-      </div>
-  </section>
+  
 
   <section class="ricambi-preview-section">
     <div class="container">
@@ -810,10 +940,25 @@
             </div>
             <div class="ricambi-image">
                 <div class="gallery-item">
-                    <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" 
-                         alt="Ricambi macchine da cucire"
-                         class="gallery-image"
-                         onclick="openLightbox(this.src)">
+                    <picture class="optimized-media">
+                        <source type="image/webp"
+                                srcset="
+                                    https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg&amp;w=640&amp;output=webp 640w,
+                                    https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg&amp;w=960&amp;output=webp 960w,
+                                    https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg&amp;w=1400&amp;output=webp 1400w"
+                                sizes="(max-width: 1024px) 100vw, 40vw">
+                        <img src="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg" 
+                             alt="Ricambi macchine da cucire"
+                             class="gallery-image"
+                             width="1600"
+                             height="1067"
+                             loading="lazy"
+                             decoding="async"
+                             fetchpriority="low"
+                             sizes="(max-width: 1024px) 100vw, 40vw"
+                             data-fullsize="https://live.staticflickr.com/65535/54376140548_26a13323d1_h.jpg"
+                             onclick="openLightbox(this)">
+                    </picture>
                     <div class="gallery-overlay">
                         <span>Ricambi Originali</span>
                     </div>
@@ -875,11 +1020,26 @@
               <div class="service-image">
                 <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
                     <div class="gallery-item">
-                        <img src="https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg" alt="Servizio a domicilio" style="width: 100%; border-radius: 1rem;"
-                             alt="Officina riparazioni"
-                             class="gallery-image"
-                             onclick="openLightbox(this.src)"
-                             itemprop="contentUrl">
+                        <picture class="optimized-media">
+                            <source type="image/webp"
+                                    srcset="
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg&amp;w=640&amp;output=webp 640w,
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg&amp;w=960&amp;output=webp 960w,
+                                        https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg&amp;w=1400&amp;output=webp 1400w"
+                                    sizes="(max-width: 1024px) 100vw, 45vw">
+                            <img src="https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg" alt="Servizio a domicilio"
+                                 style="width: 100%; border-radius: 1rem;"
+                                 class="gallery-image"
+                                 width="1600"
+                                 height="1067"
+                                 loading="lazy"
+                                 decoding="async"
+                                 fetchpriority="low"
+                                 sizes="(max-width: 1024px) 100vw, 45vw"
+                                 data-fullsize="https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg"
+                                 onclick="openLightbox(this)"
+                                 itemprop="contentUrl">
+                        </picture>
                         <div class="gallery-overlay">
                             <span itemprop="name">Officina Specializzata</span>
                         </div>
@@ -1095,11 +1255,26 @@
           <div class="gallery-grid">
               <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
                   <div class="gallery-item">
-                      <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" alt="Servizio a domicilio" style="width: 100%; border-radius: 1rem;"
-                           alt="Officina riparazioni"
-                           class="gallery-image"
-                           onclick="openLightbox(this.src)"
-                           itemprop="contentUrl">
+                      <picture class="optimized-media">
+                          <source type="image/webp"
+                                  srcset="
+                                      https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg&amp;w=640&amp;output=webp 640w,
+                                      https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg&amp;w=960&amp;output=webp 960w,
+                                      https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg&amp;w=1400&amp;output=webp 1400w"
+                                  sizes="(max-width: 992px) 48vw, 30vw">
+                          <img src="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg" alt="Servizio a domicilio"
+                               style="width: 100%; border-radius: 1rem;"
+                               class="gallery-image"
+                               width="1600"
+                               height="1067"
+                               loading="lazy"
+                               decoding="async"
+                               fetchpriority="low"
+                               sizes="(max-width: 992px) 48vw, 30vw"
+                               data-fullsize="https://live.staticflickr.com/65535/54376078574_cf46babeba_h.jpg"
+                               onclick="openLightbox(this)"
+                               itemprop="contentUrl">
+                      </picture>
                       <div class="gallery-overlay">
                           <span itemprop="name">Officina Specializzata</span>
                       </div>
@@ -1110,11 +1285,26 @@
 
               <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
                   <div class="gallery-item">
-                      <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg" alt="Servizio a domicilio" style="width: 100%; border-radius: 1rem;"
-                           alt="Officina riparazioni"
-                           class="gallery-image"
-                           onclick="openLightbox(this.src)"
-                           itemprop="contentUrl">
+                      <picture class="optimized-media">
+                          <source type="image/webp"
+                                  srcset="
+                                      https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg&amp;w=640&amp;output=webp 640w,
+                                      https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg&amp;w=960&amp;output=webp 960w,
+                                      https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg&amp;w=1400&amp;output=webp 1400w"
+                                  sizes="(max-width: 992px) 48vw, 30vw">
+                          <img src="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg" alt="Servizio a domicilio"
+                               style="width: 100%; border-radius: 1rem;"
+                               class="gallery-image"
+                               width="1600"
+                               height="1067"
+                               loading="lazy"
+                               decoding="async"
+                               fetchpriority="low"
+                               sizes="(max-width: 992px) 48vw, 30vw"
+                               data-fullsize="https://live.staticflickr.com/65535/54375000122_29ea10dad5_h.jpg"
+                               onclick="openLightbox(this)"
+                               itemprop="contentUrl">
+                      </picture>
                       <div class="gallery-overlay">
                           <span itemprop="name">Officina Specializzata</span>
                       </div>
@@ -1122,11 +1312,26 @@
               </div>
               <div class="gallery-item" itemprop="photo" itemscope itemtype="https://schema.org/ImageObject">
                 <div class="gallery-item">
-                    <img src="https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg" alt="Servizio a domicilio" style="width: 100%; border-radius: 1rem;"
-                         alt="Officina riparazioni"
-                         class="gallery-image"
-                         onclick="openLightbox(this.src)"
-                         itemprop="contentUrl">
+                    <picture class="optimized-media">
+                        <source type="image/webp"
+                                srcset="
+                                    https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg&amp;w=640&amp;output=webp 640w,
+                                    https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg&amp;w=960&amp;output=webp 960w,
+                                    https://wsrv.nl/?url=https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg&amp;w=1400&amp;output=webp 1400w"
+                                sizes="(max-width: 992px) 48vw, 30vw">
+                        <img src="https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg" alt="Servizio a domicilio"
+                             style="width: 100%; border-radius: 1rem;"
+                             class="gallery-image"
+                             width="1600"
+                             height="1067"
+                             loading="lazy"
+                             decoding="async"
+                             fetchpriority="low"
+                             sizes="(max-width: 992px) 48vw, 30vw"
+                             data-fullsize="https://live.staticflickr.com/65535/54376078589_1af587655e_h.jpg"
+                             onclick="openLightbox(this)"
+                             itemprop="contentUrl">
+                    </picture>
                     <div class="gallery-overlay">
                         <span itemprop="name">Officina Specializzata</span>
                     </div>
@@ -1221,7 +1426,7 @@
 </footer>
     <div class="lightbox" id="imageLightbox">
         <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+        <img class="lightbox-content" id="lightbox-img" loading="lazy" decoding="async">
     </div>
 
     <!-- Modal Contatti -->
@@ -1300,8 +1505,10 @@
   {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
+      "@id": "https://www.macchinedacucirefirenze.it/#business",
       "name": "Stefano Ricci - Riparazione Macchine da Cucire",
       "image": "https://i.ibb.co/XtgdB17/Whats-App-Image-2024-12-27-at-15-33-53.jpg",
+      "logo": "https://www.macchinedacucirefirenze.it/logo.png",
       "description": "Servizio professionale di riparazione macchine da cucire a Firenze e provincia. Interventi a domicilio e preventivi gratuiti.",
       "address": {
           "@type": "PostalAddress",
@@ -1313,24 +1520,103 @@
       },
       "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 43.7696,
-          "longitude": 11.2558
+          "latitude": 43.826874,
+          "longitude": 11.114776
       },
+      "hasMap": "https://goo.gl/maps/5QZkeNp46prxkPNv5",
       "url": "https://www.macchinedacucirefirenze.it/",
       "telephone": "+393343156903",
       "email": "riparazioni.ricci@gmail.com",
       "priceRange": "€€",
-      "openingHours": "Mo-Fr 09:00-18:00"
+      "sameAs": [
+          "https://www.facebook.com/groups/riparazionimacchinedacucire",
+          "https://wa.me/393343156903"
+      ],
+      "areaServed": [
+          "Firenze",
+          "Campi Bisenzio",
+          "Prato",
+          "Scandicci",
+          "Sesto Fiorentino"
+      ],
+      "serviceArea": {
+          "@type": "AdministrativeArea",
+          "name": "Città Metropolitana di Firenze"
+      },
+      "openingHoursSpecification": [
+          {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+          }
+      ],
+      "knowsAbout": [
+          "riparazione macchine da cucire Firenze",
+          "assistenza Singer",
+          "ricambi Necchi",
+          "service Brother",
+          "riparazione Bernina"
+      ],
+      "makesOffer": [
+          {
+              "@type": "Offer",
+              "itemOffered": {
+                  "@type": "Service",
+                  "name": "Riparazione Singer Firenze",
+                  "serviceType": "Riparazione e manutenzione Singer",
+                  "areaServed": "Firenze e provincia",
+                  "url": "https://www.macchinedacucirefirenze.it/riparazione-singer.html"
+              }
+          },
+          {
+              "@type": "Offer",
+              "itemOffered": {
+                  "@type": "Service",
+                  "name": "Riparazione Necchi Firenze",
+                  "serviceType": "Assistenza Necchi certificata",
+                  "areaServed": "Firenze e Prato",
+                  "url": "https://www.macchinedacucirefirenze.it/riparazione-necchi.html"
+              }
+          },
+          {
+              "@type": "Offer",
+              "itemOffered": {
+                  "@type": "Service",
+                  "name": "Interventi a domicilio",
+                  "serviceType": "Manutenzione e riparazione a domicilio",
+                  "areaServed": [
+                      "Scandicci",
+                      "Campi Bisenzio",
+                      "Sesto Fiorentino"
+                  ],
+                  "url": "https://www.macchinedacucirefirenze.it/assistenza.html"
+              }
+          }
+      ]
   }
   </script>
 
-
   <script>
-function openLightbox(imgSrc) {
+function openLightbox(source) {
     const lightbox = document.getElementById('imageLightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const resolvedSrc = typeof source === 'string'
+        ? source
+        : (source?.dataset?.fullsize || source?.currentSrc || source?.src);
+
+    if (!resolvedSrc) {
+        return;
+    }
+
     lightbox.style.display = "block";
-    lightboxImg.src = imgSrc;
+    lightboxImg.src = resolvedSrc;
     document.body.style.overflow = 'hidden';
 }
 

@@ -171,6 +171,28 @@
     });
   });
 
+  const registerCtaTracking = () => {
+    const ctas = document.querySelectorAll('[data-track-cta]');
+    if (!ctas.length) {
+      return;
+    }
+
+    ctas.forEach((element) => {
+      if (element.__ctaTrackerAttached) return;
+      element.__ctaTrackerAttached = true;
+
+      element.addEventListener('click', () => {
+        const label = element.dataset.trackCta || sanitizeText(element.textContent);
+        const ctaPayload = {
+          cta_label: label,
+          cta_destination: element.getAttribute('href') || null,
+          cta_location: element.dataset.ctaLocation || detectContactStep(element) || 'cta',
+        };
+        sendToAnalytics('cta_click', ctaPayload);
+      });
+    });
+  };
+
   document.addEventListener('DOMContentLoaded', () => {
     const contactLink = document.getElementById('contatti-link');
     if (contactLink && !contactLink.dataset.contactEvent) {
@@ -209,6 +231,8 @@
     document.querySelectorAll('.footer-contact .contact-item a').forEach((el) => {
       el.dataset.contactStep = el.dataset.contactStep || 'footer';
     });
+
+    registerCtaTracking();
   });
 
   window.trackContactEvent = (type, extra = {}) => {

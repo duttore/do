@@ -1,0 +1,427 @@
+/* Modern Guide Styling - Ispirato WikiHow ma moderno */
+
+/* Hero Guide Hub - Stile WikiHow con Immagine */
+.guides-hub-hero {
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid #e5e7eb;
+    position: relative;
+}
+
+.guides-hub-hero .container {
+    max-width: 1200px;
+}
+
+.guides-hub-hero-content {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.guides-hub-hero-text {
+    text-align: left;
+}
+
+.guides-hub-hero h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.guides-hub-hero p {
+    font-size: 1.0625rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.guides-hub-hero-image {
+    position: relative;
+}
+
+.guides-hub-hero-image img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.guides-hub-hero .hero-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.guides-hub-hero .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    color: #6b7280;
+}
+
+.guides-hub-hero .hero-meta-item i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.guides-hub-hero .search-box {
+    max-width: 650px;
+    margin: 2rem auto 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.guides-hub-hero .search-box:focus-within {
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.2);
+}
+
+.guides-hub-hero .search-box i {
+    color: #9ca3af;
+    font-size: 1.125rem;
+    margin-right: 1rem;
+}
+
+.guides-hub-hero .search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #374151;
+}
+
+.guides-hub-hero .search-box input::placeholder {
+    color: #9ca3af;
+}
+
+/* Step Cards - WikiHow Style ma Moderno - COMPATTO */
+.guide-step {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.guide-step:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+}
+
+.guide-step-number {
+    position: absolute;
+    top: -14px;
+    left: 1.75rem;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    box-shadow: 0 3px 8px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.guide-step h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 0.875rem 0;
+    padding-top: 0.25rem;
+}
+
+.guide-step-content {
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.guide-step-content p {
+    margin-bottom: 0.875rem;
+}
+
+.guide-step-content ul,
+.guide-step-content ol {
+    margin: 0.875rem 0;
+    padding-left: 1.5rem;
+}
+
+.guide-step-content li {
+    margin-bottom: 0.625rem;
+    line-height: 1.65;
+}
+
+.guide-step-content li strong {
+    color: #1a1a1a;
+}
+
+/* Image Balance - Split Layout */
+.guide-step-with-image {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    align-items: start;
+    padding: 1.5rem 2rem;
+}
+
+.guide-step-with-image.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.guide-step-with-image.reverse .guide-step-content {
+    order: 2;
+}
+
+.guide-step-with-image.reverse .guide-step-image {
+    order: 1;
+}
+
+.guide-step-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    max-height: 280px;
+}
+
+.guide-step-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.guide-step-image figcaption {
+    padding: 0.75rem 1rem;
+    background: rgba(0,0,0,0.75);
+    color: white;
+    font-size: 0.875rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Callout Boxes - Visual Tips - COMPATTO */
+.guide-callout {
+    background: #f0f9ff;
+    border-left: 3px solid #3b82f6;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    margin: 1.25rem 0;
+}
+
+.guide-callout.warning {
+    background: #fff7ed;
+    border-left-color: #f59e0b;
+}
+
+.guide-callout.success {
+    background: #f0fdf4;
+    border-left-color: #10b981;
+}
+
+.guide-callout.danger {
+    background: #fef2f2;
+    border-left-color: #ef4444;
+}
+
+.guide-callout-header {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    margin-bottom: 0.625rem;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: #1a1a1a;
+}
+
+.guide-callout-header i {
+    font-size: 1.125rem;
+}
+
+.guide-callout p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.65;
+    font-size: 0.9375rem;
+}
+
+/* Quick Facts Box - COMPATTO */
+.guide-quick-facts {
+    background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.08) 0%, rgba(var(--primary-color-rgb), 0.02) 100%);
+    border: 1px solid rgba(var(--primary-color-rgb), 0.2);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.guide-quick-facts h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 0.875rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.guide-quick-facts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.875rem;
+}
+
+.guide-quick-facts li {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-size: 0.9375rem;
+    color: #374151;
+}
+
+.guide-quick-facts li i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* Table of Contents - Sticky */
+.guide-toc {
+    position: sticky;
+    top: 100px;
+    background: #ffffff;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.guide-toc h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 1rem 0;
+}
+
+.guide-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guide-toc li {
+    margin-bottom: 0.75rem;
+}
+
+.guide-toc a {
+    color: #6b7280;
+    text-decoration: none;
+    font-size: 0.9375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.guide-toc a:hover,
+.guide-toc a.active {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+}
+
+.guide-toc a i {
+    font-size: 0.75rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .guides-hub-hero {
+        padding: 5rem 0 3rem;
+    }
+
+    .guides-hub-hero-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .guides-hub-hero-text {
+        text-align: center;
+    }
+
+    .guides-hub-hero h1 {
+        font-size: 2rem;
+    }
+
+    .guides-hub-hero .search-box {
+        margin-top: 2rem;
+    }
+    
+    .guide-step {
+        padding: 1.25rem 1.25rem;
+    }
+    
+    .guide-step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9375rem;
+        top: -16px;
+        left: 1.25rem;
+    }
+    
+    .guide-step h3 {
+        font-size: 1.1875rem;
+    }
+    
+    .guide-step-with-image {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+    
+    .guide-step-with-image.reverse .guide-step-content {
+        order: 1;
+    }
+    
+    .guide-step-with-image.reverse .guide-step-image {
+        order: 2;
+    }
+    
+    .guide-toc {
+        position: relative;
+        top: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .guide-quick-facts ul {
+        grid-template-columns: 1fr;
+    }
+}
+

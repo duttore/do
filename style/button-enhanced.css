@@ -1,0 +1,176 @@
+/* Enhanced Gradient Button - Ispirato da note/button */
+
+@property --btn-glow-opacity {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --btn-gradient-pos {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 100%;
+}
+
+/* Base Styles */
+.button-whatsapp-enhanced {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.75rem;
+    background: linear-gradient(135deg, #25d366, #48db81);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-primary-enhanced,
+.button-whatsapp-enhanced {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s cubic-bezier(.76,-0.25,.51,1.13),
+                --btn-gradient-pos 2s ease,
+                --btn-glow-opacity 0.3s ease;
+    --btn-glow-opacity: 0;
+    --btn-gradient-pos: 100%;
+}
+
+.button-primary-enhanced::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(67, 97, 238, 0.5),
+        rgba(110, 142, 251, 0.5),
+        rgba(67, 97, 238, 0.5),
+        rgba(255, 255, 255, 0.1)
+    ) no-repeat calc(var(--btn-gradient-pos)) 0% / 300%;
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.button-primary-enhanced::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(67, 97, 238, 0),
+        rgba(67, 97, 238, 0.3),
+        rgba(110, 142, 251, 0.3),
+        rgba(67, 97, 238, 0.3),
+        rgba(67, 97, 238, 0)
+    ) no-repeat calc(var(--btn-gradient-pos)) 0% / 300%;
+    filter: blur(20px);
+    opacity: var(--btn-glow-opacity);
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.button-primary-enhanced:hover {
+    transform: scale(1.05);
+    --btn-gradient-pos: 0%;
+    --btn-glow-opacity: 0.5;
+}
+
+.button-primary-enhanced:hover::before {
+    opacity: 1;
+}
+
+.button-primary-enhanced:active {
+    transform: scale(0.98);
+}
+
+/* WhatsApp Variant */
+.button-whatsapp-enhanced::before {
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(37, 211, 102, 0.5),
+        rgba(72, 219, 129, 0.5),
+        rgba(37, 211, 102, 0.5),
+        rgba(255, 255, 255, 0.1)
+    ) no-repeat calc(var(--btn-gradient-pos)) 0% / 300%;
+}
+
+.button-whatsapp-enhanced::after {
+    background: linear-gradient(
+        120deg,
+        rgba(37, 211, 102, 0),
+        rgba(37, 211, 102, 0.3),
+        rgba(72, 219, 129, 0.3),
+        rgba(37, 211, 102, 0.3),
+        rgba(37, 211, 102, 0)
+    ) no-repeat calc(var(--btn-gradient-pos)) 0% / 300%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .button-primary-enhanced:hover,
+    .button-whatsapp-enhanced:hover {
+        transform: scale(1.02);
+    }
+}
+
+/* ===== Versione per CTA nelle Guide ===== */
+.button-cta-guide {
+    position: relative;
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(var(--primary-color-rgb), 0.3);
+}
+
+.button-cta-guide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.button-cta-guide:hover::before {
+    transform: translateX(100%);
+}
+
+.button-cta-guide:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(var(--primary-color-rgb), 0.4);
+}
+
+.button-cta-guide:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(var(--primary-color-rgb), 0.3);
+}
+

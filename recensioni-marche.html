@@ -25,6 +25,129 @@
     <link rel="stylesheet" href="style/guide.css">
     <link rel="canonical" href="https://www.macchinedacucirefirenze.it/recensioni-marche.html">
     <script defer src="contact-tracking.js"></script>
+    <style>
+        .brand-comparison {
+            padding: 3rem 0;
+            background: #f9fafb;
+        }
+
+        .brand-comparison .comparison-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .brand-comparison table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .brand-comparison th,
+        .brand-comparison td {
+            padding: 1.1rem;
+            text-align: left;
+            border-bottom: 1px solid #f1f5f9;
+            vertical-align: top;
+        }
+
+        .brand-comparison th {
+            background: #eef2ff;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .brand-comparison tr:last-child td {
+            border-bottom: none;
+        }
+
+        .brand-comparison .comparison-cta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(79,70,229,0.08), rgba(14,165,233,0.08));
+            border-radius: 16px;
+        }
+
+        .brand-comparison .comparison-cta strong {
+            font-size: 1.2rem;
+        }
+
+        .brand-snippets {
+            padding: 3rem 0;
+        }
+
+        .brand-snippet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .brand-snippet-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 12px 24px rgba(15, 23, 42, 0.07);
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .brand-snippet-card h3 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #1f2937;
+        }
+
+        .brand-snippet-card ul {
+            padding-left: 1.1rem;
+            margin: 0.5rem 0;
+            color: #4b5563;
+        }
+
+        .brand-snippet-card .snippet-cta {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .brand-snippet-card .text-link {
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: underline;
+            font-size: 0.95rem;
+        }
+
+        picture.optimized-media {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        picture.optimized-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 640px) {
+            .brand-comparison table {
+                font-size: 0.95rem;
+            }
+
+            .brand-comparison th,
+            .brand-comparison td {
+                padding: 0.85rem;
+            }
+        }
+    </style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M308EXBEQ"></script>
@@ -46,6 +169,39 @@
       "publisher": {"@type": "Organization", "name": "Riparazioni Ricci"},
       "datePublished": "2025-01-11",
       "dateModified": "2025-01-11"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Confronto Marche Macchine da Cucire",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Singer Firenze",
+          "url": "https://www.macchinedacucirefirenze.it/recensioni-marche.html#singer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Brother Firenze",
+          "url": "https://www.macchinedacucirefirenze.it/recensioni-marche.html#brother"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Janome Firenze",
+          "url": "https://www.macchinedacucirefirenze.it/recensioni-marche.html#janome"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bernina Firenze",
+          "url": "https://www.macchinedacucirefirenze.it/recensioni-marche.html#bernina"
+        }
+      ]
     }
     </script>
 
@@ -91,12 +247,154 @@
     <section id="hero" class="simple-hero">
         <div class="container">
             <div class="hero-image-container">
-                <img src="https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg" 
-                     alt="Diverse marche di macchine da cucire" 
-                     class="hero-image">
+                <picture class="optimized-media">
+                    <source type="image/webp"
+                            srcset="
+                                https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg&amp;w=640&amp;output=webp 640w,
+                                https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg&amp;w=960&amp;output=webp 960w,
+                                https://wsrv.nl/?url=https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg&amp;w=1400&amp;output=webp 1400w"
+                            sizes="(max-width: 1024px) 100vw, 70vw">
+                    <img src="https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg" 
+                         alt="Diverse marche di macchine da cucire" 
+                         class="hero-image"
+                         width="1600"
+                         height="1067"
+                         loading="lazy"
+                         decoding="async"
+                         data-fullsize="https://live.staticflickr.com/65535/54375875071_476b923c7c_h.jpg">
+                </picture>
                 <div class="image-overlay">
                     <h1>Recensioni Marche di Macchine da Cucire</h1>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brand-comparison">
+        <div class="container">
+            <div class="comparison-wrapper">
+                <div>
+                    <h2>Confronto rapido tra le marche più richieste a Firenze</h2>
+                    <p>Scegli la marca partendo dalle tue priorità: robustezza industriale, funzioni digitali o precisione nei ricami. I dati arrivano da oltre 1.500 interventi effettuati nel laboratorio Ricci.</p>
+                </div>
+                <div class="comparison-cta">
+                    <strong>Dubbi sul modello?</strong>
+                    <span>Inviaci una foto su WhatsApp e ti dico subito se conviene riparare o cambiare macchina.</span>
+                    <button type="button"
+                            class="button button-primary"
+                            data-track-cta="recensioni-parere-tecnico"
+                            onclick="document.getElementById('contatti-modal').classList.add('show'); document.body.style.overflow='hidden';">
+                        Richiedi parere tecnico
+                    </button>
+                </div>
+            </div>
+            <div class="comparison-table-wrapper" style="margin-top: 2rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Punti di forza</th>
+                            <th>Ideale per</th>
+                            <th>Supporto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Singer</strong></td>
+                            <td>Struttura Heavy Duty, ricambi immediati, affidabilità storica.</td>
+                            <td>Laboratori intensivi e artigiani che lavorano su tessuti spessi.</td>
+                            <td><a href="riparazione-singer.html" data-track-cta="table-singer">Assistenza Singer Firenze</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brother</strong></td>
+                            <td>Interfacce intuitive, funzioni digitali e ottimo rapporto qualità/prezzo.</td>
+                            <td>Principianti evoluti e chi desidera ricami computerizzati.</td>
+                            <td><a href="riparazione-brother.html" data-track-cta="table-brother">Assistenza Brother Firenze</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bernina</strong></td>
+                            <td>Precisione svizzera, punti impeccabili e lunga durata.</td>
+                            <td>Sarte, quilter e atelier che richiedono massima accuratezza.</td>
+                            <td><a href="riparazione-bernina.html" data-track-cta="table-bernina">Assistenza Bernina Firenze</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Janome</strong></td>
+                            <td>Motori silenziosi, ottima gestione quilting e ricami.</td>
+                            <td>Hobbisti esigenti e scuole di cucito che vogliono versatilità.</td>
+                            <td><a href="scelta-macchine.html" data-track-cta="table-janome">Consulenza scelta modello</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="brand-snippets" itemscope itemtype="https://schema.org/FAQPage">
+        <div class="container">
+            <div class="section-header">
+                <h2>Carte d’identità rapide (con FAQ dedicate)</h2>
+                <p>Ogni card riassume quando scegliere la marca e come ottenere assistenza specializzata a Firenze.</p>
+            </div>
+            <div class="brand-snippet-grid">
+                <article class="brand-snippet-card" id="card-singer" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Quando scegliere Singer a Firenze?</h3>
+                    <div class="snippet-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Le Singer Heavy Duty affrontano denim e pelle senza sforzo e hanno ricambi disponibili in 24h.</p>
+                        <ul>
+                            <li>Motori potenziati + struttura in metallo</li>
+                            <li>Supporto ufficiale e ricambi originali sempre in stock</li>
+                        </ul>
+                        <div class="snippet-cta">
+                            <a href="riparazione-singer.html" class="button button-primary" data-track-cta="faq-singer">Vai all'assistenza Singer</a>
+                            <a href="#singer" class="text-link">Leggi la recensione completa</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="brand-snippet-card" id="card-brother" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Per chi sono perfette le Brother?</h3>
+                    <div class="snippet-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Brother offre display chiari, punti decorativi e connessione rapida ai tutorial: ideali per chi cuce spesso ma non vuole complicazioni.</p>
+                        <ul>
+                            <li>Diagnostica computerizzata in laboratorio</li>
+                            <li>Ricami e quilting gestiti da software dedicati</li>
+                        </ul>
+                        <div class="snippet-cta">
+                            <a href="riparazione-brother.html" class="button button-primary" data-track-cta="faq-brother">Assistenza Brother Firenze</a>
+                            <a href="#brother" class="text-link">Approfondisci i pro e contro</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="brand-snippet-card" id="card-bernina" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Perché puntare su Bernina?</h3>
+                    <div class="snippet-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Bernina è sinonimo di precisione e punti perfetti anche su tessuti delicati: consigliata a chi vive di cucito.</p>
+                        <ul>
+                            <li>Componentistica premium e manutenzione mirata</li>
+                            <li>Supporto ufficiale Bernina con calibrazioni certificate</li>
+                        </ul>
+                        <div class="snippet-cta">
+                            <a href="riparazione-bernina.html" class="button button-primary" data-track-cta="faq-bernina">Richiedi assistenza Bernina</a>
+                            <a href="#bernina" class="text-link">Vedi problemi e soluzioni</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="brand-snippet-card" id="card-janome" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+                    <h3 itemprop="name">Quando conviene puntare su Janome?</h3>
+                    <div class="snippet-answer" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Janome unisce affidabilità giapponese e ottimi accessori per patchwork: ottima per scuole e quilting.</p>
+                        <ul>
+                            <li>Trasporto preciso e punti decorativi puliti</li>
+                            <li>Consulenza dedicata per upgrade o trade-in</li>
+                        </ul>
+                        <div class="snippet-cta">
+                            <a href="scelta-macchine.html" class="button button-primary" data-track-cta="faq-janome">Prenota consulenza scelta modello</a>
+                            <a href="#janome" class="text-link">Scopri pro e contro</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
