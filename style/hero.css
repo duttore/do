@@ -1,7 +1,7 @@
 /* Hero Section - Stile completo */
 .hero-section {
     position: relative;
-    padding: 8rem 0 4rem;
+    padding: 10rem 0 4rem;
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -203,7 +203,7 @@
 
 @media (max-width: 768px) {
     .hero-section {
-        padding: 5rem 0 3rem;
+        padding: 6rem 0 3rem;
         min-height: 60vh;
     }
 

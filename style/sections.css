@@ -861,4 +861,186 @@
         font-size: 0.8rem;
         padding: 0.3rem 0.8rem;
     }
+    
+    /* Ottimizzazioni generali per sezioni mobile */
+    .intro-section,
+    .services-detail,
+    .pricing-section,
+    .home-service,
+    .common-issues,
+    .faq-section,
+    .work-gallery,
+    .community-section,
+    .ricambi-preview-section {
+        padding: 3rem 0;
+    }
+    
+    /* Content wrapper mobile */
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .text-content {
+        padding: 1.5rem;
+    }
+    
+    .text-content h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.75rem;
+    }
+    
+    .text-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+    }
+    
+    /* Image gallery mobile */
+    .image-gallery {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Services grid mobile */
+    .services-grid,
+    .pricing-grid,
+    .issues-grid,
+    .faq-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    /* Service content mobile */
+    .service-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .service-text h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .service-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    /* Service areas mobile - già ottimizzato in responsive.css ma aggiungo qui per completezza */
+    .service-areas {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+    }
+    
+    .service-area-item {
+        padding: 0.875rem 1rem;
+        margin: 0;
+        white-space: normal;
+    }
+    
+    /* Issue cards mobile */
+    .issue-card {
+        padding: 1.5rem;
+    }
+    
+    .issue-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .issue-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .issue-checklist li {
+        margin-bottom: 0.875rem;
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+    
+    /* Social links mobile */
+    .social-links {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .social-link {
+        padding: 1.75rem 1.5rem;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .social-link i {
+        font-size: 2.25rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .social-link span {
+        font-size: 1.1rem;
+    }
+    
+    .social-link p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    /* Ricambi preview mobile */
+    .ricambi-preview-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .ricambi-text h3 {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    .ricambi-features {
+        gap: 1rem;
+        margin: 1.25rem 0;
+    }
+    
+    .ricambi-features li {
+        padding: 0.875rem;
+        font-size: 0.95rem;
+    }
+    
+    .ricambi-features i {
+        font-size: 1.1rem;
+    }
+    
+    .ricambi-image {
+        border-radius: 12px;
+        max-height: 300px;
+    }
+    
+    .ricambi-image img {
+        border-radius: 12px;
+    }
+    
+    /* Hero section mobile (se presente) */
+    .hero {
+        height: auto;
+        min-height: 60vh;
+        padding: 8rem 0 3rem;
+        margin-top: 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
 }

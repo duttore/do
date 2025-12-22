@@ -43,30 +43,49 @@
         font-size: 2rem;
         line-height: 1.25;
         margin-bottom: 1rem;
+        word-wrap: break-word;
     }
 
     h2 {
         font-size: 1.75rem;
         line-height: 1.3;
         margin-bottom: 0.875rem;
+        word-wrap: break-word;
     }
 
     h3 {
         font-size: 1.375rem;
         line-height: 1.35;
         margin-bottom: 0.75rem;
+        word-wrap: break-word;
     }
 
     h4 {
         font-size: 1.125rem;
         line-height: 1.4;
         margin-bottom: 0.625rem;
+        word-wrap: break-word;
     }
 
     p {
         font-size: 1.0625rem;
         line-height: 1.8;
         margin-bottom: 1.25rem;
+        word-wrap: break-word;
+    }
+    
+    /* Immagini responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .gallery-image,
+    .rounded-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
     }
 
     .button {
@@ -113,11 +132,44 @@
     section {
         padding: 3rem 0;
     }
+    
+    /* Ottimizzazione sezioni specifiche */
+    .guides-carousel-section,
+    .ricambi-preview-section,
+    .community-section {
+        padding: 3rem 0 !important;
+    }
 
     .hero {
         height: auto;
         min-height: 60vh;
         padding: 2rem 0;
+    }
+    
+    /* Carousel Guide Mobile */
+    .guides-carousel-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 1rem;
+    }
+    
+    .carousel-item {
+        min-width: 100%;
+        padding: 0;
+    }
+    
+    .carousel-item .service-card {
+        margin: 0;
+    }
+    
+    .guides-cta {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    .guides-cta .button {
+        width: 100%;
+        max-width: 400px;
     }
 
     .hero-content h1 {
@@ -194,13 +246,21 @@
     }
 
     .service-areas {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
     }
 
     .service-area-item {
-        padding: 0.75rem;
-        font-size: 0.9rem;
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .service-area-item i {
+        font-size: 1rem;
+        min-width: 20px;
     }
 
     .social-links {
@@ -211,6 +271,40 @@
     .social-link {
         width: 100%;
         max-width: 400px;
+    }
+    
+    /* Ricambi Preview Mobile */
+    .ricambi-preview-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .ricambi-text {
+        order: 2;
+    }
+    
+    .ricambi-image {
+        order: 1;
+    }
+    
+    .ricambi-features {
+        padding-left: 0;
+        list-style: none;
+    }
+    
+    .ricambi-features li {
+        padding: 0.75rem 0;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .ricambi-features li i {
+        font-size: 1.1rem;
+        color: var(--primary-color);
+        min-width: 24px;
     }
 }
 
@@ -432,6 +526,70 @@
     }
 }
 
+/* Ottimizzazioni per stili inline nelle pagine */
+@media (max-width: 768px) {
+    /* Grid inline che potrebbero causare problemi */
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))"],
+    div[style*="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))"] {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Grid con due colonne fisse su mobile diventano una colonna */
+    div[style*="grid-template-columns: 1fr auto"] {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+    }
+    
+    /* Sezioni con padding inline troppo grande */
+    section[style*="padding: 5rem 0"],
+    section[style*="padding: 4rem 0"] {
+        padding: 3rem 0 !important;
+    }
+    
+    section[style*="padding: 3rem 0"] {
+        padding: 2.5rem 0 !important;
+    }
+    
+    /* Cards/links con padding inline troppo grande */
+    a[style*="padding: 2rem"] {
+        padding: 1.5rem !important;
+    }
+    
+    div[style*="padding: 3rem 2rem"] {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    /* Bottoni con padding inline */
+    button[style*="padding: 1rem 3rem"],
+    button[style*="padding: 1rem 2.5rem"],
+    button[style*="padding: 1rem 2rem"] {
+        padding: 1rem 1.75rem !important;
+        font-size: 1rem !important;
+        white-space: normal !important;
+    }
+    
+    /* Div con max-width troppo restrittivo */
+    div[style*="max-width: 800px"],
+    div[style*="max-width: 1000px"] {
+        max-width: 100% !important;
+    }
+    
+    /* Elementi h3, h2 dentro div con stili inline */
+    div[style*="background: linear-gradient"] h3,
+    div[style*="background: linear-gradient"] h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    div[style*="background: linear-gradient"] p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        margin-bottom: 1.25rem !important;
+    }
+}
+
 /* Content reading improvements for mobile */
 @media (max-width: 480px) {
     body {
@@ -445,16 +603,38 @@
     h1 {
         font-size: 1.75rem;
         line-height: 1.3;
+        margin-bottom: 1rem;
     }
 
     h2 {
         font-size: 1.5rem;
         line-height: 1.35;
+        margin-bottom: 0.875rem;
     }
 
     h3 {
         font-size: 1.25rem;
         line-height: 1.4;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Miglioramenti per le sezioni */
+    section {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+        line-height: 1.65;
     }
     
     .text-content p {
@@ -501,6 +681,45 @@
         font-size: 1.0625rem;
         padding: 1rem 1.5rem;
         min-height: 48px;
+    }
+    
+    /* Miglioramenti Cards Mobile */
+    .service-card,
+    .issue-card,
+    .faq-item {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card h3,
+    .issue-card h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card p,
+    .issue-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .service-icon,
+    .issue-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Gallery Grid Mobile */
+    .gallery-grid {
+        gap: 1rem;
+    }
+    
+    .gallery-item {
+        margin-bottom: 1rem;
+    }
+    
+    .gallery-overlay span {
+        font-size: 0.95rem;
     }
 
     /* CTA Box e Modal Mobile */
@@ -591,5 +810,83 @@
     article[onclick] p {
         font-size: 1rem !important;
         line-height: 1.75 !important;
+    }
+    
+    /* FAQ Accordion Mobile */
+    .accordion-item {
+        margin-bottom: 1rem;
+    }
+    
+    .accordion-header {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .accordion-content {
+        padding: 1rem;
+    }
+    
+    .accordion-content p,
+    .accordion-content li {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    /* Home Service Section */
+    .home-service {
+        padding: 2.5rem 0;
+    }
+    
+    .service-content {
+        gap: 2rem;
+    }
+    
+    .service-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .service-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+    }
+    
+    /* Extra ottimizzazioni per schermi molto piccoli */
+    @media (max-width: 480px) {
+        /* Grid inline ancora più compatte */
+        div[style*="grid-template-columns"] {
+            gap: 1rem !important;
+        }
+        
+        /* Padding ancora più ridotto */
+        section[style*="padding"] {
+            padding: 2rem 0 !important;
+        }
+        
+        a[style*="padding: 2rem"],
+        a[style*="padding: 1.5rem"] {
+            padding: 1.25rem !important;
+        }
+        
+        div[style*="padding: 3rem 2rem"],
+        div[style*="padding: 2rem 1.5rem"] {
+            padding: 1.5rem 1rem !important;
+        }
+        
+        /* Bottoni più compatti */
+        button[style*="padding"] {
+            padding: 0.875rem 1.5rem !important;
+            font-size: 0.95rem !important;
+        }
+        
+        /* Font-size ridotti per elementi inline */
+        div[style*="font-size: 3rem"] {
+            font-size: 2rem !important;
+        }
+        
+        h3[style*="font-size: 1.2rem"] {
+            font-size: 1.05rem !important;
+        }
     }
 }

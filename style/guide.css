@@ -213,9 +213,11 @@ article[onclick]:hover::after {
 .guide-hero-modern .hero-image img {
     width: 100%;
     max-height: 200px;
+    aspect-ratio: 16 / 9;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     object-fit: cover;
+    object-position: center;
     position: relative;
     z-index: 2;
     transition: transform 0.3s ease;
@@ -888,5 +890,55 @@ picture.optimized-media img {
     
     .guide-hero-modern {
         padding: 2rem 0 1.5rem !important;
+    }
+    
+    /* Solved grid mobile ottimizzato */
+    .solved-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .solved-card {
+        padding: 1.25rem !important;
+    }
+    
+    .solved-card h3 {
+        font-size: 1.05rem !important;
+    }
+    
+    .solved-card ul li {
+        font-size: 0.9rem !important;
+        line-height: 1.65 !important;
+    }
+    
+    /* Table of contents mobile */
+    .guide-page .table-of-contents {
+        padding: 1.25rem !important;
+        min-width: auto !important;
+    }
+    
+    .guide-page .table-of-contents h4 {
+        font-size: 0.85rem !important;
+    }
+    
+    .guide-page .table-of-contents a {
+        font-size: 0.85rem !important;
+        padding: 0.4rem 0.6rem !important;
+    }
+    
+    /* Wiki content mobile */
+    .guide-page .wiki-step {
+        margin: 1.5rem 0 1rem 0 !important;
+    }
+    
+    .guide-page .wiki-step h3 {
+        font-size: 1.25rem !important;
+        padding-bottom: 0.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Text content padding */
+    .guide-page .intro-section .content-wrapper {
+        padding: 0 1rem !important;
     }
 }

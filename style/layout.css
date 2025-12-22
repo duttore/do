@@ -166,6 +166,16 @@
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: block;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .header-content {
+        padding: 0.75rem 0;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
     }
     
     .nav-desktop {
@@ -182,6 +192,8 @@
         transition: all 0.3s ease;
         z-index: 999;
         gap: 0.5rem;
+        max-height: calc(100vh - 4rem);
+        overflow-y: auto;
     }
     
     .nav-desktop.active {
@@ -208,6 +220,11 @@
         width: 100%;
         padding: 1rem;
         border-radius: 8px;
+        font-size: 1rem;
+    }
+    
+    .nav-link i {
+        font-size: 1.2rem;
     }
     
     .nav-link::after {
@@ -216,6 +233,80 @@
     
     .nav-link:hover {
         background: rgba(var(--primary-color-rgb), 0.05);
+    }
+    
+    /* Sezioni ottimizzate per mobile */
+    section {
+        padding: 3rem 0;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.75rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+    
+    /* Footer ottimizzato */
+    footer {
+        padding: 2.5rem 0 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.875rem;
+    }
+    
+    .contact-list {
+        gap: 1.25rem;
+    }
+    
+    .contact-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .contact-item i {
+        flex-shrink: 0;
+        margin-top: 0.25rem;
+    }
+    
+    .contact-details {
+        flex: 1;
+    }
+    
+    .contact-label {
+        font-size: 0.85rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .contact-details a,
+    .contact-details span {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    .map-container {
+        height: 250px;
+        margin-top: 1.5rem;
+    }
+    
+    .copyright {
+        font-size: 0.875rem;
+        padding-top: 1.5rem;
     }
 }
 
