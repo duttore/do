@@ -236,7 +236,7 @@
         }
 
         .accordion-content {
-            max-height: 0;
+            max-height: 0 !important;
             overflow: hidden;
             transition: max-height 0.3s ease;
             padding: 0 1.2rem;
@@ -247,6 +247,11 @@
             padding: 0.5rem 0 1.2rem;
             color: #666;
             line-height: 1.6;
+        }
+
+        /* Forza chiusura di tutti gli accordion all'avvio */
+        .accordion-header:not(.active) + .accordion-content {
+            max-height: 0 !important;
         }
 
         /* Animazioni veloci come index */
@@ -320,8 +325,8 @@
         <div class="container">
             <div class="hero-wrapper">
                 <div class="hero-content">
-                    <h1>Ricambi Macchine da Cucire Firenze</h1>
-                    <p>Siamo specializzati nella fornitura di ricambi originali e compatibili per tutti i tipi di macchine da cucire, offrendo una vasta gamma di componenti per soddisfare ogni esigenza.</p>
+                    <h1 style="color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 4px 16px rgba(0,0,0,0.3);">Ricambi Macchine da Cucire Firenze</h1>
+                    <p style="color: #ffffff; text-shadow: 0 2px 6px rgba(0,0,0,0.4); font-size: 1.15rem; font-weight: 500; line-height: 1.6;">Siamo specializzati nella fornitura di ricambi originali e compatibili per tutti i tipi di macchine da cucire, offrendo una vasta gamma di componenti per soddisfare ogni esigenza.</p>
                     <div class="hero-buttons">
                         <a href="#catalogo-ricambi" class="button button-primary">
                             <span>Esplora i Ricambi</span>
@@ -355,8 +360,8 @@
         <div class="container">
             <div class="content-wrapper">
                 <div class="text-content fade-in-left">
-                    <h2>Ricambi Originali e Compatibili</h2>
-                    <p>La qualità dei ricambi è fondamentale per il corretto funzionamento della macchina da cucire. Per questo motivo, mettiamo a disposizione sia ricambi originali, che garantiscono la perfetta compatibilità con il tuo modello, sia ricambi compatibili di alta qualità, per offrire una soluzione più economica ma altrettanto affidabile.</p>
+                    <h2 style="color: #1a1a1a;">Ricambi Originali e Compatibili</h2>
+                    <p style="color: #333333; font-size: 1.05rem; line-height: 1.7;">La qualità dei ricambi è fondamentale per il corretto funzionamento della macchina da cucire. Per questo motivo, mettiamo a disposizione sia ricambi originali, che garantiscono la perfetta compatibilità con il tuo modello, sia ricambi compatibili di alta qualità, per offrire una soluzione più economica ma altrettanto affidabile.</p>
                 </div>
                 <div class="image-gallery fade-in-right">
                     <div class="gallery-item">
@@ -372,54 +377,126 @@
         </div>
     </section>
 
-    <section id="ricambi-disponibili" class="services-detail">
+    <section id="ricambi-disponibili" style="padding: 6rem 0; background: linear-gradient(135deg, #f8f9ff 0%, #fff 50%, #fff5f7 100%); position: relative; overflow: hidden;">
+        <!-- Decorative Elements -->
+        <div style="position: absolute; top: 10%; right: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%); border-radius: 50%; filter: blur(60px);"></div>
+        <div style="position: absolute; bottom: 10%; left: -5%; width: 350px; height: 350px; background: radial-gradient(circle, rgba(236,72,153,0.08) 0%, transparent 70%); border-radius: 50%; filter: blur(60px);"></div>
+
         <div class="container">
-            <div class="section-header fade-in-up">
-                <h2>Ricambi più Richiesti</h2>
-                <p>Tra i ricambi più richiesti troverai:</p>
+            <div class="section-header fade-in-up" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.75rem; font-weight: 800; background: linear-gradient(135deg, #1a1a1a 0%, #4f46e5 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem;">Ricambi più Richiesti</h2>
+                <p style="font-size: 1.15rem; color: #666;">Componenti premium per ogni esigenza</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card fade-in-left">
-                    <div class="service-icon">
-                        <i class="fas fa-pen-nib"></i>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <!-- Card 1 - Aghi -->
+                <div class="ricambi-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); backdrop-filter: blur(10px); border-radius: 24px; padding: 2rem; border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); opacity: 0.1; border-radius: 50%; filter: blur(40px);"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 24px rgba(99,102,241,0.3);">
+                            <i class="fas fa-pen-nib" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.75rem;">Aghi Professionali</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Aghi di varie misure e per diversi tipi di tessuto</p>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06);">
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; color: #6366f1; font-weight: 600; font-size: 0.9rem;">
+                                Scopri di più <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
+                            </span>
+                        </div>
                     </div>
-                    <h3>Aghi Professionali</h3>
-                    <p>Aghi di varie misure e per diversi tipi di tessuto</p>
                 </div>
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-circle"></i>
+
+                <!-- Card 2 - Bobine -->
+                <div class="ricambi-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); backdrop-filter: blur(10px); border-radius: 24px; padding: 2rem; border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%); opacity: 0.1; border-radius: 50%; filter: blur(40px);"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 24px rgba(236,72,153,0.3);">
+                            <i class="fas fa-circle" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.75rem;">Bobine e Porta-bobine</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Componenti essenziali per ogni macchina</p>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06);">
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; color: #ec4899; font-weight: 600; font-size: 0.9rem;">
+                                Scopri di più <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
+                            </span>
+                        </div>
                     </div>
-                    <h3>Bobine e Porta-bobine</h3>
-                    <p>Componenti essenziali per ogni macchina</p>
                 </div>
-                <div class="service-card fade-in-up">
-                    <div class="service-icon">
-                        <i class="fas fa-plug"></i>
+
+                <!-- Card 3 - Pedali -->
+                <div class="ricambi-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); backdrop-filter: blur(10px); border-radius: 24px; padding: 2rem; border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%); opacity: 0.1; border-radius: 50%; filter: blur(40px);"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 24px rgba(20,184,166,0.3);">
+                            <i class="fas fa-plug" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.75rem;">Pedali e Alimentazione</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Pedali elettronici e cavi di alimentazione</p>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06);">
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; color: #14b8a6; font-weight: 600; font-size: 0.9rem;">
+                                Scopri di più <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
+                            </span>
+                        </div>
                     </div>
-                    <h3>Pedali e Alimentazione</h3>
-                    <p>Pedali elettronici e cavi di alimentazione</p>
                 </div>
-                <div class="service-card fade-in-right">
-                    <div class="service-icon">
-                        <i class="fas fa-cog"></i>
+
+                <!-- Card 4 - Componenti -->
+                <div class="ricambi-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); backdrop-filter: blur(10px); border-radius: 24px; padding: 2rem; border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); opacity: 0.1; border-radius: 50%; filter: blur(40px);"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 24px rgba(245,158,11,0.3);">
+                            <i class="fas fa-cog" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.75rem;">Componenti Meccanici</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Cinghie di trasmissione e motori</p>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06);">
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; color: #f59e0b; font-weight: 600; font-size: 0.9rem;">
+                                Scopri di più <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
+                            </span>
+                        </div>
                     </div>
-                    <h3>Componenti Meccanici</h3>
-                    <p>Cinghie di trasmissione e motori</p>
                 </div>
-                <div class="service-card fade-in-left">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
+
+                <!-- Card 5 - Piastre -->
+                <div class="ricambi-card" style="background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7)); backdrop-filter: blur(10px); border-radius: 24px; padding: 2rem; border: 1px solid rgba(255,255,255,0.3); box-shadow: 0 8px 32px rgba(0,0,0,0.08); position: relative; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%); opacity: 0.1; border-radius: 50%; filter: blur(40px);"></div>
+                    <div style="position: relative; z-index: 2;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 8px 24px rgba(139,92,246,0.3);">
+                            <i class="fas fa-tools" style="font-size: 1.8rem; color: white;"></i>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.75rem;">Piastre e Piedini</h3>
+                        <p style="color: #666; line-height: 1.6; font-size: 0.95rem;">Piastre per l'ago e piedini di varie tipologie</p>
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0,0,0,0.06);">
+                            <span style="display: inline-flex; align-items: center; gap: 0.5rem; color: #8b5cf6; font-weight: 600; font-size: 0.9rem;">
+                                Scopri di più <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
+                            </span>
+                        </div>
                     </div>
-                    <h3>Piastre e Piedini</h3>
-                    <p>Piastre per l'ago e piedini di varie tipologie</p>
                 </div>
             </div>
-            <div class="contact-info fade-in-up mt-4 text-center">
-                <p>Se hai bisogno di un componente specifico, contattaci per verificare la disponibilità nel nostro magazzino di ricambi macchine da cucire a Firenze.</p>
+
+            <div class="contact-info fade-in-up" style="margin-top: 4rem; text-align: center;">
+                <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto; line-height: 1.7;">Se hai bisogno di un componente specifico, contattaci per verificare la disponibilità nel nostro magazzino di ricambi macchine da cucire a Firenze.</p>
             </div>
         </div>
     </section>
+
+    <style>
+        .ricambi-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.12) !important;
+        }
+
+        .ricambi-card:hover .fa-arrow-right {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 768px) {
+            .ricambi-card {
+                padding: 1.5rem !important;
+            }
+        }
+    </style>
 
     <section id="perche-noi" class="common-issues">
         <div class="container">
@@ -585,48 +662,89 @@
         </div>
     </section>
 
-    <section id="catalogo-ricambi" class="ricambi-preview-section">
+    <section id="catalogo-ricambi" style="padding: 6rem 0; background: #ffffff;">
         <div class="container">
-            <div class="section-header fade-in-up">
-                <h2>I Nostri Ricambi</h2>
+            <div class="section-header fade-in-up" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.75rem; font-weight: 800; color: #1a1a1a; margin-bottom: 1rem;">I Nostri Ricambi</h2>
+                <p style="font-size: 1.15rem; color: #666;">Scopri la nostra collezione premium</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item fade-in-left">
-                    <img src="https://live.staticflickr.com/65535/54375000172_a70862650a_h.jpg" 
+
+            <!-- Layout Masonry Moderno -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto 3rem;">
+                <!-- Prima immagine - Full size -->
+                <div class="gallery-modern-item" style="grid-row: span 2; position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onclick="openLightbox('https://live.staticflickr.com/65535/54375000172_a70862650a_h.jpg')">
+                    <img src="https://live.staticflickr.com/65535/54375000172_a70862650a_h.jpg"
                          alt="Aghi professionali"
-                         class="gallery-image"
-                         onclick="openLightbox(this.src)">
-                    <div class="gallery-overlay">
-                        <span>Aghi Professionali</span>
+                         style="width: 100%; height: 100%; object-fit: cover; min-height: 400px; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.7) 100%); opacity: 0; transition: opacity 0.4s;">
+                    </div>
+                    <div class="gallery-overlay-modern" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%); transform: translateY(20px); opacity: 0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <h3 style="color: white; font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Aghi Professionali</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem;">Clicca per ingrandire</p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in-up">
-                    <img src="https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg" 
+
+                <!-- Seconda immagine -->
+                <div class="gallery-modern-item" style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onclick="openLightbox('https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg')">
+                    <img src="https://live.staticflickr.com/65535/54375875121_db3c39a476_h.jpg"
                          alt="Bobine e accessori"
-                         class="gallery-image"
-                         onclick="openLightbox(this.src)">
-                    <div class="gallery-overlay">
-                        <span>Bobine e Accessori</span>
+                         style="width: 100%; height: 100%; object-fit: cover; min-height: 280px; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.7) 100%); opacity: 0; transition: opacity 0.4s;">
+                    </div>
+                    <div class="gallery-overlay-modern" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%); transform: translateY(20px); opacity: 0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <h3 style="color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">Bobine e Accessori</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Clicca per ingrandire</p>
                     </div>
                 </div>
-                <div class="gallery-item fade-in-right">
-                    <img src="https://live.staticflickr.com/65535/54376078739_7c3559d3a7_h.jpg" 
+
+                <!-- Terza immagine -->
+                <div class="gallery-modern-item" style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.1); cursor: pointer; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);" onclick="openLightbox('https://live.staticflickr.com/65535/54376078739_7c3559d3a7_h.jpg')">
+                    <img src="https://live.staticflickr.com/65535/54376078739_7c3559d3a7_h.jpg"
                          alt="Componenti meccanici"
-                         class="gallery-image"
-                         onclick="openLightbox(this.src)">
-                    <div class="gallery-overlay">
-                        <span>Componenti Meccanici</span>
+                         style="width: 100%; height: 100%; object-fit: cover; min-height: 280px; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.7) 100%); opacity: 0; transition: opacity 0.4s;">
+                    </div>
+                    <div class="gallery-overlay-modern" style="position: absolute; bottom: 0; left: 0; right: 0; padding: 1.5rem; background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%); transform: translateY(20px); opacity: 0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);">
+                        <h3 style="color: white; font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">Componenti Meccanici</h3>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Clicca per ingrandire</p>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="#footer" class="button button-primary">
+
+            <div style="text-align: center;">
+                <a href="#footer" class="button button-primary" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.2rem 2.5rem; background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%); color: white; text-decoration: none; border-radius: 12px; font-weight: 600; font-size: 1.05rem; transition: all 0.3s; box-shadow: 0 4px 16px rgba(79,70,229,0.3);">
                     <span>Richiedi Informazioni</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-right" style="transition: transform 0.3s;"></i>
                 </a>
             </div>
         </div>
     </section>
+
+    <style>
+        .gallery-modern-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.15) !important;
+        }
+
+        .gallery-modern-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-modern-item:hover .gallery-overlay-modern {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .gallery-modern-item:hover > div:nth-child(2) {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-modern-item {
+                grid-row: span 1 !important;
+            }
+        }
+    </style>
 
     <section id="garanzia" class="home-service">
         <div class="container">
@@ -710,60 +828,136 @@
         </div>
     </section>
 
-    <section id="marche" class="community-section">
+    <section id="marche" style="padding: 6rem 0; background: linear-gradient(135deg, #fafbff 0%, #f8f9ff 100%); position: relative; overflow: hidden;">
+        <!-- Decorative Elements -->
+        <div style="position: absolute; top: 20%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(99,102,241,0.05) 0%, transparent 70%); border-radius: 50%; filter: blur(80px);"></div>
+        <div style="position: absolute; bottom: 20%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(236,72,153,0.05) 0%, transparent 70%); border-radius: 50%; filter: blur(80px);"></div>
+
         <div class="container">
-            <div class="section-header fade-in-up">
-                <h2>Marche Supportate</h2>
-                <p>Ricambi disponibili per tutte le principali marche</p>
+            <div class="section-header fade-in-up" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.75rem; font-weight: 800; color: #1a1a1a; margin-bottom: 1rem;">Marche Supportate</h2>
+                <p style="font-size: 1.15rem; color: #666;">Ricambi disponibili per tutte le principali marche</p>
             </div>
-            <div class="service-areas">
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Singer</span>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+                <!-- Singer -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(99,102,241,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #f0f1ff, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/6366f1/ffffff?text=S" alt="Singer" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Singer</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Brother</span>
+
+                <!-- Brother -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(236,72,153,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fef0f7, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/ec4899/ffffff?text=B" alt="Brother" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Brother</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Pfaff</span>
+
+                <!-- Pfaff -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(20,184,166,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #f0fdfa, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/14b8a6/ffffff?text=P" alt="Pfaff" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Pfaff</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Janome</span>
+
+                <!-- Janome -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(245,158,11,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fffbeb, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/f59e0b/ffffff?text=J" alt="Janome" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Janome</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Husqvarna Viking</span>
+
+                <!-- Husqvarna -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139,92,246,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #f5f3ff, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/8b5cf6/ffffff?text=H" alt="Husqvarna Viking" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Husqvarna</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Elna</span>
+
+                <!-- Elna -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(34,197,94,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #f0fdf4, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/22c55e/ffffff?text=E" alt="Elna" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Elna</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Toyota</span>
+
+                <!-- Toyota -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(239,68,68,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fef2f2, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/ef4444/ffffff?text=T" alt="Toyota" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Toyota</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Alfa</span>
+
+                <!-- Alfa -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(59,130,246,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #eff6ff, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/3b82f6/ffffff?text=A" alt="Alfa" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Alfa</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Necchi</span>
+
+                <!-- Necchi -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(168,85,247,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #faf5ff, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/a855f7/ffffff?text=N" alt="Necchi" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Necchi</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Juki</span>
+
+                <!-- Juki -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(251,146,60,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fff7ed, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/fb923c/ffffff?text=J" alt="Juki" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Juki</h3>
                 </div>
-                <div class="service-area-item fade-in-up">
-                    <i class="fas fa-check-circle"></i>
-                    <span>Merrylock</span>
+
+                <!-- Merrylock -->
+                <div class="brand-card" style="background: white; border-radius: 20px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; position: relative; overflow: hidden;">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(244,63,94,0.05), transparent); opacity: 0; transition: opacity 0.4s;"></div>
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fff1f2, #ffffff); border-radius: 16px; display: flex; align-items: center; justify-content: center; position: relative; z-index: 2;">
+                        <img src="https://via.placeholder.com/60x60/f43f5e/ffffff?text=M" alt="Merrylock" style="width: 60px; height: 60px; object-fit: contain; border-radius: 8px;">
+                    </div>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a1a1a; margin: 0; position: relative; z-index: 2;">Merrylock</h3>
                 </div>
             </div>
         </div>
     </section>
+
+    <style>
+        .brand-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12) !important;
+        }
+
+        .brand-card:hover > div:first-child {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .brand-card {
+                padding: 1.5rem !important;
+            }
+        }
+    </style>
 
     <footer id="footer">
         <div class="container">
@@ -836,7 +1030,7 @@
                 </iframe>
             </div>
 
-            <p class="copyright">&copy; 2024 Riparazioni Ricci - Tutti i diritti riservati</p>
+            <p class="copyright">&copy; 2026 Riparazioni Ricci - Tutti i diritti riservati</p>
         </div>
     </footer>
 
